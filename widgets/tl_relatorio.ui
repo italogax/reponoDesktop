@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1336</width>
+    <height>891</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>150</y>
+     <width>731</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="bt_entrar_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>260</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clique Aqui</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_entrar_3">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>330</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clique Aqui</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Saída De Produtos</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>270</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Vendas Mensais</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>340</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Open Sans Semibold</family>
+      <pointsize>14</pointsize>
+      <weight>7</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Venda Detalhada</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>410</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Cupom Fiscal</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_entrar_4">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>190</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clique Aqui</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>541</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/895134/Downloads/logo.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_entrar_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>400</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clique Aqui </string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

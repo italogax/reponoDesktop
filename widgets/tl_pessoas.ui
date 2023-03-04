@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1630</width>
+    <height>828</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="fr_fornecedores" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>801</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(241, 241, 241);
+border-radius:10px;</string>
+    </property>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>261</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cadastro de Fornecedores</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_id_forne">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>80</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_email_forne">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>130</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>140</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Telefone</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_telefone_forne">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>130</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>(31)99999-9999</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CNPJ</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_cnpj_forne">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>190</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>99.999.999/9999-99</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_nome_forne">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>70</y>
+       <width>431</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="fr_clientes" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>801</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(241, 241, 241);
+border-radius:10px;</string>
+    </property>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cadastro de Clientes</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_idC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_id_clientes">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_nomeC">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>100</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_nome_clientes">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>90</y>
+       <width>431</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cpfC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPF</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_cpf_clientes">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>160</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>999.999.999-99</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dt_nascimentoC">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>170</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data de Nascimento</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_dt_nascimento">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>160</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>99/99/9999</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_contatoC">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contato</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_contato_clientes">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>220</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>(99)99999-9999</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_emailC">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>230</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_email_clientes">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>220</y>
+       <width>361</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="fr_funcionarios" native="true">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>0</y>
+      <width>801</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(241, 241, 241);
+border-radius:10px;</string>
+    </property>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cadastro de Funcionários</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_id">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_id">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_nome">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>431</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_nascimento">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>130</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>99/99/9999</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_nome">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>80</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_contato">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contato</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_nascimento">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>181</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data de Nascimento</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_cpf">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>140</y>
+       <width>47</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_email">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>200</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_senha">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>260</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Senha</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_usuario">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Usuário</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_cpf">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>130</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>999.999.999-99</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_contato">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>190</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="inputMask">
+      <string>(99)99999-9999</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_email">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>190</y>
+       <width>341</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_senha">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>250</y>
+       <width>113</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ent_usuario">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>250</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1630</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

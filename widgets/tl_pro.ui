@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>990</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-3</y>
+     <width>991</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="bt_cadas">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Cadastrar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_con">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Consultar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_remover">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Remover</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>204</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Produtos</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>601</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Open Sans Semibold</family>
+      <pointsize>14</pointsize>
+      <weight>7</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Produtos </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>124</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Valor Da Compra </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>204</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Open Sans Semibold</family>
+      <pointsize>14</pointsize>
+      <weight>7</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Valor Da Venda</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>124</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Id</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_atualizar">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>100</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Atualizar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_limpar">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>360</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1000</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Limpa Campos</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>-28</x>
+      <y>285</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Estoque</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>285</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Descrição</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_id">
+    <property name="geometry">
+     <rect>
+      <x>162</x>
+      <y>120</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_prodt">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>200</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_est">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>280</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_vldc">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>120</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_vldv">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>200</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ent_des">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>280</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>label_9</zorder>
+   <zorder>bt_cadas</zorder>
+   <zorder>bt_con</zorder>
+   <zorder>bt_remover</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_8</zorder>
+   <zorder>bt_atualizar</zorder>
+   <zorder>bt_limpar</zorder>
+   <zorder>label_10</zorder>
+   <zorder>ent_id</zorder>
+   <zorder>ent_prodt</zorder>
+   <zorder>ent_est</zorder>
+   <zorder>ent_vldc</zorder>
+   <zorder>ent_vldv</zorder>
+   <zorder>ent_des</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
