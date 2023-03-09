@@ -18,8 +18,10 @@ from api_conProdutos import consul_produtos_id, consul_produtos
 #Importando função que deleta produtos do DataBase.
 from api_delProdutos import remo_produtos
 #Importando função do PVD.
-from api_caixaReg import monstra_produtos, sub_total, limpa_tabrotativa, hitory_vendas
-
+from api_caixaReg import monstra_produtos, sub_total, limpa_tabrotativa
+#Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
+from api_gerirestoque import *
+#Importando funções que automatizam processos no teclado.
 from api_atalhoskey import keypress
 
 #Bottons do System======================================================================
@@ -37,11 +39,11 @@ principal.bt_limpar_pro.clicked.connect(limp_cadProdutos) #Botão limpa campos q
 #Tela do Caixa------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 principal.bt_cancelarcompra.clicked.connect(limpa_tabrotativa) #Botão encarregado de cancelar a compra que estava sendo efetuada.
 #principal.bt_cancelarproduto.clicked.connect() #Botão encarregado de cancelar produtos expecificos da compra.
-principal.bt_finalizarcompra.clicked.connect(hitory_vendas) #Botão encarregado de finalizar a compra.
+principal.bt_finalizarcompra.clicked.connect(att_estoque) #Botão encarregado de finalizar a compra.
 principal.bt_pesquisar.clicked.connect(monstra_produtos) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
 principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calculo do subtotal.
 #principal.bt_tabcodigos_ven.clicked.connect(consul_produtos)
 
-limpa_tabrotativa()
+limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 login.show() #Exibi tela login.
 app.exec() #Executar sistema.

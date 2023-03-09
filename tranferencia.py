@@ -1,63 +1,106 @@
-from PyQt5 import uic, QtWidgets # Import do Pyqt5
-import mysql
-import mysql.connector
-
-    atendente= tl_principal.ent_atendente.setText()
-
-    idcaixa= tl_principal.ent_idcaixa.setText()
-
-    produtos= tl_principal.ent_produtocaixa.setText()
-
-    quantidade= tl_principal.ent_qtcaixa.setText()
-
-    subtotal= tl_principal.ent_subtotalcaixa.setText()
-
-    valocaixa= tl_principal.ent_valorcaixa.setText()
-
-
-    estoque = ("select estoque from tb_produtos where produto = '{}'").format(produtos) # Função para buscar quantidade atual do estoque
-    cursor = connect.cursor()
-    cursor.execute(estoque)
-    linhas= cursor.fetchall()
-
-    for linha in linhas:
-
-        est= int((linha[0]))    # função para trasnformar quatindade atual do estoque em INTEIRO
-
-    conta = est - quantidade # conta para diminuir quantidade vendida no estoque
-
-    if (conta <= 0): #Função de verificaçao de estoque
-        resul = tl_principal.resul.setText("Estoque faltando") #Mensagem de estoque em falta
-
-    else: #Função de verificaçao de estoque
-
-        att= ("update tb_produtos set estoque = '{}' where nome = '{}'").format(conta,produtos) #Função para atualizar quantidade do estoque no banco de dados
-
-        att_cur = connect.cursor()
-
-        att_cur.execute(att)
-
-        confi = "insert into tb_vendas(id, produto, vl_venda, funcionario, quantidade, forma_pagamento, desconto, data, hora) values (null, %s, %s, %s, %s, %s, %s, now(),now())" #Função para inserir venda no banco de dados
-
-        dados = (prod, quant) # dados para inserir na tabela
-
-        cursor = connect.cursor()
-
-        cursor.execute(confi, dados)
-
-        connect.commit()
-
-        cursor.close()
-
-# --Iniciar tela-- #
-
-tl_principal.bt_finalizarcompra.clicked.connect(tela)
-
-tl_principal.show()
-
-app.exec()
+from api_conectDb import *
 
 
 
+"""
+cursor=con.cursor() #Conexão com o DataBase.
+comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
+cursor.execute(comandodb) #Executando comando dentro do DataBase.
+qtlinha= cursor.fetchone()
+cursor.close()
+
+for qt in qtlinha:
+    print (int(qt))
+"""
+"""
+cursor=con.cursor() #Conexão com o DataBase.
+comandodb=("SELECT estoque FROM tb_produtos WHERE id='{}'".format(1)) #Comando a ser executado dentro do DataBase selecionando o valor do campo estoque.
+cursor.execute(comandodb) #Executando comando dentro do DataBase.
+campos= cursor.fetchone() #Selecionando conteudo do campo apresentado.
+cursor.close()
+for est in campos:
+     print(int(est))
+"""
+"""
+def test():
+    global idvend #Tornando a VARIAVEL em GLOBAL. 
+    global qtvend #Tornando a VARIAVEL em GLOBAL. 
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT id, quantidade FROM tb_vendarotativa") #Comando a ser executado dentro do DataBaese.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase. 
+    vendidos=cursor.fetchall()  #Selecionando todos os campos apresentados na tabela.
+    cursor.close() #Fechando conexão com o DataBase.
+    idvend= (vendidos[0][0]) #Atribuindo valor a Variavel IDVEND, valor:(primeiro ID da TABLE.)
+    qtvend= (vendidos[0][1]) #Atribuindo valor a Variavel QTVEND, valor:(primeiro QUANTIDADE da TABLE.)
+
+def test3():
+    test()
+    print (idvend)
+    print (qtvend)
+test3()
+"""
+"""
+cursor=con.cursor() #Conexão com o DataBase.
+comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
+cursor.execute(comandodb) #Executando comando dentro do DataBase.
+max= cursor.fetchone()
+cursor.close()
+for qtlinha in max:
+    int(qtlinha)
+
+i= 1
+while i < qtlinha:
+    i= i + 1
+    hitory_vendas() #Chamando função encarregada de inserir os dados da ultima compra dentro do DataBase.
+    pro_vendidos() #Executando função para saber o produto a ser atualizado. 
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT estoque FROM tb_produtos WHERE id='{}'".format(idvend)) #Comando a ser executado dentro do DataBase selecionando o valor do campo estoque.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    campos= cursor.fetchone() #Selecionando conteudo do campo apresentado.
+    cursor.close()
+    for est in campos:
+        int(est)
+        subestoque= est - qtvend #Calculo para chegar ao numero real daquele produto no estoque.
+                
+        if(subestoque < 0):
+                print ("erro")
+                        
+
+        else:
+            esqatt=("UPDATE tb_produtos SET estoque= '{}' WHERE id= '{}'".format(subestoque, idvend)) #Comando para atualizar a quantidade do produto em estoque.
+            cursor.execute(esqatt) #Executando comando dentro do DataBase.
+            con.commit() #Commitando comando dentro do DataBase.
+            cursor.close()
+"""
+"""
+def qt_linhas():
+    global qtlinha
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    max= cursor.fetchone()
+    cursor.close()
+    for qtlinha in max:
+        float(qtlinha)
+
+qt_linhas()
+print (float(qtlinha))
+print (type(qtlinha))
+"""
+"""
+def qt_linhas():
+    global conversor
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    max= cursor.fetchone()
+    cursor.close()
+    for qtlinha in max:
+        conversor= float(qtlinha)
 
 
+def test2():
+    qt_linhas()
+    print (conversor)
+test2()
+"""

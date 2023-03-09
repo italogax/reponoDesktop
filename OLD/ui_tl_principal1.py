@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\Italo\OneDrive\test\OLD\tl_principal1.ui'
+# Form implementation generated from reading ui file 'c:\Users\Italo\OneDrive\reponoDesktop\OLD\tl_principal1.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.cabecalho)
         self.label.setGeometry(QtCore.QRect(10, 10, 151, 31))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Login/PNG/icon_repono.png"))
+        self.label.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Login/PNG/icon_repono.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.cabecalho)
@@ -379,7 +379,7 @@ class Ui_MainWindow(object):
         self.bt_tabcodigos_ven.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Vendas/PNG/icon_codigos.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Vendas/PNG/icon_codigos.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_tabcodigos_ven.setIcon(icon)
         self.bt_tabcodigos_ven.setIconSize(QtCore.QSize(35, 35))
         self.bt_tabcodigos_ven.setObjectName("bt_tabcodigos_ven")
@@ -389,7 +389,7 @@ class Ui_MainWindow(object):
         self.icon_caixa.setStyleSheet("border:noborder;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));")
         self.icon_caixa.setText("")
-        self.icon_caixa.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Vendas/PNG/registradora.png"))
+        self.icon_caixa.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Vendas/PNG/registradora.png"))
         self.icon_caixa.setScaledContents(True)
         self.icon_caixa.setObjectName("icon_caixa")
         self.bt_caixa_ven = QtWidgets.QPushButton(parent=self.men_interno_vendas)
@@ -411,7 +411,7 @@ class Ui_MainWindow(object):
 "")
         self.bt_caixa_ven.setInputMethodHints(QtCore.Qt.InputMethodHint.ImhNone)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Vendas/PNG/icon_caixa.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Vendas/PNG/icon_caixa.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_caixa_ven.setIcon(icon1)
         self.bt_caixa_ven.setIconSize(QtCore.QSize(35, 35))
         self.bt_caixa_ven.setShortcut("")
@@ -429,7 +429,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.icon_tababela.setText("")
-        self.icon_tababela.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Vendas/PNG/tabela.png"))
+        self.icon_tababela.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Vendas/PNG/tabela.png"))
         self.icon_tababela.setScaledContents(True)
         self.icon_tababela.setObjectName("icon_tababela")
         self.icon_tababela.raise_()
@@ -466,7 +466,7 @@ class Ui_MainWindow(object):
         self.bt_saidapro_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));")
         self.bt_saidapro_rel.setInputMethodHints(QtCore.Qt.InputMethodHint.ImhNone)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_saida.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_saida.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_saidapro_rel.setIcon(icon2)
         self.bt_saidapro_rel.setIconSize(QtCore.QSize(32, 32))
         self.bt_saidapro_rel.setShortcut("")
@@ -483,7 +483,7 @@ class Ui_MainWindow(object):
         self.bt_vendadt_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_venda_detalhada.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_venda_detalhada.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_vendadt_rel.setIcon(icon3)
         self.bt_vendadt_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_vendadt_rel.setObjectName("bt_vendadt_rel")
@@ -494,7 +494,7 @@ class Ui_MainWindow(object):
         self.bt_cupomfis_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_cupom_fiscal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon4.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_cupom_fiscal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_cupomfis_rel.setIcon(icon4)
         self.bt_cupomfis_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_cupomfis_rel.setObjectName("bt_cupomfis_rel")
@@ -505,7 +505,7 @@ class Ui_MainWindow(object):
         self.bt_vendasm_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_vendas_mensais.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon5.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Relatorios/PNG/icon_vendas_mensais.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_vendasm_rel.setIcon(icon5)
         self.bt_vendasm_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_vendasm_rel.setObjectName("bt_vendasm_rel")
@@ -515,7 +515,7 @@ class Ui_MainWindow(object):
         self.icon_vendasdt.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_vendasdt.setText("")
-        self.icon_vendasdt.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Relatorios/PNG/venda.png"))
+        self.icon_vendasdt.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Relatorios/PNG/venda.png"))
         self.icon_vendasdt.setScaledContents(True)
         self.icon_vendasdt.setObjectName("icon_vendasdt")
         self.icon_saidapr = QtWidgets.QLabel(parent=self.men_interno_relelatorios)
@@ -524,7 +524,7 @@ class Ui_MainWindow(object):
         self.icon_saidapr.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_saidapr.setText("")
-        self.icon_saidapr.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Relatorios/PNG/saida.png"))
+        self.icon_saidapr.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Relatorios/PNG/saida.png"))
         self.icon_saidapr.setScaledContents(True)
         self.icon_saidapr.setObjectName("icon_saidapr")
         self.icon_vendasm = QtWidgets.QLabel(parent=self.men_interno_relelatorios)
@@ -533,7 +533,7 @@ class Ui_MainWindow(object):
         self.icon_vendasm.setStyleSheet("border:noborder;\n"
 "background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));")
         self.icon_vendasm.setText("")
-        self.icon_vendasm.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Relatorios/PNG/grafico.png"))
+        self.icon_vendasm.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Relatorios/PNG/grafico.png"))
         self.icon_vendasm.setScaledContents(True)
         self.icon_vendasm.setObjectName("icon_vendasm")
         self.icon_cupon = QtWidgets.QLabel(parent=self.men_interno_relelatorios)
@@ -542,7 +542,7 @@ class Ui_MainWindow(object):
         self.icon_cupon.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_cupon.setText("")
-        self.icon_cupon.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Relatorios/PNG/cupom.png"))
+        self.icon_cupon.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Relatorios/PNG/cupom.png"))
         self.icon_cupon.setScaledContents(True)
         self.icon_cupon.setObjectName("icon_cupon")
         self.icon_cupon.raise_()
@@ -608,7 +608,7 @@ class Ui_MainWindow(object):
         self.bt_inventario.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Produtos/Incones/icon_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon6.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Produtos/Incones/icon_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_inventario.setIcon(icon6)
         self.bt_inventario.setIconSize(QtCore.QSize(35, 35))
         self.bt_inventario.setObjectName("bt_inventario")
@@ -627,7 +627,7 @@ class Ui_MainWindow(object):
         self.icon_produtos.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_produtos.setText("")
-        self.icon_produtos.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Produtos/PNG/produtos.png"))
+        self.icon_produtos.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Produtos/PNG/produtos.png"))
         self.icon_produtos.setScaledContents(True)
         self.icon_produtos.setObjectName("icon_produtos")
         self.icon_inventario = QtWidgets.QLabel(parent=self.men_interno_produtos)
@@ -635,7 +635,7 @@ class Ui_MainWindow(object):
         self.icon_inventario.setMinimumSize(QtCore.QSize(44, 44))
         self.icon_inventario.setMaximumSize(QtCore.QSize(44, 44))
         self.icon_inventario.setText("")
-        self.icon_inventario.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Produtos/PNG/inventario.png"))
+        self.icon_inventario.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Produtos/PNG/inventario.png"))
         self.icon_inventario.setScaledContents(True)
         self.icon_inventario.setObjectName("icon_inventario")
         self.icon_inventario.raise_()
@@ -957,7 +957,7 @@ class Ui_MainWindow(object):
         self.bt_fornecedores.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_fornecedores.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon7.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_fornecedores.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_fornecedores.setIcon(icon7)
         self.bt_fornecedores.setIconSize(QtCore.QSize(35, 35))
         self.bt_fornecedores.setObjectName("bt_fornecedores")
@@ -968,7 +968,7 @@ class Ui_MainWindow(object):
         self.bt_cliente.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_clientes.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon8.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_clientes.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_cliente.setIcon(icon8)
         self.bt_cliente.setIconSize(QtCore.QSize(35, 35))
         self.bt_cliente.setCheckable(False)
@@ -980,7 +980,7 @@ class Ui_MainWindow(object):
         self.bt_funcionarios.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_funcionarios.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon9.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\../Projeto_integrador/Telas/Repono/Pessoas/Icones/icon_funcionarios.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.bt_funcionarios.setIcon(icon9)
         self.bt_funcionarios.setIconSize(QtCore.QSize(35, 35))
         self.bt_funcionarios.setObjectName("bt_funcionarios")
@@ -991,7 +991,7 @@ class Ui_MainWindow(object):
         self.icon_cliente.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_cliente.setText("")
-        self.icon_cliente.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Pessoas/PNG/clientes.png"))
+        self.icon_cliente.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Pessoas/PNG/clientes.png"))
         self.icon_cliente.setScaledContents(True)
         self.icon_cliente.setObjectName("icon_cliente")
         self.icon_funcionarios = QtWidgets.QLabel(parent=self.men_interno_pessoas)
@@ -999,7 +999,7 @@ class Ui_MainWindow(object):
         self.icon_funcionarios.setMinimumSize(QtCore.QSize(44, 44))
         self.icon_funcionarios.setMaximumSize(QtCore.QSize(44, 44))
         self.icon_funcionarios.setText("")
-        self.icon_funcionarios.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Pessoas/PNG/funcionarios.png"))
+        self.icon_funcionarios.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Pessoas/PNG/funcionarios.png"))
         self.icon_funcionarios.setScaledContents(True)
         self.icon_funcionarios.setObjectName("icon_funcionarios")
         self.icon_fornecedores = QtWidgets.QLabel(parent=self.men_interno_pessoas)
@@ -1009,7 +1009,7 @@ class Ui_MainWindow(object):
         self.icon_fornecedores.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
         self.icon_fornecedores.setText("")
-        self.icon_fornecedores.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\test\\OLD\\Pessoas/PNG/fornecedores.png"))
+        self.icon_fornecedores.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\OLD\\Pessoas/PNG/fornecedores.png"))
         self.icon_fornecedores.setScaledContents(True)
         self.icon_fornecedores.setObjectName("icon_fornecedores")
         self.icon_cliente.raise_()

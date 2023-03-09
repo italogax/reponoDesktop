@@ -1,5 +1,7 @@
 """API encarregada de fazer todo o funcionamento do PVD"""
 
+from tkinter import messagebox
+
 #Importando telas do System.
 from api_iniTelas import *
 #Importando conexão com o DataBase.
@@ -9,8 +11,7 @@ from api_limpaCampos import limp_caixa
 #Importando bibliotecas para gerar o numero ALFANUMERICO.
 import string
 from random import choice
-#Importando função que faz a atualização do estoque no DataBase
-from api_gerirestoque import subestoque
+
 #Função encarregada de demonstrar os produtos da compra na tabela e nos campos.
 def monstra_produtos():
 
@@ -61,33 +62,35 @@ def set_tablepvd():
 
 #Função encarregada de preencher o subtotal    
 def sub_total():
-    
     quantidade=principal.ent_qtcaixa.text() #Importando valores do campo QUANTIDADE inserido pelo user.
     subtotal=principal.ent_subtotalcaixa.text() #Inserindo no SUBTOTAL o respequitivo valor.
     valoruni=principal.ent_valorcaixa.text()
-
-    valoruni= float(valoruni) #Convertendo variavel STR para FLOAT.
-    quantidade= int(quantidade)  #Convertendo variavel STR para INT.
-    
-    calq_vl= quantidade * valoruni #Calculo para chegar ao valor do subprodutos.
-
-    #Caso valor do SUBTOTAL seja NULO.
-    if subtotal =="": 
-        calq_vl = str(calq_vl) #Convertendo variaveis FLOAT em STR.
-        subtotal=principal.ent_subtotalcaixa.setText(calq_vl) #Setando valor do subtotal.
-        up_table() #Chamando função que faz a inserção dos dados dentro do DataBase.
-        set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
-        subestoque() #Chamando função encarregada de fazer a atualização de quantidade de produtos em estoque. 
-        limp_caixa() #Função encarregada de limpar os campos preenchidos pelo USER.
-
-    #Caso valor do SUBTOTAL nao senha NULO.
+    if quantidade=="":
+        principal.ent_qtcaixa.setText("1")
+        sub_total()
     else:
-        subtotal= float(subtotal) #Convertendo variavel STR em FLOAT.
-        calq_vl=(calq_vl + subtotal) #Calculo para chegar ao valor do subtotal.
-        calq_vl= str(calq_vl) #COnvertendo variavel FLOAT em STR.
-        subtotal=principal.ent_subtotalcaixa.setText(calq_vl) #Setando valor do sub total. 
-        up_table() #Chamando função que faz a inserção dos dados dentro do DataBase.
-        set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
+        valoruni= float(valoruni) #Convertendo variavel STR para FLOAT.
+        quantidade= int(quantidade)  #Convertendo variavel STR para INT.
+        
+        calq_vl= quantidade * valoruni #Calculo para chegar ao valor do subprodutos.
+
+        #Caso valor do SUBTOTAL seja NULO.
+        if subtotal =="": 
+            calq_vl = str(calq_vl) #Convertendo variaveis FLOAT em STR.
+            subtotal=principal.ent_subtotalcaixa.setText(calq_vl) #Setando valor do subtotal.
+            up_table() #Chamando função que faz a inserção dos dados dentro do DataBase.
+            set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
+            limp_caixa() #Função encarregada de limpar os campos preenchidos pelo USER.
+
+        #Caso valor do SUBTOTAL nao senha NULO.
+        else:
+            subtotal= float(subtotal) #Convertendo variavel STR em FLOAT.
+            calq_vl=(calq_vl + subtotal) #Calculo para chegar ao valor do subtotal.
+            calq_vl= str(calq_vl) #COnvertendo variavel FLOAT em STR.
+            subtotal=principal.ent_subtotalcaixa.setText(calq_vl) #Setando valor do sub total. 
+            up_table() #Chamando função que faz a inserção dos dados dentro do DataBase.
+            set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
+            limp_caixa()
 
 #Função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 def limpa_tabrotativa():
@@ -108,7 +111,7 @@ def numpedido():
 
 #Função encarregada de amazenar os dados de compras finalizadas no DataBase
 def hitory_vendas():
-    numpedido()
+    numpedido() #
     cursor=con.cursor() #Conexão com o DataBase.
     entdb=("""INSERT INTO tb_vendas
 	(id, produto, vl_unidade, quantidade, vl_total, data, hora, pedido)
@@ -116,6 +119,6 @@ def hitory_vendas():
     FROM tb_vendarotativa ;""".format(pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
     cursor.execute(entdb) #Executando comando no DataBase.
     con.commit() #Commitando execução no DataBase
-    limpa_tabrotativa() #Limpando a tabelaRotativa do caixa.
+    
     
 
