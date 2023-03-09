@@ -190,7 +190,7 @@ background-color: rgb(220, 220, 220);
 font-size:18px;</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="vendas">
              <attribute name="title">
@@ -2888,436 +2888,6 @@ border:noborder;</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <widget class="QWidget" name="fr_fornecedores" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>801</width>
-                  <height>380</height>
-                 </rect>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(241, 241, 241);
-border-radius:10px;</string>
-                </property>
-                <widget class="QLabel" name="label_titulo_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>10</y>
-                   <width>261</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Cadastro de Fornecedores</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_id_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>80</y>
-                   <width>31</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>ID</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_id_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>50</x>
-                   <y>70</y>
-                   <width>71</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_nome_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>150</x>
-                   <y>80</y>
-                   <width>61</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Nome</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_datanascimento_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>140</y>
-                   <width>51</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Email</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_email_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>70</x>
-                   <y>130</y>
-                   <width>351</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_telefone_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>530</x>
-                   <y>130</y>
-                   <width>181</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="inputMask">
-                  <string>(31)99999-9999</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_contato_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>200</y>
-                   <width>51</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>CNPJ</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_cnpj_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>70</x>
-                   <y>190</y>
-                   <width>181</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="inputMask">
-                  <string>99.999.999/9999-99</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_nome_for">
-                 <property name="geometry">
-                  <rect>
-                   <x>210</x>
-                   <y>70</y>
-                   <width>431</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-               </widget>
-               <widget class="QWidget" name="fr_clientes" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>801</width>
-                  <height>381</height>
-                 </rect>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(241, 241, 241);
-border-radius:10px;</string>
-                </property>
-                <widget class="QLabel" name="label_titulo__cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>20</y>
-                   <width>201</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Cadastro de Clientes</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_id_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>100</y>
-                   <width>31</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>ID</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_id_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>40</x>
-                   <y>90</y>
-                   <width>71</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_nome_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>140</x>
-                   <y>100</y>
-                   <width>61</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Nome</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_nome_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>200</x>
-                   <y>90</y>
-                   <width>431</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_cpf_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>170</y>
-                   <width>41</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>CPF</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_cpf_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>50</x>
-                   <y>160</y>
-                   <width>131</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="inputMask">
-                  <string>999.999.999-99</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_dt_nascimento_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>200</x>
-                   <y>170</y>
-                   <width>181</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Data de Nascimento</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_nascimento_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>400</x>
-                   <y>160</y>
-                   <width>131</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="inputMask">
-                  <string>99/99/9999</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_contato_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>10</x>
-                   <y>230</y>
-                   <width>81</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Contato</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_contato_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>90</x>
-                   <y>220</y>
-                   <width>131</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="inputMask">
-                  <string>(99)99999-9999</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_email_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>240</x>
-                   <y>230</y>
-                   <width>51</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Email</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_email_cli">
-                 <property name="geometry">
-                  <rect>
-                   <x>300</x>
-                   <y>220</y>
-                   <width>361</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-               </widget>
                <widget class="QWidget" name="fr_funcionarios" native="true">
                 <property name="geometry">
                  <rect>
@@ -3623,6 +3193,1186 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
 color: rgb(0, 0, 0);
 background-color: rgb(255, 255, 255);
 }</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_remover_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Remover</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_atualizar_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>480</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Atualizar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_limpar_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>630</x>
+                   <y>320</y>
+                   <width>150</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Limpa Campos</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_cadas_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Cadastrar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_consulta_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Consultar</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="fr_clientes" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>10</y>
+                  <width>801</width>
+                  <height>381</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(241, 241, 241);
+border-radius:10px;</string>
+                </property>
+                <widget class="QLabel" name="label_titulo__cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>20</y>
+                   <width>201</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Cadastro de Clientes</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_id_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>100</y>
+                   <width>31</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_id_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>90</y>
+                   <width>71</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_nome_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>140</x>
+                   <y>100</y>
+                   <width>61</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Nome</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_nome_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>90</y>
+                   <width>431</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_cpf_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>170</y>
+                   <width>41</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CPF</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_cpf_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>160</y>
+                   <width>131</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string>999.999.999-99</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_dt_nascimento_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>170</y>
+                   <width>181</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Data de Nascimento</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_nascimento_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>400</x>
+                   <y>160</y>
+                   <width>131</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string>99/99/9999</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_contato_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>230</y>
+                   <width>81</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Contato</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_contato_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>90</x>
+                   <y>220</y>
+                   <width>131</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string>(99)99999-9999</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_email_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>240</x>
+                   <y>230</y>
+                   <width>51</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Email</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_email_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>300</x>
+                   <y>220</y>
+                   <width>361</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_remover_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Remover</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_atualizar_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>480</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Atualizar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_limpar_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>630</x>
+                   <y>320</y>
+                   <width>150</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Limpa Campos</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_cadas_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Cadastrar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_consulta_cli">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Consultar</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="fr_fornecedores" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>10</y>
+                  <width>801</width>
+                  <height>380</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(241, 241, 241);
+border-radius:10px;</string>
+                </property>
+                <widget class="QLabel" name="label_titulo_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>10</y>
+                   <width>261</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Cadastro de Fornecedores</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_id_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>80</y>
+                   <width>31</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_id_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>70</y>
+                   <width>71</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_nome_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>150</x>
+                   <y>80</y>
+                   <width>61</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Nome</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_datanascimento_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>140</y>
+                   <width>51</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Email</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_email_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>130</y>
+                   <width>351</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_telefone_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>530</x>
+                   <y>130</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string>(31)99999-9999</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_contato_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>200</y>
+                   <width>51</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CNPJ</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_cnpj_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>70</x>
+                   <y>190</y>
+                   <width>181</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="inputMask">
+                  <string>99.999.999/9999-99</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_nome_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>210</x>
+                   <y>70</y>
+                   <width>431</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_remover_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Remover</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_atualizar_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>480</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Atualizar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_limpar_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>630</x>
+                   <y>320</y>
+                   <width>150</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Limpa Campos</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_cadas_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Cadastrar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="bt_consulta_for">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>320</y>
+                   <width>100</width>
+                   <height>35</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+QPushButton {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+}
+QPushButton:pressed {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: white;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+
+
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Consultar</string>
                  </property>
                 </widget>
                </widget>
@@ -3980,150 +4730,6 @@ background-color: rgb(255, 255, 255);
     <hint type="destinationlabel">
      <x>602</x>
      <y>533</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_cliente</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_fornecedores</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>229</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>237</x>
-     <y>351</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_cliente</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_clientes</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>229</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>266</x>
-     <y>395</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_cliente</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_funcionarios</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>229</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>298</x>
-     <y>442</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_funcionarios</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_funcionarios</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>351</x>
-     <y>277</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>338</x>
-     <y>444</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_funcionarios</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_fornecedores</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>364</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>475</x>
-     <y>550</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_funcionarios</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_clientes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>364</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>393</x>
-     <y>401</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_fornecedores</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_fornecedores</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>492</x>
-     <y>283</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>472</x>
-     <y>352</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_fornecedores</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_clientes</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>504</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>495</x>
-     <y>412</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_fornecedores</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_funcionarios</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>504</x>
-     <y>312</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>522</x>
-     <y>474</y>
     </hint>
    </hints>
   </connection>
