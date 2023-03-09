@@ -12,6 +12,7 @@ def limp_cadProdutos():
     vlcompra=principal.ent_vlcompra_pro.setText("") #Setando no campo espaço em branco.
     vlvenda=principal.ent_vlvenda_pro.setText("") #Setando no campo espaço em branco.
     categoria=principal.ent_categoria_pro.setText("") #Setando no campo espaço em branco.
+    fornecedores=principal.ent_fornecedor_pro.setText("") #Setando no campo espaço em branco.
 
 #Função encarregada de fazeer a limpeza dos campos da tela de LOGIN.   
 def limp_login():

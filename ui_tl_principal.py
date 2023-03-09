@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1055, 841)
+        MainWindow.resize(900, 700)
         MainWindow.setMinimumSize(QtCore.QSize(900, 700))
         MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
         MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
@@ -660,8 +660,37 @@ class Ui_MainWindow(object):
         self.fr_subtelas_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_subtelas_produtos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_subtelas_produtos.setObjectName("fr_subtelas_produtos")
+        self.fr_inventario = QtWidgets.QWidget(parent=self.fr_subtelas_produtos)
+        self.fr_inventario.setGeometry(QtCore.QRect(10, 20, 801, 361))
+        self.fr_inventario.setStyleSheet("background-color: rgb(232, 232, 232);")
+        self.fr_inventario.setObjectName("fr_inventario")
+        self.tab_inventario = QtWidgets.QTableWidget(parent=self.fr_inventario)
+        self.tab_inventario.setGeometry(QtCore.QRect(0, 10, 801, 361))
+        self.tab_inventario.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font: 12px \"Arial\";\n"
+"border-style: outset;\n"
+"border-width: 1px;\n"
+"border-radius: 5px;\n"
+"border-color: black;")
+        self.tab_inventario.setObjectName("tab_inventario")
+        self.tab_inventario.setColumnCount(7)
+        self.tab_inventario.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tab_inventario.setHorizontalHeaderItem(6, item)
         self.fr_produtos = QtWidgets.QFrame(parent=self.fr_subtelas_produtos)
-        self.fr_produtos.setGeometry(QtCore.QRect(10, 20, 801, 361))
+        self.fr_produtos.setGeometry(QtCore.QRect(10, 30, 801, 361))
         self.fr_produtos.setStyleSheet("background-color: rgb(232, 232, 232);")
         self.fr_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_produtos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -751,14 +780,14 @@ class Ui_MainWindow(object):
 "")
         self.bt_remover_pro.setObjectName("bt_remover_pro")
         self.label_produtos_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_produtos_pro.setGeometry(QtCore.QRect(13, 161, 141, 23))
+        self.label_produtos_pro.setGeometry(QtCore.QRect(13, 95, 141, 23))
         self.label_produtos_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
 "font: 63 14pt \"Open Sans Semibold\";\n"
 "border:noborder;")
         self.label_produtos_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_produtos_pro.setObjectName("label_produtos_pro")
         self.ent_produto_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_produto_pro.setGeometry(QtCore.QRect(160, 156, 200, 30))
+        self.ent_produto_pro.setGeometry(QtCore.QRect(160, 90, 200, 30))
         self.ent_produto_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_produto_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_produto_pro.setStyleSheet("QLineEdit {\n"
@@ -772,14 +801,14 @@ class Ui_MainWindow(object):
         self.ent_produto_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_produto_pro.setObjectName("ent_produto_pro")
         self.label_quantidade_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_quantidade_pro.setGeometry(QtCore.QRect(12, 240, 140, 21))
+        self.label_quantidade_pro.setGeometry(QtCore.QRect(12, 174, 140, 21))
         self.label_quantidade_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
 "font: 63 14pt \"Open Sans Semibold\";\n"
 "border:noborder;")
         self.label_quantidade_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_quantidade_pro.setObjectName("label_quantidade_pro")
         self.label_vlcompra_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_vlcompra_pro.setGeometry(QtCore.QRect(360, 80, 231, 21))
+        self.label_vlcompra_pro.setGeometry(QtCore.QRect(360, 14, 231, 21))
         self.label_vlcompra_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
 "font: 63 14pt \"Open Sans Semibold\";\n"
 "border:noborder;")
@@ -788,7 +817,7 @@ class Ui_MainWindow(object):
         self.label_vlcompra_pro.setIndent(-1)
         self.label_vlcompra_pro.setObjectName("label_vlcompra_pro")
         self.label_vlvenda_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_vlvenda_pro.setGeometry(QtCore.QRect(368, 160, 210, 21))
+        self.label_vlvenda_pro.setGeometry(QtCore.QRect(368, 94, 210, 21))
         font = QtGui.QFont()
         font.setFamily("Open Sans Semibold")
         font.setPointSize(14)
@@ -802,14 +831,14 @@ class Ui_MainWindow(object):
         self.label_vlvenda_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_vlvenda_pro.setObjectName("label_vlvenda_pro")
         self.label_nacimento_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_nacimento_pro.setGeometry(QtCore.QRect(360, 230, 231, 41))
+        self.label_nacimento_pro.setGeometry(QtCore.QRect(360, 164, 231, 41))
         self.label_nacimento_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
 "font: 63 14pt \"Open Sans Semibold\";\n"
 "border:noborder;")
         self.label_nacimento_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_nacimento_pro.setObjectName("label_nacimento_pro")
         self.ent_quantidade_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_quantidade_pro.setGeometry(QtCore.QRect(160, 236, 200, 30))
+        self.ent_quantidade_pro.setGeometry(QtCore.QRect(160, 170, 200, 30))
         self.ent_quantidade_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_quantidade_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_quantidade_pro.setStyleSheet("QLineEdit {\n"
@@ -823,7 +852,7 @@ class Ui_MainWindow(object):
         self.ent_quantidade_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_quantidade_pro.setObjectName("ent_quantidade_pro")
         self.ent_vlcompra_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_vlcompra_pro.setGeometry(QtCore.QRect(580, 76, 200, 30))
+        self.ent_vlcompra_pro.setGeometry(QtCore.QRect(580, 10, 200, 30))
         self.ent_vlcompra_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_vlcompra_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_vlcompra_pro.setStyleSheet("QLineEdit {\n"
@@ -837,7 +866,7 @@ class Ui_MainWindow(object):
         self.ent_vlcompra_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_vlcompra_pro.setObjectName("ent_vlcompra_pro")
         self.ent_vlvenda_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_vlvenda_pro.setGeometry(QtCore.QRect(580, 156, 200, 30))
+        self.ent_vlvenda_pro.setGeometry(QtCore.QRect(580, 90, 200, 30))
         self.ent_vlvenda_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_vlvenda_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_vlvenda_pro.setStyleSheet("QLineEdit {\n"
@@ -851,7 +880,7 @@ class Ui_MainWindow(object):
         self.ent_vlvenda_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_vlvenda_pro.setObjectName("ent_vlvenda_pro")
         self.ent_categoria_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_categoria_pro.setGeometry(QtCore.QRect(580, 236, 200, 30))
+        self.ent_categoria_pro.setGeometry(QtCore.QRect(580, 170, 200, 30))
         self.ent_categoria_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_categoria_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_categoria_pro.setStyleSheet("QLineEdit {\n"
@@ -865,14 +894,14 @@ class Ui_MainWindow(object):
         self.ent_categoria_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_categoria_pro.setObjectName("ent_categoria_pro")
         self.label_id_pro = QtWidgets.QLabel(parent=self.fr_produtos)
-        self.label_id_pro.setGeometry(QtCore.QRect(30, 80, 101, 21))
+        self.label_id_pro.setGeometry(QtCore.QRect(30, 14, 101, 21))
         self.label_id_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
 "font: 63 14pt \"Open Sans Semibold\";\n"
 "border:noborder;")
         self.label_id_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_id_pro.setObjectName("label_id_pro")
         self.ent_id_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
-        self.ent_id_pro.setGeometry(QtCore.QRect(160, 76, 200, 30))
+        self.ent_id_pro.setGeometry(QtCore.QRect(160, 10, 200, 30))
         self.ent_id_pro.setMinimumSize(QtCore.QSize(200, 30))
         self.ent_id_pro.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_id_pro.setStyleSheet("QLineEdit {\n"
@@ -941,33 +970,27 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.bt_limpar_pro.setObjectName("bt_limpar_pro")
-        self.fr_inventario = QtWidgets.QWidget(parent=self.fr_subtelas_produtos)
-        self.fr_inventario.setGeometry(QtCore.QRect(10, 20, 801, 361))
-        self.fr_inventario.setStyleSheet("background-color: rgb(232, 232, 232);")
-        self.fr_inventario.setObjectName("fr_inventario")
-        self.tab_inventario = QtWidgets.QTableWidget(parent=self.fr_inventario)
-        self.tab_inventario.setGeometry(QtCore.QRect(0, 10, 801, 361))
-        self.tab_inventario.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font: 12px \"Arial\";\n"
+        self.ent_fornecedor_pro = QtWidgets.QLineEdit(parent=self.fr_produtos)
+        self.ent_fornecedor_pro.setGeometry(QtCore.QRect(390, 230, 200, 30))
+        self.ent_fornecedor_pro.setMinimumSize(QtCore.QSize(200, 30))
+        self.ent_fornecedor_pro.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.ent_fornecedor_pro.setStyleSheet("QLineEdit {\n"
 "border-style: outset;\n"
-"border-width: 1px;\n"
-"border-radius: 5px;\n"
-"border-color: black;")
-        self.tab_inventario.setObjectName("tab_inventario")
-        self.tab_inventario.setColumnCount(6)
-        self.tab_inventario.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tab_inventario.setHorizontalHeaderItem(5, item)
+"border-width: 2px;\n"
+"border-radius: 15px;\n"
+"border-color: black;\n"
+"font: 87 12pt \"Segoe UI Black\";\n"
+"    color: rgb(0, 0, 0);\n"
+"}")
+        self.ent_fornecedor_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.ent_fornecedor_pro.setObjectName("ent_fornecedor_pro")
+        self.label_fornecedor_pro = QtWidgets.QLabel(parent=self.fr_produtos)
+        self.label_fornecedor_pro.setGeometry(QtCore.QRect(230, 235, 140, 21))
+        self.label_fornecedor_pro.setStyleSheet("font: 81 8pt \"Rockwell Extra Bold\";\n"
+"font: 63 14pt \"Open Sans Semibold\";\n"
+"border:noborder;")
+        self.label_fornecedor_pro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_fornecedor_pro.setObjectName("label_fornecedor_pro")
         self.tabWidget.addTab(self.produtos, "")
         self.pessoas = QtWidgets.QWidget()
         self.pessoas.setObjectName("pessoas")
@@ -1375,7 +1398,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame_mae)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1055, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 900, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.toolBar = QtWidgets.QToolBar(parent=MainWindow)
@@ -1383,7 +1406,7 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.ToolBarArea.TopToolBarArea, self.toolBar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
         self.bt_saidapro_rel.clicked.connect(self.widget_2.show) # type: ignore
         self.bt_vendasm_rel.clicked.connect(self.widget_5.show) # type: ignore
         self.bt_vendadt_rel.clicked.connect(self.widget_3.show) # type: ignore
@@ -1413,11 +1436,9 @@ class Ui_MainWindow(object):
         self.bt_fornecedores.clicked.connect(self.fr_fornecedores.show) # type: ignore
         self.bt_fornecedores.clicked.connect(self.fr_clientes.hide) # type: ignore
         self.bt_fornecedores.clicked.connect(self.fr_funcionarios.hide) # type: ignore
-        self.bt_produtos.clicked.connect(self.fr_produtos.show) # type: ignore
         self.bt_produtos.clicked.connect(self.fr_inventario.hide) # type: ignore
         self.bt_produtos.clicked.connect(self.tab_inventario.hide) # type: ignore
         self.bt_inventario.clicked.connect(self.tab_inventario.show) # type: ignore
-        self.bt_inventario.clicked.connect(self.fr_produtos.hide) # type: ignore
         self.bt_inventario.clicked.connect(self.fr_inventario.show) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1487,6 +1508,20 @@ class Ui_MainWindow(object):
 "\n"
 "Produtos/\n"
 "serviços"))
+        item = self.tab_inventario.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "ID"))
+        item = self.tab_inventario.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "NOME"))
+        item = self.tab_inventario.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "DESCRIÇÃO"))
+        item = self.tab_inventario.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "FORNECEDOR"))
+        item = self.tab_inventario.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "VALOR COMPRA"))
+        item = self.tab_inventario.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "VALOR VENDA"))
+        item = self.tab_inventario.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "ESTOQUE"))
         self.bt_cadas_pro.setText(_translate("MainWindow", "Cadastrar"))
         self.bt_consulta_pro.setText(_translate("MainWindow", "Consultar"))
         self.bt_remover_pro.setText(_translate("MainWindow", "Remover"))
@@ -1498,18 +1533,7 @@ class Ui_MainWindow(object):
         self.label_id_pro.setText(_translate("MainWindow", "Id"))
         self.bt_atualizar_pro.setText(_translate("MainWindow", "Atualizar"))
         self.bt_limpar_pro.setText(_translate("MainWindow", "Limpa Campos"))
-        item = self.tab_inventario.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "ID"))
-        item = self.tab_inventario.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "NOME"))
-        item = self.tab_inventario.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "DESCRIÇÃO"))
-        item = self.tab_inventario.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "VALOR COMPRA"))
-        item = self.tab_inventario.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "VALOR VENDA"))
-        item = self.tab_inventario.horizontalHeaderItem(5)
-        item.setText(_translate("MainWindow", "ESTOQUE"))
+        self.label_fornecedor_pro.setText(_translate("MainWindow", "Fornecedor"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.produtos), _translate("MainWindow", "Produtos"))
         self.bt_fornecedores.setText(_translate("MainWindow", "\n"
 "Fornecedores"))

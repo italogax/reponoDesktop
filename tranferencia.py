@@ -1,4 +1,29 @@
 from api_conectDb import *
+"""Codigo Fonte que faz todas as conexões."""
+
+import sys
+from tkinter import messagebox
+from PyQt5 import uic, QtWidgets
+import PySimpleGUI as py
+import keyboard
+#Importando conexão com DATABASE.
+from api_conectDb import * 
+#Importando verificação do USER e PSWORD.
+from api_checkuser import *
+#Importando função cadastro de produtos.
+from api_cadProdutos import *
+#Importando função alteração de produtos.
+from api_altProdutos import *
+#Importando função para consulta produtos
+from api_conProdutos import *
+#Importando função que deleta produtos do DataBase.
+from api_delProdutos import *
+#Importando função do PVD.
+from api_caixaReg import *
+#Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
+from api_gerirestoque import *
+#Importando funções que automatizam processos no teclado.
+from api_atalhoskey import keypress
 
 
 
@@ -104,3 +129,26 @@ def test2():
     print (conversor)
 test2()
 """
+"""
+"""
+def numpedido(): 
+    global pedido #Tornando a variavel pedido global.
+    caracter= string.ascii_letters + string.digits #Gerando as LETRAS e NUMEROS do alfanumerico.
+    pedido= '' #Variavel que recebera o numero alfanumerico.
+    for i in range(5): #Informando quantos campos vai ter o numero alfanumerico.
+        pedido += choice(caracter) #Incrementando os caracteres dentro da variavel PEDIDO.
+    
+def hitory_vendas():
+    numpedido() #
+    fpagamento= principal.comboBox.currentText()
+    cursor=con.cursor() #Conexão com o DataBase.
+    entdb=("""INSERT INTO tb_vendas
+	(id, produto, vl_unidade, quantidade, vl_total, forma_pagamento, data, hora, pedido)
+    SELECT id, produto, vl_unidade, quantidade, vl_total, '{}', now(), now(), '{}'
+    FROM tb_vendarotativa ;""".format(fpagamento, pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
+    cursor.execute(entdb) #Executando comando no DataBase.
+    con.commit() #Commitando execução no DataBase
+    
+#hitory_vendas()
+fpagamento= principal.comboBox.currentText()
+print (fpagamento )

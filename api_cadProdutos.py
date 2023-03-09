@@ -18,10 +18,11 @@ def cadas_produtos():
     vlcompra=principal.ent_vlcompra_pro.text() #Importando valores do campo VALOR COMPRA inserido pelo user.
     vlvenda=principal.ent_vlvenda_pro.text() #Importando valores do campo VALOR VENDA inserido pelo user.
     categoria=principal.ent_categoria_pro.text() #Importando valores do campo DATA ENTRADA inserido pelo user.
+    fornecedor=principal.ent_fornecedor_pro.text() #Importando valores do campo FORNECEDORES inseridos pelo user.
 
     cursor=con.cursor() #Conexão com o DataBase.
-    entrada=""" INSERT INTO tb_produtos(id,nome,descricao,vl_compra,vl_venda,estoque) values (null,%s,%s,%s,%s,%s)""" #Comando Para inserir dados no DataBase.
-    entrada2=(nome,categoria,vlcompra,vlvenda,quantidade) #Dados importandos do campo preenchido pelo user sendo inseridos no comando ENTRADA.
+    entrada=""" INSERT INTO tb_produtos(id,nome,descricao,fornecedor,vl_compra,vl_venda,estoque) values (null,%s,%s,%s,%s,%s,%s)""" #Comando Para inserir dados no DataBase.
+    entrada2=(nome,categoria,fornecedor,vlcompra,vlvenda,quantidade) #Dados importandos do campo preenchido pelo user sendo inseridos no comando ENTRADA.
     cursor.execute(entrada,entrada2) #Executando comando ENTRADA, ENTRADA2
     con.commit() #Commitando dados no DataBase.
     cursor.close() #Fechando a conexão com o DataBase.

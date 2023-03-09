@@ -108,15 +108,17 @@ def numpedido():
     pedido= '' #Variavel que recebera o numero alfanumerico.
     for i in range(5): #Informando quantos campos vai ter o numero alfanumerico.
         pedido += choice(caracter) #Incrementando os caracteres dentro da variavel PEDIDO.
+    
 
 #Função encarregada de amazenar os dados de compras finalizadas no DataBase
 def hitory_vendas():
     numpedido() #
+    fpagamento= principal.comboBox.currentText()
     cursor=con.cursor() #Conexão com o DataBase.
     entdb=("""INSERT INTO tb_vendas
-	(id, produto, vl_unidade, quantidade, vl_total, data, hora, pedido)
-    SELECT id, produto, vl_unidade, quantidade, vl_total, now(), now(), '{}'
-    FROM tb_vendarotativa ;""".format(pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
+	(id, produto, vl_unidade, quantidade, vl_total, forma_pagamento, data, hora, pedido)
+    SELECT id, produto, vl_unidade, quantidade, vl_total, '{}', now(), now(), '{}'
+    FROM tb_vendarotativa ;""".format(fpagamento, pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
     cursor.execute(entdb) #Executando comando no DataBase.
     con.commit() #Commitando execução no DataBase
     

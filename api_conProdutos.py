@@ -27,9 +27,9 @@ def consul_produtos_id():
         cursor.execute(editabanco) #Comando executando o EDITABANCO
         campos=cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
         principal.tab_inventario.setRowCount(len(campos)) #Definindo a contagem de linhas da table.
-        principal.tab_inventario.setColumnCount(6) #Definindo a contagem de colunas da table.
+        principal.tab_inventario.setColumnCount(7) #Definindo a contagem de colunas da table.
         for l in range(len(campos)): #Inserindo todas as linhas da DataBase na table.
-            for c in range(0,6): #Inserindo todas as colunas do DataBase na table.
+            for c in range(0,7): #Inserindo todas as colunas do DataBase na table.
                 principal.tab_inventario.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
         cursor.close() #Fechando a conexão com o DataBase.
 
@@ -40,11 +40,13 @@ def consul_produtos_id():
         campos = cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
 
         nome=principal.ent_produto_pro.setText(str(campos[0][1])) #Setando a primeira coluna.
-        quantidade=principal.ent_quantidade_pro.setText(str(campos[0][5])) #Setando a quinta coluna.
-        vlcompra=principal.ent_vlcompra_pro.setText(str(campos[0][3])) #Setando a terceira coluna.
-        vlvenda=principal.ent_vlvenda_pro.setText(str(campos[0][4])) #Setando a quarta coluna.
         categoria=principal.ent_categoria_pro.setText(str(campos[0][2])) #Setando a segunda coluna.
-
+        fornecedor=principal.ent_fornecedor_pro.setText(str(campos[0][3])) #Setando a terceira coluna.
+        quantidade=principal.ent_quantidade_pro.setText(str(campos[0][6])) #Setando a quinta coluna.
+        vlcompra=principal.ent_vlcompra_pro.setText(str(campos[0][4])) #Setando a terceira coluna.
+        vlvenda=principal.ent_vlvenda_pro.setText(str(campos[0][5])) #Setando a quarta coluna.
+        
+        
 #Função a ser executada apos clicar no botton INVENTARIO.
 def consul_produtos():
 
@@ -55,8 +57,8 @@ def consul_produtos():
     cursor.execute(editabanco) #Executando comando EDITABANCO dentro do DataBase.
     campos=cursor.fetchall() #Selecionando todas as linhas, colunas do DataBase.
     principal.tab_inventario.setRowCount(len(campos)) #Definindo a contagem de linhas da table. 
-    principal.tab_inventario.setColumnCount(6) #Definindo a contagem de colunas da table.
+    principal.tab_inventario.setColumnCount(7) #Definindo a contagem de colunas da table.
     for l in range(len(campos)): #Inserindo todas as linhas da DataBase na table.
-        for c in range(0,6): #Inserindo todas as colunas do DataBase na table.
+        for c in range(0,7): #Inserindo todas as colunas do DataBase na table.
             principal.tab_inventario.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
     cursor.close() #Fechando a conexão com o DataBase.

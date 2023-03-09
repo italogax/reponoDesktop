@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1055</width>
-    <height>841</height>
+    <width>900</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -190,7 +190,7 @@ background-color: rgb(220, 220, 220);
 font-size:18px;</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="vendas">
              <attribute name="title">
@@ -1823,11 +1823,77 @@ border:noborder;</string>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <widget class="QFrame" name="fr_produtos">
+               <widget class="QWidget" name="fr_inventario" native="true">
                 <property name="geometry">
                  <rect>
                   <x>10</x>
                   <y>20</y>
+                  <width>801</width>
+                  <height>361</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(232, 232, 232);</string>
+                </property>
+                <widget class="QTableWidget" name="tab_inventario">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>801</width>
+                   <height>361</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);
+font: 12px &quot;Arial&quot;;
+border-style: outset;
+border-width: 1px;
+border-radius: 5px;
+border-color: black;</string>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string>ID</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>NOME</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>DESCRIÇÃO</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>FORNECEDOR</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>VALOR COMPRA</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>VALOR VENDA</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>ESTOQUE</string>
+                  </property>
+                 </column>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="fr_produtos">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>30</y>
                   <width>801</width>
                   <height>361</height>
                  </rect>
@@ -1995,7 +2061,7 @@ background-color: rgb(0, 0, 0);
                  <property name="geometry">
                   <rect>
                    <x>13</x>
-                   <y>161</y>
+                   <y>95</y>
                    <width>141</width>
                    <height>23</height>
                   </rect>
@@ -2016,7 +2082,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>160</x>
-                   <y>156</y>
+                   <y>90</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2051,7 +2117,7 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
                  <property name="geometry">
                   <rect>
                    <x>12</x>
-                   <y>240</y>
+                   <y>174</y>
                    <width>140</width>
                    <height>21</height>
                   </rect>
@@ -2072,7 +2138,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>360</x>
-                   <y>80</y>
+                   <y>14</y>
                    <width>231</width>
                    <height>21</height>
                   </rect>
@@ -2099,7 +2165,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>368</x>
-                   <y>160</y>
+                   <y>94</y>
                    <width>210</width>
                    <height>21</height>
                   </rect>
@@ -2129,7 +2195,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>360</x>
-                   <y>230</y>
+                   <y>164</y>
                    <width>231</width>
                    <height>41</height>
                   </rect>
@@ -2150,7 +2216,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>160</x>
-                   <y>236</y>
+                   <y>170</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2185,7 +2251,7 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
                  <property name="geometry">
                   <rect>
                    <x>580</x>
-                   <y>76</y>
+                   <y>10</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2220,7 +2286,7 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
                  <property name="geometry">
                   <rect>
                    <x>580</x>
-                   <y>156</y>
+                   <y>90</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2255,7 +2321,7 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
                  <property name="geometry">
                   <rect>
                    <x>580</x>
-                   <y>236</y>
+                   <y>170</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2290,7 +2356,7 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
                  <property name="geometry">
                   <rect>
                    <x>30</x>
-                   <y>80</y>
+                   <y>14</y>
                    <width>101</width>
                    <height>21</height>
                   </rect>
@@ -2311,7 +2377,7 @@ border:noborder;</string>
                  <property name="geometry">
                   <rect>
                    <x>160</x>
-                   <y>76</y>
+                   <y>10</y>
                    <width>200</width>
                    <height>30</height>
                   </rect>
@@ -2442,66 +2508,61 @@ background-color: rgb(0, 0, 0);
                   <string>Limpa Campos</string>
                  </property>
                 </widget>
-               </widget>
-               <widget class="QWidget" name="fr_inventario" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>20</y>
-                  <width>801</width>
-                  <height>361</height>
-                 </rect>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(232, 232, 232);</string>
-                </property>
-                <widget class="QTableWidget" name="tab_inventario">
+                <widget class="QLineEdit" name="ent_fornecedor_pro">
                  <property name="geometry">
                   <rect>
-                   <x>0</x>
-                   <y>10</y>
-                   <width>801</width>
-                   <height>361</height>
+                   <x>390</x>
+                   <y>230</y>
+                   <width>200</width>
+                   <height>30</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>400</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 2px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+	color: rgb(0, 0, 0);
+}</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_fornecedor_pro">
+                 <property name="geometry">
+                  <rect>
+                   <x>230</x>
+                   <y>235</y>
+                   <width>140</width>
+                   <height>21</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);
-font: 12px &quot;Arial&quot;;
-border-style: outset;
-border-width: 1px;
-border-radius: 5px;
-border-color: black;</string>
+                  <string notr="true">font: 81 8pt &quot;Rockwell Extra Bold&quot;;
+font: 63 14pt &quot;Open Sans Semibold&quot;;
+border:noborder;</string>
                  </property>
-                 <column>
-                  <property name="text">
-                   <string>ID</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>NOME</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>DESCRIÇÃO</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>VALOR COMPRA</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>VALOR VENDA</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>ESTOQUE</string>
-                  </property>
-                 </column>
+                 <property name="text">
+                  <string>Fornecedor</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </widget>
               </widget>
@@ -3583,7 +3644,7 @@ background-color: rgb(255, 255, 255);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1055</width>
+     <width>900</width>
      <height>21</height>
     </rect>
    </property>
@@ -4069,22 +4130,6 @@ background-color: rgb(255, 255, 255);
   <connection>
    <sender>bt_produtos</sender>
    <signal>clicked()</signal>
-   <receiver>fr_produtos</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>172</x>
-     <y>292</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>172</x>
-     <y>364</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_produtos</sender>
-   <signal>clicked()</signal>
    <receiver>fr_inventario</receiver>
    <slot>hide()</slot>
    <hints>
@@ -4127,22 +4172,6 @@ background-color: rgb(255, 255, 255);
     <hint type="destinationlabel">
      <x>394</x>
      <y>563</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_inventario</sender>
-   <signal>clicked()</signal>
-   <receiver>fr_produtos</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>288</x>
-     <y>296</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>305</x>
-     <y>373</y>
     </hint>
    </hints>
   </connection>
