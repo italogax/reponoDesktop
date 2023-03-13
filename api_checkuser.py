@@ -32,4 +32,6 @@ def check_user():
         messagebox.showerror(title="Aviso de Login", message="Acesso negado, Verifique se esta cadastrado no sistema!") #MessageBox informando que o user e senha esta incorreto.
         limp_login()#Função que limpa os campos da tela login.
 
+
+
     

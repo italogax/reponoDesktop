@@ -9,7 +9,7 @@ from api_iniTelas import *
 #Importando função LIMPACAMPOS.
 from api_limpaCampos import *
 
-#Função encarregada de remover produtos do banco de dados.
+#Função encarregada de remover produtos do DataBase.
 def remo_produtos():
 
     id=principal.ent_id_pro.text() #Importando valores do campo ID inseridos pelo user.

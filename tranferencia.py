@@ -130,7 +130,6 @@ def test2():
 test2()
 """
 """
-"""
 def numpedido(): 
     global pedido #Tornando a variavel pedido global.
     caracter= string.ascii_letters + string.digits #Gerando as LETRAS e NUMEROS do alfanumerico.
@@ -142,13 +141,14 @@ def hitory_vendas():
     numpedido() #
     fpagamento= principal.comboBox.currentText()
     cursor=con.cursor() #Conexão com o DataBase.
-    entdb=("""INSERT INTO tb_vendas
+    entdb=(""""""INSERT INTO tb_vendas
 	(id, produto, vl_unidade, quantidade, vl_total, forma_pagamento, data, hora, pedido)
     SELECT id, produto, vl_unidade, quantidade, vl_total, '{}', now(), now(), '{}'
-    FROM tb_vendarotativa ;""".format(fpagamento, pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
+    FROM tb_vendarotativa ;"""""".format(fpagamento, pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
     cursor.execute(entdb) #Executando comando no DataBase.
     con.commit() #Commitando execução no DataBase
     
 #hitory_vendas()
 fpagamento= principal.comboBox.currentText()
 print (fpagamento )
+"""

@@ -1,7 +1,6 @@
 """API encarregada de fazer todo o funcionamento do PVD"""
 
 from tkinter import messagebox
-
 #Importando telas do System.
 from api_iniTelas import *
 #Importando conexão com o DataBase.
@@ -23,7 +22,7 @@ def monstra_produtos():
 
     #Campos da tela---------------------------------
     produto=principal.ent_produtocaixa.setText(str(campos[0][1])) #Setando nome do produto.
-    valoruni=principal.ent_valorcaixa.setText(str(campos[0][4])) #Setando valor de venda.
+    valoruni=principal.ent_valorcaixa.setText(str(campos[0][5])) #Setando valor de venda.
 
 #Função encarregada de fazer o commit dos dados aputados na tela do CAIXA no DataBase.
 def up_table():

@@ -21,8 +21,20 @@ from api_delProdutos import remo_produtos
 from api_caixaReg import monstra_produtos, sub_total, limpa_tabrotativa
 #Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
 from api_gerirestoque import *
-#Importando funções que automatizam processos no teclado.
-from api_atalhoskey import keypress
+#Imporando função que cadastra clientes.
+from api_cadcliente import  *
+#Imporando função que altera cadastro de clientes.
+from api_altcliente import *
+#Imporando função que consulta cadastro de clientes.
+from api_concliente import *
+#Imporando função que deleta cadastro de clientes.
+from api_delcliente import *
+
+
+
+
+
+
 
 #Bottons do System======================================================================
 #Tela de login------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -36,13 +48,21 @@ principal.bt_inventario.clicked.connect(consul_produtos)  #Botão inventario que
 principal.bt_remover_pro.clicked.connect(remo_produtos) #Botão remover que chama a função remover produtos no DataBase.
 principal.bt_limpar_pro.clicked.connect(limp_cadProdutos) #Botão limpa campos que chama a função para limpar todos os campos da tela de cadastro de produtos.
 
-#Tela do Caixa------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Tela do Caixa=========================================================================================================================================================================================================================
 principal.bt_cancelarcompra.clicked.connect(limpa_tabrotativa) #Botão encarregado de cancelar a compra que estava sendo efetuada.
 #principal.bt_cancelarproduto.clicked.connect() #Botão encarregado de cancelar produtos expecificos da compra.
 principal.bt_finalizarcompra.clicked.connect(att_estoque) #Botão encarregado de finalizar a compra.
 principal.bt_pesquisar.clicked.connect(monstra_produtos) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
 principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calculo do subtotal.
 #principal.bt_tabcodigos_ven.clicked.connect(consul_produtos)
+
+#Tela de Pessoas=========================================================================================================================================================================================================================
+#Tela Cadastro de Clientes---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+principal.bt_cadas_cli.clicked.connect(cad_cliente)
+principal.bt_consulta_cli.clicked.connect(consul_clientes)
+principal.bt_atualizar_cli.clicked.connect(alter_cliente)
+principal.bt_remover_cli.clicked.connect(remo_clientes)
+#principal.bt_limpar_cli.clicked.connect()
 
 limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 login.show() #Exibi tela login.

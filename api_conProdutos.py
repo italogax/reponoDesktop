@@ -10,20 +10,20 @@ from api_iniTelas import *
 #Importando função LIMPACAMPOS.
 from api_limpaCampos import *
 
-#Função para ser executada na tela principal PRODUTOS.
+#Função encarregada de fazer a consulta de PRODUTOS no DataBase retornar dados na tela.
 def consul_produtos_id():
 
-    cursor=con.cursor() #Conexão no DataBase.
     id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
 
+    cursor=con.cursor() #Conexão no DataBase.
     #Caso o campo ID esteja vazio.
     if id =="":
-        #MessageBox informando que o ID não foi encontrado
+        #MessageBox informando que o ID não foi encontrado.
         messagebox.showerror(title="Id não encontrado", message="""
         ID não encontrado!
         Por favor verficque na aba INVENTARIO o ID que procura!""")
 
-        editabanco="SELECT * from tb_produtos" #Comando que seleciona todos os dados da DataBase.
+        editabanco=("SELECT * from tb_produtos") #Comando que seleciona todos os dados da DataBase.
         cursor.execute(editabanco) #Comando executando o EDITABANCO
         campos=cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
         principal.tab_inventario.setRowCount(len(campos)) #Definindo a contagem de linhas da table.

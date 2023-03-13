@@ -1893,7 +1893,7 @@ border-color: black;</string>
                 <property name="geometry">
                  <rect>
                   <x>10</x>
-                  <y>30</y>
+                  <y>20</y>
                   <width>801</width>
                   <height>361</height>
                  </rect>
@@ -4420,12 +4420,12 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>208</x>
-     <y>312</y>
+     <x>130</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>359</x>
-     <y>703</y>
+     <x>391</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4436,8 +4436,8 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>328</x>
-     <y>312</y>
+     <x>250</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>276</x>
@@ -4452,8 +4452,8 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
-     <y>312</y>
+     <x>380</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>407</x>
@@ -4468,12 +4468,12 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>312</y>
+     <x>510</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>930</x>
-     <y>730</y>
+     <x>852</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4484,12 +4484,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>208</x>
-     <y>312</y>
+     <x>130</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>374</x>
-     <y>687</y>
+     <x>406</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4500,8 +4500,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>208</x>
-     <y>312</y>
+     <x>130</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>235</x>
@@ -4516,12 +4516,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>207</x>
-     <y>246</y>
+     <x>130</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>930</x>
-     <y>638</y>
+     <x>852</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4532,8 +4532,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>280</y>
+     <x>250</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>310</x>
@@ -4548,12 +4548,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>328</x>
-     <y>312</y>
+     <x>250</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>361</x>
-     <y>721</y>
+     <x>393</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4564,12 +4564,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>328</x>
-     <y>312</y>
+     <x>250</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>930</x>
-     <y>624</y>
+     <x>852</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4580,8 +4580,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
-     <y>312</y>
+     <x>380</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>460</x>
@@ -4596,12 +4596,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>458</x>
-     <y>312</y>
+     <x>380</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>359</x>
-     <y>721</y>
+     <x>391</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4612,12 +4612,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>450</x>
-     <y>272</y>
+     <x>380</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>930</x>
-     <y>649</y>
+     <x>852</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4628,8 +4628,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>312</y>
+     <x>510</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>729</x>
@@ -4644,8 +4644,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>312</y>
+     <x>510</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
      <x>544</x>
@@ -4660,12 +4660,12 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>312</y>
+     <x>510</x>
+     <y>241</y>
     </hint>
     <hint type="destinationlabel">
-     <x>361</x>
-     <y>703</y>
+     <x>393</x>
+     <y>659</y>
     </hint>
    </hints>
   </connection>
@@ -4676,8 +4676,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>187</x>
-     <y>301</y>
+     <x>109</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
      <x>210</x>
@@ -4692,8 +4692,8 @@ background-color: rgb(0, 0, 0);
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>271</x>
-     <y>301</y>
+     <x>193</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
      <x>602</x>
@@ -4708,8 +4708,8 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>271</x>
-     <y>301</y>
+     <x>193</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
      <x>341</x>
@@ -4724,8 +4724,8 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>187</x>
-     <y>301</y>
+     <x>109</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
      <x>602</x>
@@ -4734,50 +4734,178 @@ background-color: rgb(0, 0, 0);
    </hints>
   </connection>
   <connection>
-   <sender>bt_produtos</sender>
+   <sender>bt_cliente</sender>
    <signal>clicked()</signal>
-   <receiver>fr_inventario</receiver>
+   <receiver>fr_funcionarios</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>200</x>
-     <y>280</y>
+     <x>66</x>
+     <y>232</y>
     </hint>
     <hint type="destinationlabel">
-     <x>239</x>
-     <y>482</y>
+     <x>66</x>
+     <y>291</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>bt_produtos</sender>
+   <sender>bt_cliente</sender>
    <signal>clicked()</signal>
-   <receiver>tab_inventario</receiver>
+   <receiver>fr_fornecedores</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_cliente</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_clientes</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_funcionarios</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_fornecedores</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>171</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_funcionarios</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_clientes</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>203</x>
-     <y>258</y>
+     <y>231</y>
     </hint>
     <hint type="destinationlabel">
-     <x>253</x>
-     <y>565</y>
+     <x>194</x>
+     <y>330</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>bt_inventario</sender>
+   <sender>bt_funcionarios</sender>
    <signal>clicked()</signal>
-   <receiver>tab_inventario</receiver>
+   <receiver>fr_funcionarios</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>312</x>
-     <y>282</y>
+     <x>228</x>
+     <y>230</y>
     </hint>
     <hint type="destinationlabel">
-     <x>394</x>
-     <y>563</y>
+     <x>218</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_fornecedores</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_funcionarios</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_fornecedores</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_clientes</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_fornecedores</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_fornecedores</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_produtos</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_inventario</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_produtos</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_produtos</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>357</y>
     </hint>
    </hints>
   </connection>
@@ -4788,12 +4916,28 @@ background-color: rgb(0, 0, 0);
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>314</x>
-     <y>260</y>
+     <x>196</x>
+     <y>219</y>
     </hint>
     <hint type="destinationlabel">
-     <x>343</x>
-     <y>477</y>
+     <x>200</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bt_inventario</sender>
+   <signal>clicked()</signal>
+   <receiver>fr_produtos</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>353</y>
     </hint>
    </hints>
   </connection>

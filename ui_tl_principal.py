@@ -690,7 +690,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tab_inventario.setHorizontalHeaderItem(6, item)
         self.fr_produtos = QtWidgets.QFrame(parent=self.fr_subtelas_produtos)
-        self.fr_produtos.setGeometry(QtCore.QRect(10, 30, 801, 361))
+        self.fr_produtos.setGeometry(QtCore.QRect(10, 20, 801, 361))
         self.fr_produtos.setStyleSheet("background-color: rgb(232, 232, 232);")
         self.fr_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_produtos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -1847,10 +1847,19 @@ class Ui_MainWindow(object):
         self.bt_tabcodigos_ven.clicked.connect(self.fr_caixa.hide) # type: ignore
         self.bt_tabcodigos_ven.clicked.connect(self.fr_tabelaprodutos.show) # type: ignore
         self.bt_caixa_ven.clicked.connect(self.fr_caixa.show) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_fornecedores.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_clientes.show) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_fornecedores.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_funcionarios.show) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_fornecedores.show) # type: ignore
         self.bt_produtos.clicked.connect(self.fr_inventario.hide) # type: ignore
-        self.bt_produtos.clicked.connect(self.tab_inventario.hide) # type: ignore
-        self.bt_inventario.clicked.connect(self.tab_inventario.show) # type: ignore
+        self.bt_produtos.clicked.connect(self.fr_produtos.show) # type: ignore
         self.bt_inventario.clicked.connect(self.fr_inventario.show) # type: ignore
+        self.bt_inventario.clicked.connect(self.fr_produtos.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
