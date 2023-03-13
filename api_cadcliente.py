@@ -1,3 +1,5 @@
+"""API encarregada de fazer o cadastro de CLIENTES dentro do DataBase."""
+
 #Importando API encarregada de fazer a inicialização das telas.
 from api_iniTelas import *
 #Importando API encarregada de fazer a conexão com o DataBase.
