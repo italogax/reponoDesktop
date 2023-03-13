@@ -29,11 +29,14 @@ from api_altcliente import *
 from api_concliente import *
 #Imporando função que deleta cadastro de clientes.
 from api_delcliente import *
-
-
-
-
-
+#Importando função que cadastra Fornecedore.
+from api_cadfornecedores import *
+#Importando função que consulta dados dos FORNECEDORES dentro do DataBase e retorna esses dados na tela FORNECEDORES.
+from api_confornecedores import *
+#Importando função que faz alterações de dados já existentes dentro do DataBase.
+from api_altfornecedores import *
+#Importando função encarregada de DELETAR cadastro de fornecedores no DataBase.
+from api_delfornecedores import *
 
 
 #Bottons do System======================================================================
@@ -62,7 +65,15 @@ principal.bt_cadas_cli.clicked.connect(cad_cliente)
 principal.bt_consulta_cli.clicked.connect(consul_clientes)
 principal.bt_atualizar_cli.clicked.connect(alter_cliente)
 principal.bt_remover_cli.clicked.connect(remo_clientes)
-#principal.bt_limpar_cli.clicked.connect()
+principal.bt_limpar_cli.clicked.connect(limp_cadclientes)
+
+#Tela Cadastro de Funcionarios-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+principal.bt_cadas_for.clicked.connect(cad_fornecedores) #Botão encarregado de cadastrar novos FORNECEDORES no DataBase.
+principal.bt_consulta_for.clicked.connect(con_fornecedores) #Botão encarregado de consultar e retornar dados do DataBase na tela FORNECEDORES.
+principal.bt_atualizar_for.clicked.connect(alter_fornecedores) #Botão encarregado de fazer alteraçõess em dados já existentes dentro do DataBase na table FORNECEDORES.
+principal.bt_remover_for.clicked.connect(remo_fornecedores)
+principal.bt_limpar_for.clicked.connect(limp_cadfornecedores) #Botão encarregado de fazer a limpeza dos campos da tela FORNECEDORES.
+
 
 limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 login.show() #Exibi tela login.

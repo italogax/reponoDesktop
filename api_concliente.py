@@ -28,6 +28,7 @@ def consul_clientes():
         dadoscli=cursor.fetchall() #Selecionando todos os dados demonstrados no DataBase a partir do comando do editdb.
         cursor=cursor.close() #Fechando a conexão com o DataBase.
 
+        #Setando dados nos campos da tela CLIENTES.
         principal.ent_nome_cli.setText(str(dadoscli[0][1])) #Setando NOME do cliente.
         principal.ent_email_cli.setText(str(dadoscli[0][2])) #Setando EMAIL do cliente.
         principal.ent_contato_cli.setText(str(dadoscli[0][3])) #Setando TELEFONE do cliente.

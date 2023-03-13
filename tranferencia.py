@@ -1,6 +1,4 @@
 from api_conectDb import *
-"""Codigo Fonte que faz todas as conexões."""
-
 import sys
 from tkinter import messagebox
 from PyQt5 import uic, QtWidgets
