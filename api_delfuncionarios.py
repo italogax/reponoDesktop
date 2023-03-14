@@ -15,7 +15,7 @@ def remo_funcionarios():
 
     #Comandos a serem executados dentro do DataBase.
     cursor=con.cursor() #Criando a conexão no DataBase.
-    editdb=("DELETE tb_funcionario WHERE id='{}'".format(id))
+    editdb=("DELETE FROM tb_funcionario WHERE id='{}'".format(id))
     cursor.execute(editdb) #Executando comando acima dentro do DataBase.
     con.commit() #Commitando comando dentro do DataBase.
     cursor.close() #Fechando a conexão com o DataBase.
