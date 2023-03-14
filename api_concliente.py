@@ -32,6 +32,5 @@ def consul_clientes():
         principal.ent_nome_cli.setText(str(dadoscli[0][1])) #Setando NOME do cliente.
         principal.ent_email_cli.setText(str(dadoscli[0][2])) #Setando EMAIL do cliente.
         principal.ent_contato_cli.setText(str(dadoscli[0][3])) #Setando TELEFONE do cliente.
-        principal.ent_cpf_cli.setText(str(dadoscli[0][4])) #Setando CPF do cliente.
-
-        
+        principal.ent_nascimento_cli.setText(str(dadoscli[0][4])) #Setando NASCIMENTO do cliente.
+        principal.ent_cpf_cli.setText(str(dadoscli[0][5])) #Setando CPF do cliente.

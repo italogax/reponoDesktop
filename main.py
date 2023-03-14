@@ -37,6 +37,10 @@ from api_confornecedores import *
 from api_altfornecedores import *
 #Importando função encarregada de DELETAR cadastro de fornecedores no DataBase.
 from api_delfornecedores import *
+#Importando função encarregada de DELETAR cadastro de funcionarios no DataBase.
+from api_delfuncionarios import *
+#Importando função encarregada de CONSULTAR cadastro de funcionarios no DataBase.
+from api_confuncionarios import *
 
 
 #Bottons do System======================================================================
@@ -61,19 +65,25 @@ principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calc
 
 #Tela de Pessoas=========================================================================================================================================================================================================================
 #Tela Cadastro de Clientes---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-principal.bt_cadas_cli.clicked.connect(cad_cliente)
+principal.bt_cadas_cli.clicked.connect(cad_clientes)
 principal.bt_consulta_cli.clicked.connect(consul_clientes)
-principal.bt_atualizar_cli.clicked.connect(alter_cliente)
+principal.bt_atualizar_cli.clicked.connect(alter_clientes)
 principal.bt_remover_cli.clicked.connect(remo_clientes)
 principal.bt_limpar_cli.clicked.connect(limp_cadclientes)
 
-#Tela Cadastro de Funcionarios-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Tela Cadastro de Fornecedores-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 principal.bt_cadas_for.clicked.connect(cad_fornecedores) #Botão encarregado de cadastrar novos FORNECEDORES no DataBase.
 principal.bt_consulta_for.clicked.connect(con_fornecedores) #Botão encarregado de consultar e retornar dados do DataBase na tela FORNECEDORES.
 principal.bt_atualizar_for.clicked.connect(alter_fornecedores) #Botão encarregado de fazer alteraçõess em dados já existentes dentro do DataBase na table FORNECEDORES.
 principal.bt_remover_for.clicked.connect(remo_fornecedores)
 principal.bt_limpar_for.clicked.connect(limp_cadfornecedores) #Botão encarregado de fazer a limpeza dos campos da tela FORNECEDORES.
 
+#Tela Cadastro de Funcionarios-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#principal.bt_cadas_fun.clicked.connect(cad_funcionarios)
+principal.bt_consulta_fun.clicked.connect(consul_funcionarios)
+#principal.bt_atualizar_fun.clicked.connect(alter_funcionarios)
+principal.bt_remover_fun.clicked.connect(remo_funcionarios)
+principal.bt_limpar_fun.clicked.connect(limp_cadfuncionarios)
 
 limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 login.show() #Exibi tela login.

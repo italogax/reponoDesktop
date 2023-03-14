@@ -1,8 +1,6 @@
 """Está API é encarregada de efetuar as consultas no DataBase e retornar dados dos
     produtos tanto na tela de cadastrar dados quanto na tela de inventario onde temos uma tabela"""
 
-from PyQt5 import uic, QtWidgets
-import PySimpleGUI as py
 #Importando conexão com o banco de dados.
 from api_conectDb import *
 #Importando telas.

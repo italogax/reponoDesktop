@@ -1148,12 +1148,10 @@ class Ui_MainWindow(object):
         self.label_email_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
         self.label_email_fun.setGeometry(QtCore.QRect(240, 200, 51, 21))
         self.label_email_fun.setObjectName("label_email_fun")
-        self.label_senha_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
-        self.label_senha_fun.setGeometry(QtCore.QRect(290, 260, 61, 21))
-        self.label_senha_fun.setObjectName("label_senha_fun")
-        self.label_usuario_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
-        self.label_usuario_fun.setGeometry(QtCore.QRect(10, 260, 71, 16))
-        self.label_usuario_fun.setObjectName("label_usuario_fun")
+        self.label_cargo_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
+        self.label_cargo_fun.setGeometry(QtCore.QRect(10, 250, 71, 41))
+        self.label_cargo_fun.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_cargo_fun.setObjectName("label_cargo_fun")
         self.ent_cpf_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
         self.ent_cpf_fun.setGeometry(QtCore.QRect(390, 130, 141, 41))
         self.ent_cpf_fun.setStyleSheet("QLineEdit {\n"
@@ -1190,9 +1188,9 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "}")
         self.ent_email_fun.setObjectName("ent_email_fun")
-        self.ent_senha_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
-        self.ent_senha_fun.setGeometry(QtCore.QRect(350, 250, 113, 41))
-        self.ent_senha_fun.setStyleSheet("QLineEdit {\n"
+        self.ent_cargo_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
+        self.ent_cargo_fun.setGeometry(QtCore.QRect(90, 250, 121, 41))
+        self.ent_cargo_fun.setStyleSheet("QLineEdit {\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
 "border-radius: 15px;\n"
@@ -1201,19 +1199,7 @@ class Ui_MainWindow(object):
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
 "}")
-        self.ent_senha_fun.setObjectName("ent_senha_fun")
-        self.ent_usuario_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
-        self.ent_usuario_fun.setGeometry(QtCore.QRect(90, 250, 171, 41))
-        self.ent_usuario_fun.setStyleSheet("QLineEdit {\n"
-"border-style: outset;\n"
-"border-width: 1px;\n"
-"border-radius: 15px;\n"
-"border-color: black;\n"
-"font: 87 12pt \"Segoe UI Black\";\n"
-"color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);\n"
-"}")
-        self.ent_usuario_fun.setObjectName("ent_usuario_fun")
+        self.ent_cargo_fun.setObjectName("ent_cargo_fun")
         self.bt_remover_fun = QtWidgets.QPushButton(parent=self.fr_funcionarios)
         self.bt_remover_fun.setGeometry(QtCore.QRect(330, 320, 100, 35))
         self.bt_remover_fun.setMinimumSize(QtCore.QSize(100, 35))
@@ -1354,6 +1340,22 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.bt_consulta_fun.setObjectName("bt_consulta_fun")
+        self.label_endereco_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
+        self.label_endereco_fun.setGeometry(QtCore.QRect(230, 250, 101, 41))
+        self.label_endereco_fun.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_endereco_fun.setObjectName("label_endereco_fun")
+        self.ent_endereco_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
+        self.ent_endereco_fun.setGeometry(QtCore.QRect(330, 250, 341, 41))
+        self.ent_endereco_fun.setStyleSheet("QLineEdit {\n"
+"border-style: outset;\n"
+"border-width: 1px;\n"
+"border-radius: 15px;\n"
+"border-color: black;\n"
+"font: 87 12pt \"Segoe UI Black\";\n"
+"color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);\n"
+"}")
+        self.ent_endereco_fun.setObjectName("ent_endereco_fun")
         self.fr_clientes = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
         self.fr_clientes.setGeometry(QtCore.QRect(10, 10, 801, 381))
         self.fr_clientes.setStyleSheet("background-color: rgb(241, 241, 241);\n"
@@ -1969,8 +1971,7 @@ class Ui_MainWindow(object):
         self.label_nascimento_fun.setText(_translate("MainWindow", "Data de Nascimento"))
         self.label_cpf_fun.setText(_translate("MainWindow", "CPF"))
         self.label_email_fun.setText(_translate("MainWindow", "Email"))
-        self.label_senha_fun.setText(_translate("MainWindow", "Senha"))
-        self.label_usuario_fun.setText(_translate("MainWindow", "Usuário"))
+        self.label_cargo_fun.setText(_translate("MainWindow", "Cargo"))
         self.ent_cpf_fun.setInputMask(_translate("MainWindow", "999.999.999-99"))
         self.ent_contato_fun.setInputMask(_translate("MainWindow", "(99)99999-9999"))
         self.bt_remover_fun.setText(_translate("MainWindow", "Remover"))
@@ -1978,6 +1979,7 @@ class Ui_MainWindow(object):
         self.bt_limpar_fun.setText(_translate("MainWindow", "Limpa Campos"))
         self.bt_cadas_fun.setText(_translate("MainWindow", "Cadastrar"))
         self.bt_consulta_fun.setText(_translate("MainWindow", "Consultar"))
+        self.label_endereco_fun.setText(_translate("MainWindow", "Endereço"))
         self.label_titulo__cli.setText(_translate("MainWindow", "Cadastro de Clientes"))
         self.label_id_cli.setText(_translate("MainWindow", "ID"))
         self.label_nome_cli.setText(_translate("MainWindow", "Nome"))

@@ -3058,30 +3058,20 @@ background-color: rgb(255, 255, 255);
                   <string>Email</string>
                  </property>
                 </widget>
-                <widget class="QLabel" name="label_senha_fun">
-                 <property name="geometry">
-                  <rect>
-                   <x>290</x>
-                   <y>260</y>
-                   <width>61</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>Senha</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_usuario_fun">
+                <widget class="QLabel" name="label_cargo_fun">
                  <property name="geometry">
                   <rect>
                    <x>10</x>
-                   <y>260</y>
+                   <y>250</y>
                    <width>71</width>
-                   <height>16</height>
+                   <height>41</height>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Usuário</string>
+                  <string>Cargo</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                 <widget class="QLineEdit" name="ent_cpf_fun">
@@ -3153,33 +3143,12 @@ background-color: rgb(255, 255, 255);
 }</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="ent_senha_fun">
-                 <property name="geometry">
-                  <rect>
-                   <x>350</x>
-                   <y>250</y>
-                   <width>113</width>
-                   <height>41</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_usuario_fun">
+                <widget class="QLineEdit" name="ent_cargo_fun">
                  <property name="geometry">
                   <rect>
                    <x>90</x>
                    <y>250</y>
-                   <width>171</width>
+                   <width>121</width>
                    <height>41</height>
                   </rect>
                  </property>
@@ -3443,6 +3412,43 @@ background-color: rgb(0, 0, 0);
                  </property>
                  <property name="text">
                   <string>Consultar</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_endereco_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>230</x>
+                   <y>250</y>
+                   <width>101</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Endereço</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="ent_endereco_fun">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>250</y>
+                   <width>341</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: black;
+font: 87 12pt &quot;Segoe UI Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+}</string>
                  </property>
                 </widget>
                </widget>
