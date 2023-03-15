@@ -25,7 +25,7 @@ def alter_produtos():
     #Comandos dentro do SQL
     cursor=con.cursor() #Conectando ao DataBase.
     #Comando executado dentro do DataBase para gerar a atualização nos dados.
-    editabanco=("UPDATE tb_produtos SET nome='{}',descricao='{}',fornecedor='{}',vl_compra='{}',vl_venda='{}',estoque='{}' where id ='{}'".format(nome,categoria,fornecedor,vlcompra,vlvenda,quantidade,id))
+    editabanco=("UPDATE tb_produtos SET nome='{}',descricao='{}',fornecedor='{}',vl_compra='{}',vl_venda='{}',estoque='{}' WHERE id ='{}'".format(nome,categoria,fornecedor,vlcompra,vlvenda,quantidade,id))
     cursor.execute(editabanco) #Executando comando.
     con.commit() #Efetuando o commit do comando EDITABANCO.
     cursor.close() #Fechando a conexão com o DataBase.
