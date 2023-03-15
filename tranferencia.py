@@ -1,4 +1,4 @@
-from api_conectDb import *
+
 import sys
 from tkinter import messagebox
 from PyQt5 import uic, QtWidgets

@@ -41,6 +41,8 @@ from api_delfornecedores import *
 from api_delfuncionarios import *
 #Importando função encarregada de CONSULTAR cadastro de funcionarios no DataBase.
 from api_confuncionarios import *
+#Importando função encarregada de CADASTRAR novos funcionarios no DataBase.
+from api_cadfuncionarios import *
 
 
 #Bottons do System======================================================================
@@ -79,11 +81,11 @@ principal.bt_remover_for.clicked.connect(remo_fornecedores)
 principal.bt_limpar_for.clicked.connect(limp_cadfornecedores) #Botão encarregado de fazer a limpeza dos campos da tela FORNECEDORES.
 
 #Tela Cadastro de Funcionarios-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#principal.bt_cadas_fun.clicked.connect(cad_funcionarios)
-principal.bt_consulta_fun.clicked.connect(consul_funcionarios)
+principal.bt_cadas_fun.clicked.connect(cad_funcionarios) #Botão encarregado de cadastrar novos FUNCIONARIOS no DataBase.
+principal.bt_consulta_fun.clicked.connect(consul_funcionarios) #Botão encarregado de fazer a CONSULTA de dados no DataBase e rotarnando esses dados na tela FUNCIONARIOS.
 #principal.bt_atualizar_fun.clicked.connect(alter_funcionarios)
-principal.bt_remover_fun.clicked.connect(remo_funcionarios)
-principal.bt_limpar_fun.clicked.connect(limp_cadfuncionarios)
+principal.bt_remover_fun.clicked.connect(remo_funcionarios) #Botão encarregado de fazer o DELETE FUNCIONARIOS do DataBase.
+principal.bt_limpar_fun.clicked.connect(limp_cadfuncionarios) #Botão encarregado de fazer a limpeza dos campos da tela FUNCIONARIOS.
 
 limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 login.show() #Exibi tela login.
