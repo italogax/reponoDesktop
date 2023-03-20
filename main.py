@@ -18,7 +18,7 @@ from api_conProdutos import consul_produtos_id, consul_produtos
 #Importando função que deleta produtos do DataBase.
 from api_delProdutos import remo_produtos
 #Importando função do PVD.
-from api_caixaReg import monstra_produtos, sub_total, limpa_tabrotativa
+from api_caixaReg import monstra_produtos, sub_total, limpa_tabrotativa, del_procompra
 #Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
 from api_gerirestoque import *
 #Imporando função que cadastra clientes.
@@ -61,11 +61,14 @@ principal.bt_limpar_pro.clicked.connect(limp_cadProdutos) #Botão limpa campos q
 
 #Tela do Caixa=========================================================================================================================================================================================================================
 principal.bt_cancelarcompra.clicked.connect(limpa_tabrotativa) #Botão encarregado de cancelar a compra que estava sendo efetuada.
-#principal.bt_cancelarproduto.clicked.connect() #Botão encarregado de cancelar produtos expecificos da compra.
+principal.bt_cancelarproduto.clicked.connect(chama_tl_position) #Botão encarregado de cancelar produtos expecificos da compra.
 principal.bt_finalizarcompra.clicked.connect(att_estoque) #Botão encarregado de finalizar a compra.
 principal.bt_pesquisar.clicked.connect(monstra_produtos) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
 principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calculo do subtotal.
 #principal.bt_tabcodigos_ven.clicked.connect(consul_produtos)
+
+#Tel Posição-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+position.bt_remover.clicked.connect(del_procompra) #Botão encarregado de fazer a remoção de um produto especifico na compra.
 
 #Tela de Pessoas=========================================================================================================================================================================================================================
 #Tela Cadastro de Clientes---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -90,5 +93,5 @@ principal.bt_remover_fun.clicked.connect(remo_funcionarios) #Botão encarregado 
 principal.bt_limpar_fun.clicked.connect(limp_cadfuncionarios) #Botão encarregado de fazer a limpeza dos campos da tela FUNCIONARIOS.
 
 limpa_tabrotativa() #Executando função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
-login.show() #Exibi tela login.
+principal.show() #Exibi tela login.
 app.exec() #Executar sistema.

@@ -112,7 +112,7 @@ class Ui_MainWindow(object):
 "border-radius: 5px;\n"
 "border-color: black;")
         self.tab_caixa.setObjectName("tab_caixa")
-        self.tab_caixa.setColumnCount(5)
+        self.tab_caixa.setColumnCount(6)
         self.tab_caixa.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tab_caixa.setHorizontalHeaderItem(0, item)
@@ -124,6 +124,9 @@ class Ui_MainWindow(object):
         self.tab_caixa.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tab_caixa.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setText("POSITION")
+        self.tab_caixa.setHorizontalHeaderItem(5, item)
         self.bt_sair = QtWidgets.QPushButton(parent=self.fr_caixa)
         self.bt_sair.setGeometry(QtCore.QRect(714, 340, 81, 31))
         self.bt_sair.setStyleSheet("QPushButton {\n"
@@ -1284,7 +1287,7 @@ class Ui_MainWindow(object):
 "}")
         self.ent_endereco_fun.setObjectName("ent_endereco_fun")
         self.fr_clientes = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
-        self.fr_clientes.setGeometry(QtCore.QRect(10, 10, 801, 381))
+        self.fr_clientes.setGeometry(QtCore.QRect(10, 50, 801, 381))
         self.fr_clientes.setStyleSheet("background-color: rgb(241, 241, 241);\n"
 "border-radius:10px;")
         self.fr_clientes.setObjectName("fr_clientes")
@@ -1522,7 +1525,7 @@ class Ui_MainWindow(object):
 "")
         self.bt_consulta_cli.setObjectName("bt_consulta_cli")
         self.fr_fornecedores = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
-        self.fr_fornecedores.setGeometry(QtCore.QRect(10, 10, 801, 380))
+        self.fr_fornecedores.setGeometry(QtCore.QRect(10, 90, 801, 380))
         self.fr_fornecedores.setStyleSheet("background-color: rgb(241, 241, 241);\n"
 "border-radius:10px;")
         self.fr_fornecedores.setObjectName("fr_fornecedores")
@@ -1831,6 +1834,23 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
+        self.bt_caixa_ven.clicked.connect(self.fr_caixa.show) # type: ignore
+        self.bt_caixa_ven.clicked.connect(self.fr_tabelaprodutos.hide) # type: ignore
+        self.bt_tabcodigos_ven.clicked.connect(self.fr_caixa.hide) # type: ignore
+        self.bt_tabcodigos_ven.clicked.connect(self.fr_tabelaprodutos.show) # type: ignore
+        self.bt_produtos.clicked.connect(self.fr_produtos.show) # type: ignore
+        self.bt_produtos.clicked.connect(self.fr_inventario.hide) # type: ignore
+        self.bt_inventario.clicked.connect(self.fr_inventario.show) # type: ignore
+        self.bt_inventario.clicked.connect(self.fr_produtos.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_clientes.show) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_fornecedores.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_funcionarios.show) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_fornecedores.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_fornecedores.show) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

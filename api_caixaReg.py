@@ -35,7 +35,7 @@ def up_table():
     valoruni = float(valoruni) #Transformando variavel STR em FLOAT.
     quantidade = int(quantidade) #Transformando variavel STR em FLOAT.
     vl_total= valoruni * quantidade #Multiplicação para fazer o calculo do valor total daquele produto. 
-    vl_total= str(vl_total)
+    #vl_total= str(vl_total)
 
     cursor=con.cursor() #Estabelecendo conexão com o banco de dados.
     edittb=("INSERT INTO tb_vendarotativa(id, produto, quantidade, vl_unidade, vl_total) values (%s,%s,%s,%s,%s)") #Comando a ser executado dentro do DataBase.
@@ -52,17 +52,17 @@ def set_tablepvd():
     cursor.execute(edittb) #Executando comando dentro do DataBase.
     campos=cursor.fetchall() #Comando para selecionar todos os campos do DataBase.
     principal.tab_caixa.setRowCount(len(campos)) #Setando a quantidade de linhas que tem dentro do DataBase.
-    principal.tab_caixa.setColumnCount(5) #Setando a quantidade de colunas que a tabela tem.
+    principal.tab_caixa.setColumnCount(6) #Setando a quantidade de colunas que a tabela tem.
     
     for l in range(len(campos)): #Inserindo todas as linhas da DataBase na table.nse 
-        for c in range(0,5):#Inserindo todas as colunas do DataBase na table.
+        for c in range(0,6):#Inserindo todas as colunas do DataBase na table.
             principal.tab_caixa.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
     cursor.close() #Fechando a conexão com o DataBase.
 
 #Função encarregada de preencher o subtotal    
 def sub_total():
     quantidade=principal.ent_qtcaixa.text() #Importando valores do campo QUANTIDADE inserido pelo user.
-    subtotal=principal.ent_subtotalcaixa.text() #Inserindo no SUBTOTAL o respequitivo valor.
+    subtotal=principal.ent_subtotalcaixa.text() #Importando valores do campo SUBTOTAL da tela do caixa.
     valoruni=principal.ent_valorcaixa.text()
     if quantidade=="":
         principal.ent_qtcaixa.setText("1")
@@ -120,6 +120,43 @@ def hitory_vendas():
     FROM tb_vendarotativa ;""".format(fpagamento, pedido)) #Codigo para inserir dados da tabela do Caixa no Historico de vendas. 
     cursor.execute(entdb) #Executando comando no DataBase.
     con.commit() #Commitando execução no DataBase
+
+#Função encarregada de fazer a atualização do SUBTOTAL quando algum produto for removido da compra.
+def att_subtotal():
+
+    subtotal=principal.ent_subtotalcaixa.text() #Importando valores do campo SUBTOTAL da tela do caixa.
+
+    #Comandos a serem executados dentro do DataBase.
+    cursor=con.cursor() #Criando conexão com o DataBase.
+    selectdb=("SELECT vl_total FROM tb_vendarotativa WHERE id_pk='{}'".format(posi)) #Comando a ser executando dentro do DataBase.
+    cursor.execute(selectdb) #Executando comando acima dentro do DataBase.
+    valor=cursor.fetchone() #Selecionando valor do produto.
+    cursor.close() #Fechando a conexão com o DataBase.
+
+    #Calulo para chegar ao novo valor do SUBTOTAL:
+    subtotal= float(subtotal) #Transformando variavel STR em FLOAT.
+    valor= float(valor[0]) #Transformando variavel STR em FLOAT.
+    calq_vl = (subtotal - valor) #Calculo para chegar ao novo valor do SUBTOTAL.
+
+    principal.ent_subtotalcaixa.setText(str(calq_vl)) #Setando novo valor atualizado no campo SUBTOTAL.
     
+
+#Função encarregada de fazer a remoção de produtos da compra.
+def del_procompra():
+    global posi #Tornando variavel visivel para outras funções.
+    posi=position.ent_position.text() #Imporando valor inseirido pelo user no campo POSIÇÃO.
     
+    att_subtotal() #Executando função para atualizar valor do SUBTOTAL.
+
+    #Comandos a serem executados dentro do DataBase.
+    cursor=con.cursor() #Criando conexão com o DataBase.
+    editdb=("DELETE FROM tb_vendarotativa WHERE id_pk='{}'".format(posi)) #Comando a ser executado dentro do DataBase para remover um determinado produto.
+    cursor.execute(editdb) #Executando comando acima dentro do DataBase.
+    con.commit() #Commitando execução no DataBase.
+    cursor.close() #Fechando conexão com o DataBase.
+
+    position.hide() #Fechando tela de POSIÇÃO.
+
+    set_tablepvd() #Executando função encarregada de mostrar a tabela da compra atualizada.
+
 

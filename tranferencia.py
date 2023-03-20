@@ -1,6 +1,15 @@
 
 import sys
+
+
+#from  import *
+from tkinter import *
 from tkinter import messagebox
+from tkinter import ttk
+
+
+
+
 from PyQt5 import uic, QtWidgets
 import PySimpleGUI as py
 import keyboard
@@ -150,3 +159,53 @@ def hitory_vendas():
 fpagamento= principal.comboBox.currentText()
 print (fpagamento )
 """
+"""
+#Criando JANELA para escolher qual produto deve ser removido.
+jan= Tk() #Criando a JANELA tkinter.
+jan.title("Cancelamento de produto") #Inserindo um titulo nessa JANELA.
+jan.geometry("250x150") #Informando as dimenções dessa JANELA.
+jan.configure(background= "white") #Indicando uma cor para o fundo dessa JANELA.
+jan.resizable(width=False, height=False) #
+
+#========= WIDGETS ============
+Frame = Frame(jan, width=250, height=150, bg="GRAY", relief="raise") #Criando FRAME direito.
+Frame.pack(side=RIGHT) #Selecionando o lado do FRAME.
+
+Labeltext = Label(Frame, text="Digite a posição do produto:", font=("Century Gothic", 10), bg="GRAY", fg="Black") #Criando texto idicativo.
+Labeltext.place(x=30, y=30) #Posicionando o campo LABEL.
+
+UserEntry = ttk.Entry(Frame, width=30) #Criando o campo de entrada do USER.
+UserEntry.place(x=35, y=55) #Posicionando o campo USER.
+
+bt_remover = Button(jan, text="Remover", bd="white", command= jan.destroy)
+bt_remover.place(x=35, y=70)
+
+jan.mainloop()
+"""
+"""
+def att_subtotal():
+
+    subtotal= 1000 #Importando valores do campo SUBTOTAL da tela do caixa.
+
+    #Comandos a serem executados dentro do DataBase.
+    cursor=con.cursor() #Criando conexão com o DataBase.
+    selectdb=("SELECT vl_total FROM tb_vendarotativa WHERE id_pk='{}'".format(1)) #Comando a ser executando dentro do DataBase.
+    cursor.execute(selectdb) #Executando comando acima dentro do DataBase.
+    valor=cursor.fetchone() #Selecionando valor do produto.
+    cursor.close() #Fechando a conexão com o DataBase.
+
+    #Calulo para chegar ao novo valor do SUBTOTAL:
+    subtotal= float(subtotal) #Transformando variavel STR em FLOAT.
+    valor= float(valor[0]) #Transformando variavel STR em FLOAT.
+    calqsub = subtotal - valor #Calculo para chegar ao novo valor do SUBTOTAL.
+
+    #subtotal=principal.ent_subtotalcaixa.setText(str(calqsub)) #Setando novo valor atualizado no campo SUBTOTAL.
+    print(calqsub)
+    print(valor)
+
+att_subtotal()
+"""
+
+
+
+
