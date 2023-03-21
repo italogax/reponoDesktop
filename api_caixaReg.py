@@ -15,14 +15,38 @@ from random import choice
 def monstra_produtos():
 
     id=principal.ent_idcaixa.text() #Importando conteudo do campo ID inserido pelo USER.
+
     cursor=con.cursor() #Estabelecendo conexão com o DataBase.
     pesqprodutos=("SELECT * FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase.
     cursor.execute(pesqprodutos) #Executando comando PESQPRODUTOS.
     campos=cursor.fetchall() #Selecionando toda a linha selecionada no DataBase.
 
     #Campos da tela---------------------------------
-    produto=principal.ent_produtocaixa.setText(str(campos[0][1])) #Setando nome do produto.
-    valoruni=principal.ent_valorcaixa.setText(str(campos[0][5])) #Setando valor de venda.
+    principal.ent_produtocaixa.setText(str(campos[0][1])) #Setando nome do produto.
+    principal.ent_valorcaixa.setText(str(campos[0][5])) #Setando valor de venda.
+
+
+#Função encarregada de fazer a verificação do ID no DataBase.
+def verifi_id():
+
+    id=int(principal.ent_idcaixa.text()) #Importando conteudo do campo ID inserido pelo USER.
+    
+    cursor=con.cursor() #Criando a conexão com o DataBase.
+    editdb=("SELECT * FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase para verificar se o ID é existente.
+    cursor.execute(editdb) #Executando comando acima dentro do DataBase.
+    
+#================== Verificação do ID do produto ====================================================================
+    VerifiProduto=cursor.fetchone() #Selecionando todos os campos apresentados no DataBase.
+
+    try:
+        #Fazendo a comparação do ID apresetado pelo USER aos IDs contidos no DataBase.
+        if(id in VerifiProduto):
+            monstra_produtos() #Executando função que SETA os dados do DataBase nos campos da tela do CAIXA.
+    
+    except:
+        #MensageBox de erro caso o ID não seja encontrado.
+        messagebox.showerror(title="Erro", message="Codigo do produto incorreto!")
+        limp_caixa() #Executando função encarregada de limpar os camposs da tela do CAIXA.
 
 #Função encarregada de fazer o commit dos dados aputados na tela do CAIXA no DataBase.
 def up_table():
@@ -99,6 +123,7 @@ def limpa_tabrotativa():
     cursor.execute(editlimp) #Executando comando dentro do DataBase.
     cursor.close() #Fechando conexão com o DataBase.
     set_tablepvd() #Executando comando para limpar os produtos do caixa. 
+    principal.ent_subtotalcaixa.setText("") #Setando valor do sub total. 
 
 #Função encarregada de gerar o numero alfanumerico do pedido.
 def numpedido(): 
@@ -111,8 +136,8 @@ def numpedido():
 
 #Função encarregada de amazenar os dados de compras finalizadas no DataBase
 def hitory_vendas():
-    numpedido() #
-    fpagamento= principal.comboBox.currentText()
+    numpedido() #Excutando função encarregada de gerar o número do PEDIDO.
+    fpagamento= principal.comboBox.currentText() #Importando a forma de pagamento selecionada pelo USER.
     cursor=con.cursor() #Conexão com o DataBase.
     entdb=("""INSERT INTO tb_vendas
 	(id, produto, vl_unidade, quantidade, vl_total, forma_pagamento, data, hora, pedido)

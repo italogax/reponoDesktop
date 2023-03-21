@@ -8,43 +8,43 @@ from api_iniTelas import *
 #Importando função LIMPACAMPOS.
 from api_limpaCampos import *
 
+def pesquisa_id():
+    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
+    cursor=con.cursor() #Conexão no DataBase.
+    editabanco=("SELECT * FROM tb_produtos WHERE id= '{}'".format(id)) #Comando que seleciona a coluna a partir do ID.
+    cursor.execute(editabanco) #Executando o EDITABANCO dentro do DataBase.
+    campos = cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
+
+    principal.ent_produto_pro.setText(str(campos[0][1])) #Setando a primeira coluna.
+    principal.ent_categoria_pro.setText(str(campos[0][2])) #Setando a segunda coluna.
+    principal.ent_fornecedor_pro.setText(str(campos[0][3])) #Setando a terceira coluna.
+    principal.ent_quantidade_pro.setText(str(campos[0][6])) #Setando a quinta coluna.
+    principal.ent_vlcompra_pro.setText(str(campos[0][4])) #Setando a terceira coluna.
+    principal.ent_vlvenda_pro.setText(str(campos[0][5])) #Setando a quarta coluna.
+
 #Função encarregada de fazer a consulta de PRODUTOS no DataBase retornar dados na tela.
 def consul_produtos_id():
 
-    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
+    id=int(principal.ent_id_pro.text()) #Importando valores inseridos pelo user no campo ID.
+    
+    cursor=con.cursor() #Criando conexão com o dataBase.
+    editdb=("SELECT * FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase.
+    cursor.execute(editdb) #Executando comando acima dentro do DataBase.
+    
+    #================== Verificação do ID do produto ====================================================================
+    verifiProduto=cursor.fetchone() #Selecionando campo especifico no DataBase.
+    try:
+        if(id in verifiProduto):
+            pesquisa_id() #Execuntando função que seta os campos do DataBase na tela PRODUTOS.
 
-    cursor=con.cursor() #Conexão no DataBase.
-    #Caso o campo ID esteja vazio.
-    if id =="":
+    except:
         #MessageBox informando que o ID não foi encontrado.
         messagebox.showerror(title="Id não encontrado", message="""
         ID não encontrado!
-        Por favor verficque na aba INVENTARIO o ID que procura!""")
+        Por favor verficque na aba INVENTARIO o ID que procura!""")#Caso tenha digita algum ID no campo ID.
 
-        editabanco=("SELECT * from tb_produtos") #Comando que seleciona todos os dados da DataBase.
-        cursor.execute(editabanco) #Comando executando o EDITABANCO
-        campos=cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
-        principal.tab_inventario.setRowCount(len(campos)) #Definindo a contagem de linhas da table.
-        principal.tab_inventario.setColumnCount(7) #Definindo a contagem de colunas da table.
-        for l in range(len(campos)): #Inserindo todas as linhas da DataBase na table.
-            for c in range(0,7): #Inserindo todas as colunas do DataBase na table.
-                principal.tab_inventario.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
-        cursor.close() #Fechando a conexão com o DataBase.
+        limp_cadProdutos() #Executando função encarregada de fazer a limpeza dos campos da tela PRODUTOS.
 
-    #Caso tenha digita algum ID no campo ID.
-    else:
-        editabanco=("SELECT * FROM tb_produtos WHERE id= '{}'".format(id)) #Comando que seleciona a coluna a partir do ID.
-        cursor.execute(editabanco) #Executando o EDITABANCO dentro do DataBase.
-        campos = cursor.fetchall() #Selecionando toda a linha com as colunas no DataBase.
-
-        nome=principal.ent_produto_pro.setText(str(campos[0][1])) #Setando a primeira coluna.
-        categoria=principal.ent_categoria_pro.setText(str(campos[0][2])) #Setando a segunda coluna.
-        fornecedor=principal.ent_fornecedor_pro.setText(str(campos[0][3])) #Setando a terceira coluna.
-        quantidade=principal.ent_quantidade_pro.setText(str(campos[0][6])) #Setando a quinta coluna.
-        vlcompra=principal.ent_vlcompra_pro.setText(str(campos[0][4])) #Setando a terceira coluna.
-        vlvenda=principal.ent_vlvenda_pro.setText(str(campos[0][5])) #Setando a quarta coluna.
-        
-        
 #Função a ser executada apos clicar no botton INVENTARIO.
 def consul_produtos():
 

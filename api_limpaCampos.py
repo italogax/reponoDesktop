@@ -44,7 +44,7 @@ def limp_cadfornecedores():
     principal.ent_email_for.setText("") #Limpando o campo EMAIL na tela FORNECEDORES.
     principal.ent_telefone_for.setText("") #Limpando o campo TELEFONE na tela FORNECEDORES.
     principal.ent_cnpj_for.setText("") #Limpando o campo CNPJ na tela FORNECEDORES.
-
+    
 
 #Função encarregada de limpar os campos da tela de cadastro de FUNCIONARIOS.
 def limp_cadfuncionarios():
@@ -56,5 +56,5 @@ def limp_cadfuncionarios():
     principal.ent_cpf_fun.setText("") #Limpando o campo CPF de cadastro de FUNCIONARIOS.
     principal.ent_nascimento_fun.setText("") #Limpando o campo NASCIMENTO de cadastro de FUNCIONARIOS.
     principal.ent_cargo_fun.setText("") #Limpando o campo CARGO na tela FUNCIONARIOS.
-
+    principal.ent_endereco_fun.setText("") #Lipando o capo ENDEREÇO na tela FORNECEDORES.
     

@@ -1287,7 +1287,7 @@ class Ui_MainWindow(object):
 "}")
         self.ent_endereco_fun.setObjectName("ent_endereco_fun")
         self.fr_clientes = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
-        self.fr_clientes.setGeometry(QtCore.QRect(10, 50, 801, 381))
+        self.fr_clientes.setGeometry(QtCore.QRect(10, 10, 801, 381))
         self.fr_clientes.setStyleSheet("background-color: rgb(241, 241, 241);\n"
 "border-radius:10px;")
         self.fr_clientes.setObjectName("fr_clientes")
@@ -1525,7 +1525,7 @@ class Ui_MainWindow(object):
 "")
         self.bt_consulta_cli.setObjectName("bt_consulta_cli")
         self.fr_fornecedores = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
-        self.fr_fornecedores.setGeometry(QtCore.QRect(10, 90, 801, 380))
+        self.fr_fornecedores.setGeometry(QtCore.QRect(10, 10, 801, 380))
         self.fr_fornecedores.setStyleSheet("background-color: rgb(241, 241, 241);\n"
 "border-radius:10px;")
         self.fr_fornecedores.setObjectName("fr_fornecedores")
@@ -1833,7 +1833,7 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.ToolBarArea.TopToolBarArea, self.toolBar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(3)
         self.bt_caixa_ven.clicked.connect(self.fr_caixa.show) # type: ignore
         self.bt_caixa_ven.clicked.connect(self.fr_tabelaprodutos.hide) # type: ignore
         self.bt_tabcodigos_ven.clicked.connect(self.fr_caixa.hide) # type: ignore
@@ -1982,7 +1982,8 @@ class Ui_MainWindow(object):
         self.label_id_for.setText(_translate("MainWindow", "ID"))
         self.label_nome_for.setText(_translate("MainWindow", "Nome"))
         self.label_datanascimento_for.setText(_translate("MainWindow", "Email"))
-        self.ent_telefone_for.setInputMask(_translate("MainWindow", "(31)99999-9999"))
+        self.ent_telefone_for.setInputMask(_translate("MainWindow", "(99)99999-9999"))
+        self.ent_telefone_for.setText(_translate("MainWindow", "()-"))
         self.label_contato_for.setText(_translate("MainWindow", "CNPJ"))
         self.ent_cnpj_for.setInputMask(_translate("MainWindow", "99.999.999/9999-99"))
         self.bt_remover_for.setText(_translate("MainWindow", "Remover"))

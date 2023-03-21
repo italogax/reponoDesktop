@@ -1,6 +1,9 @@
 
 import sys
 
+#PDF
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
 
 #from  import *
 from tkinter import *
@@ -205,7 +208,53 @@ def att_subtotal():
 
 att_subtotal()
 """
+"""
+def criarPDF():
+    cnv= canvas.Canvas("test.pdf", pagesize=A4) #Gerando o arquivo PDF.
 
+app=Tk()
+app.title("TESTE DE PDF")
+app.geometry("600x300")
 
+btn_criaPDF=Button(app, text="CRIA PDF", command=criarPDF)
+btn_criaPDF.pack(side="left", padx=10)
 
+app.mainloop()
+"""
+def comando1():
+        
+    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
 
+    cursor=con.cursor()
+    editdb=("SELECT * FROM tb_produtos WHERE id='{}'".format(id))
+    cursor.execute(editdb)
+    campos=cursor.fetchall() #Selecionando todos os campos mostrados no DataBase.
+
+    principal.ent_produto_pro.setText(str(campos[0][1])) #Setando a primeira coluna.
+    principal.ent_categoria_pro.setText(str(campos[0][2])) #Setando a segunda coluna.
+    principal.ent_fornecedor_pro.setText(str(campos[0][3])) #Setando a terceira coluna.
+    principal.ent_quantidade_pro.setText(str(campos[0][6])) #Setando a quinta coluna.
+    principal.ent_vlcompra_pro.setText(str(campos[0][4])) #Setando a terceira coluna.
+    principal.ent_vlvenda_pro.setText(str(campos[0][5])) #Setando a quarta coluna.
+
+def consul_produtos_ids():
+
+    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
+
+    cursor=con.cursor() #Conexão no DataBase.
+    editabanco=("SELECT * FROM tb_produtos WHERE id= '{}'".format(1)) #Comando que seleciona a coluna a partir do ID.
+    cursor.execute(editabanco) #Executando o EDITABANCO dentro do DataBase.
+    veriProduto = cursor.fetchone() #Selecionando toda a linha com as colunas no DataBase.
+    cursor.close() #Fechando a conexão com o DataBase
+    try:
+        if(id in veriProduto):
+            print(id)
+
+            
+    except:        
+        #MessageBox informando que o ID não foi encontrado.
+        messagebox.showerror(title="Id não encontrado", message="""
+        ID não encontrado!
+        Por favor verficque na aba INVENTARIO o ID que procura!""")    #Caso tenha digita algum ID no campo ID.
+
+consul_produtos_ids()

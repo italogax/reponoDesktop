@@ -25,7 +25,7 @@ def check_user():
     VeriyLogin = cursor.fetchone() #Comando que busca apenas um dado dentro do DataBase.
     try:
         if (usuario in VeriyLogin and psword in VeriyLogin): #Pesquisando se o USUARIO, PSWORD estão dentro do DataBase.
-            messagebox.showinfo(title= "Avisto de Login", message= "Login efetuado com sucesso, seja bem vindo!") #MessageBox informando que acessou com sucesso o sistema.
+            messagebox.showinfo(title= "Aviso de Login", message= "Login efetuado com sucesso, seja bem vindo!") #MessageBox informando que acessou com sucesso o sistema.
             chama_tl_principal() #Show tl Principal.
 
     except:
