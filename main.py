@@ -18,7 +18,7 @@ from api_conProdutos import consul_produtos_id, consul_produtos
 #Importando função que deleta produtos do DataBase.
 from api_delProdutos import remo_produtos
 #Importando função do PVD.
-from api_caixaReg import verifi_id, sub_total, limpa_tabrotativa, del_procompra
+from api_caixaReg import check_conteudo, sub_total, limpa_tabrotativa, del_procompra 
 #Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
 from api_gerirestoque import *
 #Imporando função que cadastra clientes.
@@ -66,7 +66,7 @@ principal.bt_limpar_pro.clicked.connect(limp_cadProdutos) #Botão limpa campos q
 principal.bt_cancelarcompra.clicked.connect(limpa_tabrotativa) #Botão encarregado de cancelar a compra que estava sendo efetuada.
 principal.bt_cancelarproduto.clicked.connect(chama_tl_position) #Botão encarregado de cancelar produtos expecificos da compra.
 principal.bt_finalizarcompra.clicked.connect(att_estoque) #Botão encarregado de finalizar a compra.
-principal.bt_pesquisar.clicked.connect(verifi_id) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
+principal.bt_pesquisar.clicked.connect(check_conteudo) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
 principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calculo do subtotal.
 #principal.bt_tabcodigos_ven.clicked.connect(consul_produtos)
 

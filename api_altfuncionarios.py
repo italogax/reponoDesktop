@@ -1,4 +1,4 @@
-"""API encarregada de fazer a alteração em dandos de FUNCIONARIOS já cadastrados"""
+"""API encarregada de fazer a alteração em dandos de FUNCIONARIOS já cadastrados."""
 
 #Importando conexão com o banco de dados.
 from api_conectDb import *

@@ -25,25 +25,30 @@ def pesquisa_id():
 #Função encarregada de fazer a consulta de PRODUTOS no DataBase retornar dados na tela.
 def consul_produtos_id():
 
-    id=int(principal.ent_id_pro.text()) #Importando valores inseridos pelo user no campo ID.
+    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
     
     cursor=con.cursor() #Criando conexão com o dataBase.
     editdb=("SELECT * FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase.
     cursor.execute(editdb) #Executando comando acima dentro do DataBase.
     
     #================== Verificação do ID do produto ====================================================================
-    verifiProduto=cursor.fetchone() #Selecionando campo especifico no DataBase.
-    try:
-        if(id in verifiProduto):
-            pesquisa_id() #Execuntando função que seta os campos do DataBase na tela PRODUTOS.
+    if id != "":
+        id=(str(id))
+        verifiProduto=cursor.fetchone() #Selecionando campo especifico no DataBase.
+        try:
+            if(id in verifiProduto):
+                pesquisa_id() #Execuntando função que seta os campos do DataBase na tela PRODUTOS.
 
-    except:
-        #MessageBox informando que o ID não foi encontrado.
-        messagebox.showerror(title="Id não encontrado", message="""
-        ID não encontrado!
-        Por favor verficque na aba INVENTARIO o ID que procura!""")#Caso tenha digita algum ID no campo ID.
-
-        limp_cadProdutos() #Executando função encarregada de fazer a limpeza dos campos da tela PRODUTOS.
+        except:
+            #Mensagem encarregada de mostrar que o codigo do PRODUTO esta incorreto.
+            def msg_erro():
+                #MessageBox informando que o ID não foi encontrado.
+                messagebox.showerror(title="Id não encontrado", message="""
+                ID não encontrado!
+                Por favor verficque na aba INVENTARIO o ID que procura!""")#Caso tenha digita algum ID no campo ID.
+    else:
+        msg_erro() #Executando função encarregada de mostrar a mensagem de erro.
+    limp_cadProdutos() #Executando função encarregada de fazer a limpeza dos campos da tela PRODUTOS.
 
 #Função a ser executada apos clicar no botton INVENTARIO.
 def consul_produtos():

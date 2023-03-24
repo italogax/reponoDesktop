@@ -11,6 +11,11 @@ from api_limpaCampos import limp_caixa
 import string
 from random import choice
 
+#Função encarregada de monstrar a mensagem de ERRO.
+def msg_erro():
+    #MensageBox de erro caso o ID não seja encontrado.
+    messagebox.showerror(title="Erro", message="Codigo do produto incorreto!")
+
 #Função encarregada de demonstrar os produtos da compra na tabela e nos campos.
 def monstra_produtos():
 
@@ -25,6 +30,15 @@ def monstra_produtos():
     principal.ent_produtocaixa.setText(str(campos[0][1])) #Setando nome do produto.
     principal.ent_valorcaixa.setText(str(campos[0][5])) #Setando valor de venda.
 
+#Função encarregada de fazer a verificação do campo ser nulo ou não.
+def check_conteudo():
+    id=principal.ent_idcaixa.text() #Importando conteudo do campo ID inserido pelo USER.
+
+    #Se o ID for igual a VAZIO.
+    if id == "":
+        msg_erro() #Executando função que mostra a mensagem ERRO.
+    else:
+        verifi_id() #Executando função que verifica a existencia do ID informado.
 
 #Função encarregada de fazer a verificação do ID no DataBase.
 def verifi_id():
@@ -37,15 +51,13 @@ def verifi_id():
     
 #================== Verificação do ID do produto ====================================================================
     VerifiProduto=cursor.fetchone() #Selecionando todos os campos apresentados no DataBase.
-
     try:
         #Fazendo a comparação do ID apresetado pelo USER aos IDs contidos no DataBase.
         if(id in VerifiProduto):
             monstra_produtos() #Executando função que SETA os dados do DataBase nos campos da tela do CAIXA.
     
     except:
-        #MensageBox de erro caso o ID não seja encontrado.
-        messagebox.showerror(title="Erro", message="Codigo do produto incorreto!")
+        msg_erro() #Executando função encarregada de mostrar a MENSAGEM de ERRO.
         limp_caixa() #Executando função encarregada de limpar os camposs da tela do CAIXA.
 
 #Função encarregada de fazer o commit dos dados aputados na tela do CAIXA no DataBase.
