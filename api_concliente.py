@@ -7,6 +7,12 @@ from api_conectDb import *
 #Importando API encarregada de limpar os campos da tela de CLIENTES
 from api_limpaCampos import limp_cadclientes
 
+#Função encarregada de gerar a mensagem de erro no ID.
+def msg_erro():
+    #MesssageBox que informa queo cliente não foi encontrado.
+    messagebox.showerror(title="Erro", message="Cliente não encontrado!") 
+
+
 #Função encarregada de SETAR os dados do DataBase na tela de CLIENTES.
 def  set_clientes():
     id=principal.ent_id_cli.text() #Importando valores inseridos pelo user no campo ID. 
@@ -40,7 +46,17 @@ def verifi_clientes():
             set_clientes() #Executando função encarregada de fazer a inserção de dados dos clientes na tela CLIENTES.
 
     except:
-        #MesssageBox que informa queo cliente não foi encontrado.
-        messagebox.showerror(title="Erro", message="Cliente não encontrado!") 
-
+        msg_erro() #Executando função que gera a mensagem de erro.
         limp_cadclientes() #Executando função encarregada de limpar os campos da tela CLIENTES.
+
+#Função encarregada de fazer a verificação do campo ser nulo ou não.
+def check_conteudo_cl():
+    id=principal.ent_id_cli.text() #Importando conteudo do campo ID na tela CLientes.
+
+    #Se o ID estiver Vazio.
+    if id == "":
+        msg_erro() #Executando função que gera a mensagem de erro.
+    
+    #Se não estiver Vaizio.
+    else:
+        verifi_clientes() #Executando função que faz a verificação da existencia do conteudo no DataBase.

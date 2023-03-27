@@ -31,7 +31,7 @@ def monstra_produtos():
     principal.ent_valorcaixa.setText(str(campos[0][5])) #Setando valor de venda.
 
 #Função encarregada de fazer a verificação do campo ser nulo ou não.
-def check_conteudo():
+def check_conteudo_cx():
     id=principal.ent_idcaixa.text() #Importando conteudo do campo ID inserido pelo USER.
 
     #Se o ID for igual a VAZIO.

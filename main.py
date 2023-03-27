@@ -18,7 +18,7 @@ from api_conProdutos import consul_produtos_id, consul_produtos
 #Importando função que deleta produtos do DataBase.
 from api_delProdutos import remo_produtos
 #Importando função do PVD.
-from api_caixaReg import check_conteudo, sub_total, limpa_tabrotativa, del_procompra 
+from api_caixaReg import check_conteudo_cx, sub_total, limpa_tabrotativa, del_procompra 
 #Importando Aplicação referente a todas as funções que fazer o trabalho de baixa no estoque.
 from api_gerirestoque import *
 #Imporando função que cadastra clientes.
@@ -66,7 +66,7 @@ principal.bt_limpar_pro.clicked.connect(limp_cadProdutos) #Botão limpa campos q
 principal.bt_cancelarcompra.clicked.connect(limpa_tabrotativa) #Botão encarregado de cancelar a compra que estava sendo efetuada.
 principal.bt_cancelarproduto.clicked.connect(chama_tl_position) #Botão encarregado de cancelar produtos expecificos da compra.
 principal.bt_finalizarcompra.clicked.connect(att_estoque) #Botão encarregado de finalizar a compra.
-principal.bt_pesquisar.clicked.connect(check_conteudo) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
+principal.bt_pesquisar.clicked.connect(check_conteudo_cx) #Botão encarregado de pesquisar o valor unitario e o nome do produto.
 principal.bt_calq.clicked.connect(sub_total) #Botão encarregado de fazer o calculo do subtotal.
 #principal.bt_tabcodigos_ven.clicked.connect(consul_produtos)
 
@@ -76,21 +76,21 @@ position.bt_remover.clicked.connect(del_procompra) #Botão encarregado de fazer 
 #Tela de Pessoas=========================================================================================================================================================================================================================
 #Tela Cadastro de Clientes---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 principal.bt_cadas_cli.clicked.connect(cad_clientes) #Botão encarregado de fazer o cadastro de CLIENTES.
-principal.bt_consulta_cli.clicked.connect(verifi_clientes) #Botão encarregado de fazer consulta de dados dentro do DataBase e retornar os dados na tela de CLIENTES.
+principal.bt_consulta_cli.clicked.connect(check_conteudo_cl) #Botão encarregado de fazer consulta de dados dentro do DataBase e retornar os dados na tela de CLIENTES.
 principal.bt_atualizar_cli.clicked.connect(alter_clientes) #Botão encarregado de fazer alterações no cadastro de CLIENTES.
 principal.bt_remover_cli.clicked.connect(remo_clientes) #Botão encarregado de fazer o DELETE de dados de CLIENTES no DataBase.
 principal.bt_limpar_cli.clicked.connect(limp_cadclientes) #Botão encarregado de fazer a limpeza dos campos da tela CLIENTES.
 
 #Tela Cadastro de Fornecedores-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 principal.bt_cadas_for.clicked.connect(cad_fornecedores) #Botão encarregado de cadastrar novos FORNECEDORES no DataBase.
-principal.bt_consulta_for.clicked.connect(con_fornecedores) #Botão encarregado de consultar e retornar dados do DataBase na tela FORNECEDORES.
+principal.bt_consulta_for.clicked.connect(check_conteudo_fo) #Botão encarregado de consultar e retornar dados do DataBase na tela FORNECEDORES.
 principal.bt_atualizar_for.clicked.connect(alter_fornecedores) #Botão encarregado de fazer alteraçõess em dados já existentes dentro do DataBase na table FORNECEDORES.
 principal.bt_remover_for.clicked.connect(remo_fornecedores) #Botão encarregado de fazer o DELETE CLIENTES do DataBase.
 principal.bt_limpar_for.clicked.connect(limp_cadfornecedores) #Botão encarregado de fazer a limpeza dos campos da tela FORNECEDORES.
 
 #Tela Cadastro de Funcionarios-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 principal.bt_cadas_fun.clicked.connect(cad_funcionarios) #Botão encarregado de cadastrar novos FUNCIONARIOS no DataBase.
-principal.bt_consulta_fun.clicked.connect(veri_funcionarios) #Botão encarregado de fazer a CONSULTA de dados no DataBase e rotarnando esses dados na tela FUNCIONARIOS.
+principal.bt_consulta_fun.clicked.connect(check_conteudo_fu) #Botão encarregado de fazer a CONSULTA de dados no DataBase e rotarnando esses dados na tela FUNCIONARIOS.
 principal.bt_atualizar_fun.clicked.connect(alter_funcionarios) #Botão encarregado de fazer as ALTERAÇÕES de dados de FUNCIONARIOS no DataBase.
 principal.bt_remover_fun.clicked.connect(remo_funcionarios) #Botão encarregado de fazer o DELETE FUNCIONARIOS do DataBase.
 principal.bt_limpar_fun.clicked.connect(limp_cadfuncionarios) #Botão encarregado de fazer a limpeza dos campos da tela FUNCIONARIOS.

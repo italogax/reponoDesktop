@@ -1,5 +1,5 @@
-"""Esta API é encarregada de fazer todas as modificações possiveis 
-no DataBase referente a produtos.
+"""Esta API é encarregada de fazer todas as 
+modificações possiveis no DataBase referente a produtos.
 """
 
 from PyQt5 import uic, QtWidgets
