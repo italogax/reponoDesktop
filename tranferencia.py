@@ -221,6 +221,7 @@ btn_criaPDF.pack(side="left", padx=10)
 
 app.mainloop()
 """
+"""
 def comando1():
         
     id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
@@ -254,7 +255,8 @@ def consul_produtos_ids():
     except:        
         #MessageBox informando que o ID não foi encontrado.
         messagebox.showerror(title="Id não encontrado", message="""
-        ID não encontrado!
+        """ID não encontrado!
         Por favor verficque na aba INVENTARIO o ID que procura!""")    #Caso tenha digita algum ID no campo ID.
-
+"""
 consul_produtos_ids()
+"""

@@ -45,7 +45,7 @@ def con_fornecedores():
     try:
         #Fazendo a comparação de dados do FORNECEDOR.
         if(id in VeriFor):
-             set_fornecedores() #Executando função encarregada de fazer a inserção de dados na tela FORNECEDORES.
+            set_fornecedores() #Executando função encarregada de fazer a inserção de dados na tela FORNECEDORES.
         
     except:
         msg_erro() #Executando função encarregada de gerar a mensagem de erro.

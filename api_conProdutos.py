@@ -7,6 +7,10 @@ from api_conectDb import *
 from api_iniTelas import *
 #Importando função LIMPACAMPOS.
 from api_limpaCampos import *
+#Função encarregada de gerar a mensagem de erro do ID.
+def msg_erro():
+    #MessageBox informando que o ID não foi encontrado.
+    messagebox.showerror(title="Id não encontrado", message="""Por favor verficque na aba INVENTARIO o ID que procura!""")#Caso tenha digita algum ID no campo ID.
 
 def pesquisa_id():
     id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
@@ -23,32 +27,25 @@ def pesquisa_id():
     principal.ent_vlvenda_pro.setText(str(campos[0][5])) #Setando a quarta coluna.
 
 #Função encarregada de fazer a consulta de PRODUTOS no DataBase retornar dados na tela.
-def consul_produtos_id():
+def verifi_id_pro():
 
-    id=principal.ent_id_pro.text() #Importando valores inseridos pelo user no campo ID.
+    id=int(principal.ent_id_pro.text()) #Importando valores inseridos pelo user no campo ID.
     
     cursor=con.cursor() #Criando conexão com o dataBase.
     editdb=("SELECT * FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase.
     cursor.execute(editdb) #Executando comando acima dentro do DataBase.
     
     #================== Verificação do ID do produto ====================================================================
-    if id != "":
-        id=(str(id))
-        verifiProduto=cursor.fetchone() #Selecionando campo especifico no DataBase.
-        try:
-            if(id in verifiProduto):
-                pesquisa_id() #Execuntando função que seta os campos do DataBase na tela PRODUTOS.
+    
+    verifiProduto=cursor.fetchone() #Selecionando campo especifico no DataBase.
+    try:
+        #Fazendo a comparação de dados no DataBase.
+        if(id in verifiProduto):
+            pesquisa_id() #Execuntando função que seta os campos do DataBase na tela PRODUTOS.
 
-        except:
-            #Mensagem encarregada de mostrar que o codigo do PRODUTO esta incorreto.
-            def msg_erro():
-                #MessageBox informando que o ID não foi encontrado.
-                messagebox.showerror(title="Id não encontrado", message="""
-                ID não encontrado!
-                Por favor verficque na aba INVENTARIO o ID que procura!""")#Caso tenha digita algum ID no campo ID.
-    else:
+    except:
         msg_erro() #Executando função encarregada de mostrar a mensagem de erro.
-    limp_cadProdutos() #Executando função encarregada de fazer a limpeza dos campos da tela PRODUTOS.
+        limp_cadProdutos() #Executando função encarregada de fazer a limpeza dos campos da tela PRODUTOS.
 
 #Função a ser executada apos clicar no botton INVENTARIO.
 def consul_produtos():
@@ -65,3 +62,15 @@ def consul_produtos():
         for c in range(0,7): #Inserindo todas as colunas do DataBase na table.
             principal.tab_inventario.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
     cursor.close() #Fechando a conexão com o DataBase.
+
+#Função encarregada de verificar se o conteudo do ID é nulo.
+def check_conteudo_pr():
+    id=principal.ent_id_pro.text() #Importando conteudo do campo ID na tela PRODUTOS.
+    
+    #Se o campo ID for Vazio.
+    if id == "":
+        msg_erro()
+    #Se o campo ID não for Vazio. 
+    else:
+        verifi_id_pro() #Executando função encarregada de verificar se o ID é exsitente no DataBase.
+
