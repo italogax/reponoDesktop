@@ -13,8 +13,12 @@ from random import choice
 
 #Função encarregada de monstrar a mensagem de ERRO.
 def msg_erro():
-    #MensageBox de erro caso o ID não seja encontrado.
+    #MensageBox de erro caso o ID não seja pesquisado.
     messagebox.showerror(title="Erro", message="Codigo do produto incorreto!")
+
+def msg_errounit():
+    #MensageBox de erro caso o PRODUTO não seja encontrado.
+    messagebox.showerror(title="Erro", message="Produto não selecionado")
 
 #Função encarregada de demonstrar os produtos da compra na tabela e nos campos.
 def monstra_produtos():
@@ -99,7 +103,7 @@ def set_tablepvd():
 def sub_total():
     quantidade=principal.ent_qtcaixa.text() #Importando valores do campo QUANTIDADE inserido pelo user.
     subtotal=principal.ent_subtotalcaixa.text() #Importando valores do campo SUBTOTAL da tela do caixa.
-    valoruni=principal.ent_valorcaixa.text()
+    valoruni=principal.ent_valorcaixa.text() #Importando conteudo do campo VALOR UNITARIO na tela do CAIXA.
     if quantidade=="":
         principal.ent_qtcaixa.setText("1")
         sub_total()
@@ -126,6 +130,19 @@ def sub_total():
             up_table() #Chamando função que faz a inserção dos dados dentro do DataBase.
             set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
             limp_caixa()
+
+
+#Função encarregada de fazer a verificação se é possivel efetuar o calculo do subtotal.
+def verifi_subtotal():
+    valoruni=principal.ent_valorcaixa.text() #Importando conteudo do campo VALOR UNITARIO na tela do CAIXA.
+    
+    #Comparação caso o campo valor unitario esteja vazio.
+    if valoruni == "":
+        msg_errounit() #Executando função encarregada de gerar a mensagem de erro no valor unitario.
+    
+    #Caso não esteja vazio o campo VALOR UNI.
+    else:
+        sub_total() #Executando função que calcula o valor subtotal.
 
 #Função encarregada de fazer a limpeza da TAB_VENDAROTATIVA.
 def limpa_tabrotativa():
