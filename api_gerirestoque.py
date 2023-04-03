@@ -44,10 +44,12 @@ def qt_linhas():
 def att_estoque():
     qt_linhas() #Executanod função que faz a contagem da quantidade de linhas da Table no DataBase.
     qtlen= float(qtlinha) #Convertendo qt linhas para o formato float.
-    while qtlen >= 0:
+    while qtlen > 0:
         qtlen= qtlen -1
         hitory_vendas() #Chamando função encarregada de inserir os dados da ultima compra dentro do DataBase.
         pro_vendidos() #Executando função para saber o produto a ser atualizado. 
+        del_linha()
+
         cursor=con.cursor() #Conexão com o DataBase.
         comandodb=("SELECT estoque FROM tb_produtos WHERE id='{}'".format(idvend)) #Comando a ser executado dentro do DataBase selecionando o valor do campo estoque.
         cursor.execute(comandodb) #Executando comando dentro do DataBase.
@@ -56,26 +58,16 @@ def att_estoque():
 
         #Adconando o campo selecionado no DataBase em uma Variavel no System.
         for est in campos:
-            int(est) #Alterando o tipo da VARIAVEL para INTEIRO.
+            est = int(est) #Alterando o tipo da VARIAVEL para INTEIRO.
             subestoque= est - qtvend #Calculo para chegar ao numero real daquele produto no estoque.
-
-            #Caso o SUBESTOQUE seja menor que 0. EXECUTE:    
-            if subestoque < 0:
-                messagebox.showerror(
-                    title= "Produto Indisponivel", 
-                    message= """Quantidade de produto em estoque indisponivel.
-                                Verficque a quantidade disponivel em estoque.""") #MessageBox informando que a quantidade de produtos informanda não esta disponivel no estoque.
-                        
-
-            else:
-                cursor= con.cursor()
-                esqatt=("UPDATE tb_produtos SET estoque= '{}' WHERE id= '{}'".format(subestoque, idvend)) #Comando para atualizar a quantidade do produto em estoque.
-                cursor.execute(esqatt) #Executando comando dentro do DataBase.
-                con.commit() #Commitando comando dentro do DataBase.
-                cursor.close()
-    else:
-        messagebox.showinfo(title="Finalizado", message="Compra finalizada com sucesso!")
-        limpa_tabrotativa() #Limpando a tabelaRotativa do caixa.
+            cursor= con.cursor()
+            esqatt=("UPDATE tb_produtos SET estoque= '{}' WHERE id= '{}'".format(subestoque, idvend)) #Comando para atualizar a quantidade do produto em estoque.
+            cursor.execute(esqatt) #Executando comando dentro do DataBase.
+            con.commit() #Commitando comando dentro do DataBase.
+            cursor.close()
+            
+    messagebox.showinfo(title="Finalizado", message="Compra finalizada com sucesso!")
+    limpa_tabrotativa() #Limpando a tabelaRotativa do caixa.
     
     
         

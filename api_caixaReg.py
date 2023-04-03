@@ -16,6 +16,7 @@ def msg_erro():
     #MensageBox de erro caso o ID não seja pesquisado.
     messagebox.showerror(title="Erro", message="Codigo do produto incorreto!")
 
+#Função encarregada de mostrar a mensagem de ERRO.
 def msg_errounit():
     #MensageBox de erro caso o PRODUTO não seja encontrado.
     messagebox.showerror(title="Erro", message="Produto não selecionado")
@@ -66,23 +67,43 @@ def verifi_id():
 
 #Função encarregada de fazer o commit dos dados aputados na tela do CAIXA no DataBase.
 def up_table():
-
     id=principal.ent_idcaixa.text() #Importando valores inseridos pelo user no campo ID.
     produto=principal.ent_produtocaixa.text() #Importando valores inseridos pelo SYSTEM no campo PRODUTO.
     valoruni=principal.ent_valorcaixa.text() #Importando valores inseridos pelo SYSTEM no campo VALOR UNITARIO.
     quantidade=principal.ent_qtcaixa.text() #Importando valores inseridos pelo USER no campo QUANTIDADE.
-    
+    subtotal=float(principal.ent_subtotalcaixa.text()) #Importando valores do campo SUBTOTAL da tela do caixa.
+
     valoruni = float(valoruni) #Transformando variavel STR em FLOAT.
     quantidade = int(quantidade) #Transformando variavel STR em FLOAT.
     vl_total= valoruni * quantidade #Multiplicação para fazer o calculo do valor total daquele produto. 
-    #vl_total= str(vl_total)
 
-    cursor=con.cursor() #Estabelecendo conexão com o banco de dados.
-    edittb=("INSERT INTO tb_vendarotativa(id, produto, quantidade, vl_unidade, vl_total) values (%s,%s,%s,%s,%s)") #Comando a ser executado dentro do DataBase.
-    edittb2=(id,produto,quantidade,valoruni, vl_total) #Dados importados da tela para serem inseridos no DataBase.
-    cursor.execute(edittb,edittb2) #Executando comandos detro do DataBase.
-    con.commit() #Comitando os comandos dentro do DataBase.
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT estoque FROM tb_produtos WHERE id='{}'".format(id)) #Comando a ser executado dentro do DataBase selecionando o valor do campo estoque.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    campos= cursor.fetchone() #Selecionando conteudo do campo apresentado.
     cursor.close() #Fechando conexão com o DataBase.
+
+    #Adconando o campo selecionado no DataBase em uma Variavel no System.
+    for est in campos:
+        int(est) #Alterando o tipo da VARIAVEL para INTEIRO.
+        subestoque= est - quantidade #Calculo para chegar ao numero real daquele produto no estoque.
+        
+
+        #Caso o SUBESTOQUE seja menor que 0. EXECUTE:    
+        if subestoque < 0:
+            messagebox.showerror(title= "Erro", message= """Quantidade de produto em estoque indisponivel.""") #MessageBox informando que a quantidade de produtos informanda não esta disponivel no estoque.
+            #Atualizando o valor do subtotal. 
+            calq_vl= quantidade * valoruni #Calculo para chegar ao valor do subprodutos.
+            calq_vl=(subtotal - calq_vl) #Calculo para chegar ao valor do subtotal.
+            calq_vl= str(calq_vl) #COnvertendo variavel FLOAT em STR.
+            subtotal=principal.ent_subtotalcaixa.setText(calq_vl) #Setando valor do sub total. 
+        else:
+            cursor=con.cursor() #Estabelecendo conexão com o banco de dados.
+            edittb=("INSERT INTO tb_vendarotativa(id, produto, quantidade, vl_unidade, vl_total) values (%s,%s,%s,%s,%s)") #Comando a ser executado dentro do DataBase.
+            edittb2=(id,produto,quantidade,valoruni, vl_total) #Dados importados da tela para serem inseridos no DataBase.
+            cursor.execute(edittb,edittb2) #Executando comandos detro do DataBase.
+            con.commit() #Comitando os comandos dentro do DataBase.
+            cursor.close() #Fechando conexão com o DataBase.
 
 #Função encarregada de mostrar os 
 def set_tablepvd():
@@ -131,7 +152,6 @@ def sub_total():
             set_tablepvd() #Chamando função que intruduz os dados na tabela do CAIXA.
             limp_caixa()
 
-
 #Função encarregada de fazer a verificação se é possivel efetuar o calculo do subtotal.
 def verifi_subtotal():
     valoruni=principal.ent_valorcaixa.text() #Importando conteudo do campo VALOR UNITARIO na tela do CAIXA.
@@ -139,7 +159,7 @@ def verifi_subtotal():
     #Comparação caso o campo valor unitario esteja vazio.
     if valoruni == "":
         msg_errounit() #Executando função encarregada de gerar a mensagem de erro no valor unitario.
-    
+
     #Caso não esteja vazio o campo VALOR UNI.
     else:
         sub_total() #Executando função que calcula o valor subtotal.
@@ -162,11 +182,10 @@ def numpedido():
     for i in range(5): #Informando quantos campos vai ter o numero alfanumerico.
         pedido += choice(caracter) #Incrementando os caracteres dentro da variavel PEDIDO.
     
-
 #Função encarregada de amazenar os dados de compras finalizadas no DataBase
 def hitory_vendas():
     numpedido() #Excutando função encarregada de gerar o número do PEDIDO.
-    fpagamento= principal.comboBox.currentText() #Importando a forma de pagamento selecionada pelo USER.
+    fpagamento= principal.box_pag.currentText() #Importando a forma de pagamento selecionada pelo USER.
     cursor=con.cursor() #Conexão com o DataBase.
     entdb=("""INSERT INTO tb_vendas
 	(id, produto, vl_unidade, quantidade, vl_total, forma_pagamento, data, hora, pedido)
@@ -193,7 +212,6 @@ def att_subtotal():
     calq_vl = (subtotal - valor) #Calculo para chegar ao novo valor do SUBTOTAL.
 
     principal.ent_subtotalcaixa.setText(str(calq_vl)) #Setando novo valor atualizado no campo SUBTOTAL.
-    
 
 #Função encarregada de fazer a remoção de produtos da compra.
 def del_procompra():

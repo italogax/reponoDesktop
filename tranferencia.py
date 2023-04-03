@@ -256,7 +256,7 @@ def consul_produtos_ids():
         #MessageBox informando que o ID não foi encontrado.
         messagebox.showerror(title="Id não encontrado", message="""
         """ID não encontrado!
-        Por favor verficque na aba INVENTARIO o ID que procura!""")    #Caso tenha digita algum ID no campo ID.
+        Por favor verficque na aba INVENTARIO o ID que procura!""")   
+ #Caso tenha digita algum ID no campo ID.
 """
-consul_produtos_ids()
-"""
+

@@ -200,6 +200,9 @@ background-color: rgb(255, 255, 255);</string>
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
+
+
+        
          <item>
           <widget class="QPushButton" name="bt_remover">
            <property name="maximumSize">

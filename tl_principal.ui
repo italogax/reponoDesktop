@@ -190,7 +190,7 @@ background-color: rgb(220, 220, 220);
 font-size:18px;</string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="vendas">
              <attribute name="title">
@@ -273,10 +273,10 @@ border-radius:10px;</string>
                 <widget class="QTableWidget" name="tab_caixa">
                  <property name="geometry">
                   <rect>
-                   <x>420</x>
-                   <y>20</y>
-                   <width>381</width>
-                   <height>281</height>
+                   <x>180</x>
+                   <y>60</y>
+                   <width>621</width>
+                   <height>271</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -287,6 +287,12 @@ border-width: 1px;
 border-radius: 5px;
 border-color: black;</string>
                  </property>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>40</number>
+                 </attribute>
+                 <attribute name="verticalHeaderMinimumSectionSize">
+                  <number>30</number>
+                 </attribute>
                  <column>
                   <property name="text">
                    <string>ID</string>
@@ -355,7 +361,7 @@ color: rgb(255, 255, 255);
                 <widget class="QPushButton" name="bt_finalizarcompra">
                  <property name="geometry">
                   <rect>
-                   <x>490</x>
+                   <x>470</x>
                    <y>340</y>
                    <width>101</width>
                    <height>31</height>
@@ -389,7 +395,7 @@ background-color: rgb(182, 185, 0);
                 <widget class="QPushButton" name="bt_cancelarcompra">
                  <property name="geometry">
                   <rect>
-                   <x>380</x>
+                   <x>340</x>
                    <y>340</y>
                    <width>101</width>
                    <height>31</height>
@@ -423,7 +429,7 @@ background-color: rgb(100, 100, 100);
                 <widget class="QPushButton" name="bt_cancelarproduto">
                  <property name="geometry">
                   <rect>
-                   <x>270</x>
+                   <x>210</x>
                    <y>340</y>
                    <width>101</width>
                    <height>31</height>
@@ -458,7 +464,7 @@ background-color: rgb(100, 100, 100);
                  <property name="geometry">
                   <rect>
                    <x>10</x>
-                   <y>80</y>
+                   <y>10</y>
                    <width>31</width>
                    <height>31</height>
                   </rect>
@@ -470,8 +476,8 @@ background-color: rgb(100, 100, 100);
                 <widget class="QLineEdit" name="ent_idcaixa">
                  <property name="geometry">
                   <rect>
-                   <x>49</x>
-                   <y>82</y>
+                   <x>50</x>
+                   <y>10</y>
                    <width>61</width>
                    <height>30</height>
                   </rect>
@@ -512,8 +518,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLabel" name="label_15">
                  <property name="geometry">
                   <rect>
-                   <x>130</x>
-                   <y>80</y>
+                   <x>120</x>
+                   <y>10</y>
                    <width>91</width>
                    <height>31</height>
                   </rect>
@@ -525,9 +531,9 @@ color: rgb(0, 0, 0);
                 <widget class="QLineEdit" name="ent_produtocaixa">
                  <property name="geometry">
                   <rect>
-                   <x>230</x>
-                   <y>82</y>
-                   <width>181</width>
+                   <x>220</x>
+                   <y>10</y>
+                   <width>400</width>
                    <height>30</height>
                   </rect>
                  </property>
@@ -567,8 +573,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLabel" name="label_16">
                  <property name="geometry">
                   <rect>
-                   <x>260</x>
-                   <y>160</y>
+                   <x>630</x>
+                   <y>10</y>
                    <width>41</width>
                    <height>31</height>
                   </rect>
@@ -580,8 +586,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLineEdit" name="ent_qtcaixa">
                  <property name="geometry">
                   <rect>
-                   <x>314</x>
-                   <y>162</y>
+                   <x>690</x>
+                   <y>10</y>
                    <width>80</width>
                    <height>30</height>
                   </rect>
@@ -622,8 +628,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLabel" name="label_17">
                  <property name="geometry">
                   <rect>
-                   <x>10</x>
-                   <y>160</y>
+                   <x>20</x>
+                   <y>70</y>
                    <width>111</width>
                    <height>31</height>
                   </rect>
@@ -635,8 +641,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLineEdit" name="ent_valorcaixa">
                  <property name="geometry">
                   <rect>
-                   <x>130</x>
-                   <y>162</y>
+                   <x>20</x>
+                   <y>110</y>
                    <width>111</width>
                    <height>30</height>
                   </rect>
@@ -677,8 +683,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLabel" name="label_18">
                  <property name="geometry">
                   <rect>
-                   <x>10</x>
-                   <y>250</y>
+                   <x>30</x>
+                   <y>150</y>
                    <width>91</width>
                    <height>31</height>
                   </rect>
@@ -690,8 +696,8 @@ color: rgb(0, 0, 0);
                 <widget class="QLineEdit" name="ent_subtotalcaixa">
                  <property name="geometry">
                   <rect>
-                   <x>110</x>
-                   <y>251</y>
+                   <x>10</x>
+                   <y>190</y>
                    <width>136</width>
                    <height>30</height>
                   </rect>
@@ -729,66 +735,11 @@ color: rgb(0, 0, 0);
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
-                <widget class="QLabel" name="label_19">
+                <widget class="QComboBox" name="box_pag">
                  <property name="geometry">
                   <rect>
-                   <x>10</x>
-                   <y>10</y>
-                   <width>111</width>
-                   <height>31</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Atendente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="ent_atendente">
-                 <property name="geometry">
-                  <rect>
-                   <x>130</x>
-                   <y>10</y>
-                   <width>140</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>400</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QLineEdit {
-border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-font: 87 12pt &quot;Segoe UI Black&quot;;
-color: rgb(0, 0, 0);
-	background-color: rgb(255, 255, 255);
-}</string>
-                 </property>
-                 <property name="echoMode">
-                  <enum>QLineEdit::Normal</enum>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-                <widget class="QComboBox" name="comboBox">
-                 <property name="geometry">
-                  <rect>
-                   <x>39</x>
-                   <y>301</y>
+                   <x>0</x>
+                   <y>240</y>
                    <width>171</width>
                    <height>31</height>
                   </rect>
@@ -2854,7 +2805,7 @@ background-color: rgb(255, 255, 255);
 }</string>
                  </property>
                  <property name="inputMask">
-                  <string>999.999.999-99</string>
+                  <string/>
                  </property>
                 </widget>
                 <widget class="QLineEdit" name="ent_contato_fun">
@@ -3339,7 +3290,7 @@ background-color: rgb(255, 255, 255);
 }</string>
                  </property>
                  <property name="inputMask">
-                  <string>999.999.999-99</string>
+                  <string/>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_dt_nascimento_cli">
@@ -3869,7 +3820,7 @@ background-color: rgb(255, 255, 255);
 }</string>
                  </property>
                  <property name="inputMask">
-                  <string>99.999.999/9999-99</string>
+                  <string/>
                  </property>
                 </widget>
                 <widget class="QLineEdit" name="ent_nome_for">
