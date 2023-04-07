@@ -8,7 +8,12 @@ from api_conectDb import *
 #Conexção com a tela do System.
 from api_iniTelas import *
 
+# Importando API relacionadas as vendas.
 from api_caixaReg import hitory_vendas, limpa_tabrotativa
+
+#Importando API relacionada ao gerador de CUPOM.
+from api_geracupom import geracp
+
 
 #Função encarregada de fazer a verificação da primeira linha da Table.   
 def pro_vendidos():
@@ -22,6 +27,7 @@ def pro_vendidos():
     idvend= int(vendidos[0][0]) #Atribuindo valor a Variavel IDVEND, valor:(primeiro ID da TABLE.)
     qtvend= int(vendidos[0][1]) #Atribuindo valor a Variavel QTVEND, valor:(primeiro QUANTIDADE da TABLE.)
 
+#função encarregada de deletar as linhas da tabela VENDAROTATIVA.
 def del_linha():
     cursor=con.cursor() #Conexão com o DataBase.
     comandodb=("DELETE FROM tb_vendarotativa WHERE id='{}'".format(idvend)) #Comando a ser executado dentro do DataBaese.
@@ -42,13 +48,14 @@ def qt_linhas():
 
 #Função encarregada de fazer a att do DataBase.
 def att_estoque():
+    geracp() #Executando função encarregada de gerar o CUPOM FISCAL.
     qt_linhas() #Executanod função que faz a contagem da quantidade de linhas da Table no DataBase.
     qtlen= float(qtlinha) #Convertendo qt linhas para o formato float.
     while qtlen > 0:
         qtlen= qtlen -1
         hitory_vendas() #Chamando função encarregada de inserir os dados da ultima compra dentro do DataBase.
         pro_vendidos() #Executando função para saber o produto a ser atualizado. 
-        del_linha()
+        del_linha() #Executando função que deleta linha da tab VENDAROTATIVA.
 
         cursor=con.cursor() #Conexão com o DataBase.
         comandodb=("SELECT estoque FROM tb_produtos WHERE id='{}'".format(idvend)) #Comando a ser executado dentro do DataBase selecionando o valor do campo estoque.
@@ -56,7 +63,7 @@ def att_estoque():
         campos= cursor.fetchone() #Selecionando conteudo do campo apresentado.
         cursor.close() #Fechando conexão com o DataBase.
 
-        #Adconando o campo selecionado no DataBase em uma Variavel no System.
+        #Adcionando o campo selecionado no DataBase em uma Variavel no System.
         for est in campos:
             est = int(est) #Alterando o tipo da VARIAVEL para INTEIRO.
             subestoque= est - qtvend #Calculo para chegar ao numero real daquele produto no estoque.

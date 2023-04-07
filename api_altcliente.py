@@ -16,14 +16,18 @@ def alter_clientes():
     telefone=principal.ent_contato_cli.text() #Importando os valores do campo TELEFONE do cliente.
     nascimento=principal.ent_nascimento_cli.text() #Importando os valores do campo DATA NASCIMENTO do CLIENTES.
     cpf=principal.ent_cpf_cli.text() #Importando os valores do campo CPF do cliente.
-
-    #Comando dentro do SQL
-    cursor=con.cursor() #Conexão com o DataBase.
-    #Comando executado dentro do DataBase para gerar a atualização nos dados.
-    editdb=("UPDATE tb_clientes SET nome='{}',email='{}',telefone='{}',dt_nascimento='{}',cpf='{}' WHERE id='{}'".format(nome, email, telefone, nascimento, cpf, id))
-    cursor.execute(editdb) #Executando comando dentro do DataBase.
-    con.commit() #Commitando dados atualizados dentro do DataBase.
-    cursor.close() #Fechando a conexão do DataBase.
     
-    limp_cadclientes() #Limpando os campos da tela de CLIENTES.
+    #Função para fazer a verificação dos campos e detectar ce algum esta fazio
+    if id == '' or nome == '' or email == '' or telefone == '' or nascimento == '' or cpf == '':
+        messagebox.showerror(title="Campo Vazio", message="Alteração interronpida, por favor preencha tds os campos!") #MessageBox informando que algum campo esta vazio.
+    
+    else:
+        #Comando dentro do SQL
+        cursor=con.cursor() #Conexão com o DataBase.
+        #Comando executado dentro do DataBase para gerar a atualização nos dados.
+        editdb=("UPDATE tb_clientes SET nome='{}',email='{}',telefone='{}',dt_nascimento='{}',cpf='{}' WHERE id='{}'".format(nome, email, telefone, nascimento, cpf, id))
+        cursor.execute(editdb) #Executando comando dentro do DataBase.
+        con.commit() #Commitando dados atualizados dentro do DataBase.
+        cursor.close() #Fechando a conexão do DataBase.
+        limp_cadclientes() #Limpando os campos da tela de CLIENTES.
     

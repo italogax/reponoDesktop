@@ -19,12 +19,17 @@ def alter_funcionarios():
     email=principal.ent_email_fun.text() #Importando valores do campo EMAIL da tela FUNCIONARIOS.
     endereco=principal.ent_endereco_fun.text() #Importando valores do campo ENDERÇO da tela FUNCIONARIOS.
 
-    #Comandos a serem executados dentro do DataBase.
-    cursor=con.cursor() #Criando a conexão com o DataBase.
-    #Comando a ser executado dentro do DataBase para alterar os dados de FUNCIONARIOS.
-    editdb=("UPDATE tb_funcionario SET nome='{}', cargo='{}', dt_nascimento='{}', cpf='{}', telefone='{}', email='{}', endereco='{}' WHERE id='{}'".format(nome,cargo,nascimento,cpf,contato,email,endereco, id))
-    cursor.execute(editdb) #Executando comando acima para altera dados de FUNCIONARIOS.
-    con.commit() #Commitando dados inseridos no DataBase.
-    cursor.close() #Fechando a conexão no DataBase.
+    #Função para fazer a verificação dos campos e detectar ce algum esta fazio
+    if id == '' or nome == '' or cargo == '' or nascimento == '' or cpf == '' or contato == '' or email == '' or endereco == '':
+        messagebox.showerror(title="Campo Vazio", message="Alteração interronpida, por favor preencha tds os campos!") #MessageBox informando que algum campo esta vazio.
+    
+    else:
+        #Comandos a serem executados dentro do DataBase.
+        cursor=con.cursor() #Criando a conexão com o DataBase.
+        #Comando a ser executado dentro do DataBase para alterar os dados de FUNCIONARIOS.
+        editdb=("UPDATE tb_funcionario SET nome='{}', cargo='{}', dt_nascimento='{}', cpf='{}', telefone='{}', email='{}', endereco='{}' WHERE id='{}'".format(nome,cargo,nascimento,cpf,contato,email,endereco, id))
+        cursor.execute(editdb) #Executando comando acima para altera dados de FUNCIONARIOS.
+        con.commit() #Commitando dados inseridos no DataBase.
+        cursor.close() #Fechando a conexão no DataBase.
 
-    limp_cadfuncionarios() #Executando função encarregada de fazer a limpeza dos campos da tela FUNCIONARIOS.
+        limp_cadfuncionarios() #Executando função encarregada de fazer a limpeza dos campos da tela FUNCIONARIOS.

@@ -255,8 +255,45 @@ def consul_produtos_ids():
     except:        
         #MessageBox informando que o ID não foi encontrado.
         messagebox.showerror(title="Id não encontrado", message="""
-        """ID não encontrado!
-        Por favor verficque na aba INVENTARIO o ID que procura!""")   
- #Caso tenha digita algum ID no campo ID.
-"""
+"""ID não encontrado!Por favor verficque na aba INVENTARIO o ID que procura!"""
+ 
 
+
+def produtos_vd():
+
+    #Comandos a serem executados dentro do DataBase.
+    cursor=con.cursor() #Criando conexão com o DataBase.
+    comandodb=("SELECT * FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    itens=cursor.fetchall() #Selecionando todos campos da tabela.
+    
+    print(itens[0][0])
+
+produtos_vd()
+
+"""#Função encarregada de importar os intes vendidos na compra
+def produtos_vd():
+    qt_linhas() #Executando função que conta quantas linhas tem no DataBase.
+    select_item() #Função encarregada de selecionar ITEM no DataBase.
+    qtlen = qtlinha #Atribuindo o valor da quantidade de linhas da TABLE a uma outra Variavel.
+    #Laço de repetição.
+    while qtlen > 0:  
+        qtlen = qtlen - 1 #Subtraindo 1 na quantidade de linhas. 
+        #Comandos a serem executados dentro do DataBase.
+        cursor=con.cursor() #Criando conexão com o DataBase.
+        comandodb=("SELECT * FROM tb_vendarotativa WHERE id='{}'".format(qtlen)) #Comando a ser executado dentro do DataBase.
+        cursor.execute(comandodb) #Executando comando dentro do DataBase.
+        itens=cursor.fetchall() #Selecionando todos campos da tabela.
+        for it in itens:
+            print(it)"""
+
+"""#Função encarregada de verificar quantas linhas tem na table tb_vendarotativa.
+def qt_linhas():
+    global qtlinha
+    cursor=con.cursor() #Conexão com o DataBase.
+    comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
+    cursor.execute(comandodb) #Executando comando dentro do DataBase.
+    max= cursor.fetchone()
+    cursor.close()
+    for qtlinha in max:
+        qtlinha= float(qtlinha)"""
