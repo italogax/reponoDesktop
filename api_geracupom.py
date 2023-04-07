@@ -1,24 +1,32 @@
 """API encarregada de gerar o PDF do CUPOM FISCAL do System."""
 
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas 
+from reportlab.lib.pagesizes import A4 
 
-test=("""---------------------------------------------------------------------------------------------------------------------------""")
-
-cabecapdf= ('Loja', 'AV.', 'CNPJ:', 'IE:','{}'.format(test))
+campos = ['ITEM','CODIGO ','DESCRIÇÃO','QT','VL_UN','VL_TOTAL']
 
 
-def mm2p(milimetros):
-    return milimetros / 0.352777
 
-cnv = canvas.Canvas("meu_pdf.pdf", pagesize=A4) #Gerando o arquivo PDF.
+pdf= canvas.Canvas("cp_vendas\Cupom_Fiscal.pdf") #Criando o arquivo.
 
-eixox=10
-eixoy=280
+#PreTexto de todo cupom:
+pdf.rect(90, 100, 420, 720) #Criando controno do CUPOM
 
-for cabecalho in cabecapdf:
-    cnv.drawString(mm2p(eixox), mm2p(eixoy), cabecalho) #Inserindo TEXT no PDF.
-    cnv.drawImage("Login\PNG\icon_repono.png", 200, 280, width=200, height=100) #Inserindo imagem no PDF
-    eixoy -= 5
 
-cnv.save() #Salvando alterações no PDF.
+pdf.drawString(260, 800, "Repono") #Titulo.
+pdf.drawString(100, 780, "CNPJ: 00.000.000/0001-00") #CNPJ.
+pdf.drawString(100, 760, "IE:000000000000") #IE.
+pdf.drawString(100, 740, "IM:000000000000") #IM.
+pdf.line(100, 720, 500, 720) #Linha Divisoria.
+pdf.drawString(250, 700, "CUPOM FISCAL") #Titulo.
+
+
+#Cabeçalho de itens do CUPOM FISCAL:
+espaco = 100 #Espaçamento entre itens.
+#Selecionando todos os nomes do vetor CAMPOS
+for cm in campos: 
+    pdf.drawString(espaco, 680, cm) #Inserindo os nomes selecionados dentro de CAMPOS.
+    espaco += 60 #adcionando mais 30 de espaço no espaçamento entre os ITENS.
+
+
+pdf.save() #Salvando PDF criado. 
