@@ -51,8 +51,7 @@ def verifi_id_pro():
 def consul_produtos():
 
     cursor=con.cursor() #Conexão com o DataBase.
-    id=principal.ent_id_pro.text() #Importando o conteudo inserido pelo USER no campo ID.
-
+    
     editabanco=("SELECT * from tb_produtos") #Comando que seleciona todas as linhas e todas as colunas no DataBase.
     cursor.execute(editabanco) #Executando comando EDITABANCO dentro do DataBase.
     campos=cursor.fetchall() #Selecionando todas as linhas, colunas do DataBase.

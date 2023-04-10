@@ -213,6 +213,17 @@ def att_subtotal():
 
     principal.ent_subtotalcaixa.setText(str(calq_vl)) #Setando novo valor atualizado no campo SUBTOTAL.
 
+#Função encarregada de verificar os campo da tela position
+def verifi_posi():
+    id=position.ent_position.text() #Importando valores inseridos pelo user no campo POSIÇÃO.
+
+    #Verificação de dados:
+    if id == "":
+        msg_errounit() #Executando função encarregada de gerar a mensagem de erro.
+    #Caso o campo não esteja vazio.
+    else:
+        del_procompra() #Executando função encarregada de fazer a remoção de produtos da compra.
+
 #Função encarregada de fazer a remoção de produtos da compra.
 def del_procompra():
     global posi #Tornando variavel visivel para outras funções.
@@ -232,3 +243,18 @@ def del_procompra():
     set_tablepvd() #Executando função encarregada de mostrar a tabela da compra atualizada.
 
 
+#Função encarregada de setar dados na Tabela com todos os produtos.
+def most_produtos():
+    
+    cursor=con.cursor() #Conexão com o DataBase.
+    
+    editabanco=("SELECT * from tb_produtos") #Comando que seleciona todas as linhas e todas as colunas no DataBase.
+    cursor.execute(editabanco) #Executando comando EDITABANCO dentro do DataBase.
+    campos=cursor.fetchall() #Selecionando todas as linhas, colunas do DataBase.
+    principal.tab_produtos.setRowCount(len(campos)) #Definindo a contagem de linhas da table. 
+    principal.tab_produtos.setColumnCount(3) #Definindo a contagem de colunas da table.
+    for l in range(len(campos)): #Inserindo todas as linhas da DataBase na table.
+        for c in range(0,3): #Inserindo todas as colunas do DataBase na table.
+            principal.tab_produtos.setItem(l,c,QtWidgets.QTableWidgetItem(str(campos[l][c]))) #Setando os ITENS dentro da table.
+            
+    cursor.close() #Fechando a conexão com o DataBase.

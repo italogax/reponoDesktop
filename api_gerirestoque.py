@@ -14,6 +14,10 @@ from api_caixaReg import hitory_vendas, limpa_tabrotativa
 #Importando API relacionada ao gerador de CUPOM.
 from api_geracupom import geracp
 
+#Função encarregada de gerara MESSAGEBOX de erro.
+def erro_finalizar():
+    #Mensagem de erro.
+    messagebox.showerror(title="ERRO", message="É necessario haver pelo menos 1 produto para poder finalizar uma compra.")
 
 #Função encarregada de fazer a verificação da primeira linha da Table.   
 def pro_vendidos():
@@ -75,6 +79,20 @@ def att_estoque():
             
     messagebox.showinfo(title="Finalizado", message="Compra finalizada com sucesso!")
     limpa_tabrotativa() #Limpando a tabelaRotativa do caixa.
+
+
+#Função encarregada de fazer a verificação da existencia de produtos na compra.
+def verifi_comp():
+    qt_linhas() #Executando função que faz a contagem da quantidade de linhas na TABLE VENDAROTATIVA no DataBase.
+    
+    #Caso não tenha linhas.
+    if qtlinha == 0: 
+        erro_finalizar() #Executando função encarregada de gerara mensagem de erro.
+    
+    #Caso tenha alguma linha.
+    else:
+        att_estoque() #Executando função encarregada de fazer a atualização no DataBase.
+
     
     
         

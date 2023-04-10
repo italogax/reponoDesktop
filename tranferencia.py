@@ -16,6 +16,7 @@ from tkinter import ttk
 from PyQt5 import uic, QtWidgets
 import PySimpleGUI as py
 import keyboard
+from api_iniTelas import *
 #Importando conexão com DATABASE.
 from api_conectDb import * 
 #Importando verificação do USER e PSWORD.
@@ -35,8 +36,43 @@ from api_gerirestoque import *
 #Importando funções que automatizam processos no teclado.
 from api_atalhoskey import keypress
 
+from tabula import read_pdf
+"""
+import os
+caminho= ("D:\meu_pdf.pdf")
+cmd = "start {}".format(caminho)
+cmd1= "taskkill /f /im cmd.exe"
+
+os.system(cmd)
+os.system(cmd1)
+app.exec()
+"""
+"""
+def pdf():
+    df = read_pdf('meu_pdf.pdf')
+
+pdf()
+"""
+"""
+from pypdf import PdfReader
+
+def leitorPDF():
+    arquivo = r"Cupom_Fiscal.pdf"
+
+    pdf_leitor= PdfReader(arquivo)
+    page_conteudo = {}
 
 
+    for indx, pdf_pag in enumerate(pdf_leitor.pages):
+        page_conteudo[indx + 1] = pdf_pag.extract_text()
+
+        cupom.pdf.setText(str(page_conteudo))
+
+cupom.bt_gerar.clicked.connect(leitorPDF)
+
+chama_tl_cupom()
+app.exec()
+"""
 """
 cursor=con.cursor() #Conexão com o DataBase.
 comandodb=("SELECT COUNT(id) FROM tb_vendarotativa") #Comando a ser executado dentro do DataBase para identificar quantas linhas há na tb_vendarotativa.
@@ -258,7 +294,7 @@ def consul_produtos_ids():
 """ID não encontrado!Por favor verficque na aba INVENTARIO o ID que procura!"""
  
 
-
+"""
 def produtos_vd():
 
     #Comandos a serem executados dentro do DataBase.
@@ -270,6 +306,9 @@ def produtos_vd():
     print(itens[0][0])
 
 produtos_vd()
+"""
+
+
 
 """#Função encarregada de importar os intes vendidos na compra
 def produtos_vd():

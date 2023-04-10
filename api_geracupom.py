@@ -2,6 +2,7 @@
 
 from reportlab.pdfgen import canvas 
 from reportlab.lib.pagesizes import A4 
+import os
 
 #Criando a conexão com o DataBase.
 from api_conectDb import *
@@ -15,6 +16,15 @@ def select_item():
     cursor.execute(comandodb) #Executando comando dentro do DataBase.
     item=cursor.fetchall() #Selecionando campos mostrados no DataBase.
     cursor.close() #Fechando conexão com o DataBase.
+
+#Função encarregada de executar o PDF no acrobat.
+def exe_pdf():
+    caminho= ("D:\meu_pdf.pdf") #Caminho do arquivo PDF.
+    cmd = "start {}".format(caminho) #Comando a ser executado para inicicar o PDF.
+    exitCMD= "taskkill /f /im cmd.exe" #Comando a ser executado para FECHAR o CMD.
+
+    os.system(cmd) #Executando comando no CMD.
+    os.system(exitCMD) #Executando comando no CMD.
 
 #Função encarregada de gerar o CUPOM fiscal.
 def geracp():
@@ -42,27 +52,29 @@ def geracp():
         espaco += 60 #adcionando mais 30 de espaço no espaçamento entre os ITENS.
 
     #Setando dados do DataBase
-    y= 0
-    a= 670
+    y= 0 #Adcionando uma variavel para ser utilizanda no posicionamento dos dados abaixo.
+
+    #Lendo dados da tabela no DataBase.
     for i in range(0,len(item)):
 
-        y = y + 30
-        x= 130
+        y = y + 30 #Adcionando mais 30 na medida da posição Y.
+        x= 130 #Adcionando uma valor a medida da posição X.
 
-        pdf.drawString(x, 680 -y, str(item[i][5]))
-        x+=50
-        pdf.drawString(x, 680 -y, str(item[i][0]))
-        x+=30
-        pdf.drawString(x, 680 -y, str(item[i][1]))
-        x+=100
-        pdf.drawString(x, 680 -y, str(item[i][2]))
-        x+=50
-        pdf.drawString(x, 680 -y, str(item[i][4]))
-        x+=70
-        pdf.drawString(x, 680 -y, str(item[i][3]))
-        x+=50
+        pdf.drawString(x, 680 -y, str(item[i][5])) #Setando dados da Table no PDF.
+        x+=50 #Adcionando mais espaço na medida X.
+        pdf.drawString(x, 680 -y, str(item[i][0])) #Setando dados da Table no PDF.
+        x+=30 #Adcionando mais espaço na medida X.
+        pdf.drawString(x, 680 -y, str(item[i][1])) #Setando dados da Table no PDF.
+        x+=100 #Adcionando mais espaço na medida X.
+        pdf.drawString(x, 680 -y, str(item[i][2])) #Setando dados da Table no PDF.
+        x+=50 #Adcionando mais espaço na medida X.
+        pdf.drawString(x, 680 -y, str(item[i][4])) #Setando dados da Table no PDF.
+        x+=70 #Adcionando mais espaço na medida X.
+        pdf.drawString(x, 680 -y, str(item[i][3])) #Setando dados da Table no PDF.
+        x+=50 #Adcionando mais espaço na medida X.
  
-
     pdf.save() #Salvando PDF criado.
 
+    exe_pdf() #Executando comando que abre arquivo PDF.
 geracp()
+

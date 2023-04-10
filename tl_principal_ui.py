@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\Italo\OneDrive\reponoDesktop\tl_principalattfim.ui'
+# Form implementation generated from reading ui file 'c:\Users\Italo\OneDrive\reponoDesktop\tl_principal.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -15,8 +15,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(900, 700)
         MainWindow.setMinimumSize(QtCore.QSize(900, 700))
         MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        MainWindow.setStyleSheet("background-color:#a6a6a6;\n"
-"")
+        MainWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -24,8 +23,10 @@ class Ui_MainWindow(object):
         self.frame_mae = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame_mae.setMinimumSize(QtCore.QSize(850, 650))
         self.frame_mae.setMaximumSize(QtCore.QSize(850, 650))
-        self.frame_mae.setStyleSheet("background-color: rgb(0,0,0);\n"
-"border:noborder;")
+        self.frame_mae.setStyleSheet("background-color: rgb(220, 220, 220);\n"
+"\n"
+"\n"
+"")
         self.frame_mae.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_mae.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_mae.setObjectName("frame_mae")
@@ -36,7 +37,7 @@ class Ui_MainWindow(object):
         self.cabecalho = QtWidgets.QFrame(parent=self.frame_mae)
         self.cabecalho.setMinimumSize(QtCore.QSize(850, 50))
         self.cabecalho.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.cabecalho.setStyleSheet("background-color:#a6a6a6;\n"
+        self.cabecalho.setStyleSheet("background-color: rgb(220, 220, 220);\n"
 "\n"
 "border:noborder;")
         self.cabecalho.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -52,7 +53,7 @@ class Ui_MainWindow(object):
         self.telas = QtWidgets.QFrame(parent=self.frame_mae)
         self.telas.setMinimumSize(QtCore.QSize(850, 600))
         self.telas.setMaximumSize(QtCore.QSize(850, 600))
-        self.telas.setStyleSheet("background-color:#a6a6a6;")
+        self.telas.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.telas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.telas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.telas.setObjectName("telas")
@@ -70,57 +71,48 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(50)
         self.tabWidget.setFont(font)
-        self.tabWidget.setStyleSheet("border:noborder;\n"
-"border-style: outset;\n"
-"border-width: 1px;\n"
-"border-radius: 3px;\n"
-"border-color: black;\n"
+        self.tabWidget.setStyleSheet("background-color: rgb(220, 220, 220);\n"
 "font: 10pt \"Segoe UI Black\";\n"
-"color: rgb(50, 50, 50);\n"
-"background-color:#a6a6a6;\n"
 "font-size:18px;")
         self.tabWidget.setObjectName("tabWidget")
         self.vendas = QtWidgets.QWidget()
+        self.vendas.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.vendas.setObjectName("vendas")
         self.fr_primariovendas = QtWidgets.QFrame(parent=self.vendas)
         self.fr_primariovendas.setGeometry(QtCore.QRect(-1, -1, 840, 560))
         self.fr_primariovendas.setMinimumSize(QtCore.QSize(840, 560))
         self.fr_primariovendas.setMaximumSize(QtCore.QSize(16777215, 560))
-        self.fr_primariovendas.setStyleSheet("background-color: #f2f2f2;\n"
-"border:noborder;")
+        self.fr_primariovendas.setStyleSheet("background-color: rgb(220, 220, 220);\n"
+"")
+        self.fr_primariovendas.setInputMethodHints(QtCore.Qt.InputMethodHint.ImhNone)
         self.fr_primariovendas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_primariovendas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_primariovendas.setObjectName("fr_primariovendas")
         self.fr_subtelas_vendas = QtWidgets.QFrame(parent=self.fr_primariovendas)
-        self.fr_subtelas_vendas.setGeometry(QtCore.QRect(9, 139, 820, 400))
-        self.fr_subtelas_vendas.setMinimumSize(QtCore.QSize(820, 400))
-        self.fr_subtelas_vendas.setMaximumSize(QtCore.QSize(820, 400))
-        self.fr_subtelas_vendas.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"")
+        self.fr_subtelas_vendas.setGeometry(QtCore.QRect(9, 139, 840, 400))
+        self.fr_subtelas_vendas.setMinimumSize(QtCore.QSize(840, 400))
+        self.fr_subtelas_vendas.setMaximumSize(QtCore.QSize(840, 400))
+        self.fr_subtelas_vendas.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_subtelas_vendas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_subtelas_vendas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_subtelas_vendas.setObjectName("fr_subtelas_vendas")
         self.fr_caixa = QtWidgets.QWidget(parent=self.fr_subtelas_vendas)
-        self.fr_caixa.setGeometry(QtCore.QRect(10, 10, 801, 381))
-        self.fr_caixa.setStyleSheet("background-color: rgb(241, 241, 241);\n"
-"border-radius:10px;")
+        self.fr_caixa.setGeometry(QtCore.QRect(10, 0, 801, 381))
+        self.fr_caixa.setStyleSheet("background-color: rgb(220, 220, 220);\n"
+"")
         self.fr_caixa.setObjectName("fr_caixa")
         self.tab_caixa = QtWidgets.QTableWidget(parent=self.fr_caixa)
-        self.tab_caixa.setGeometry(QtCore.QRect(400, 20, 401, 281))
+        self.tab_caixa.setGeometry(QtCore.QRect(180, 60, 621, 271))
         self.tab_caixa.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 12px \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
 "border-radius: 5px;\n"
 "border-color: black;")
-        self.tab_caixa.setAutoScrollMargin(16)
         self.tab_caixa.setObjectName("tab_caixa")
         self.tab_caixa.setColumnCount(6)
         self.tab_caixa.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        item.setFont(font)
         self.tab_caixa.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.tab_caixa.setHorizontalHeaderItem(1, item)
@@ -133,8 +125,8 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         item.setText("POSITION")
         self.tab_caixa.setHorizontalHeaderItem(5, item)
-        self.tab_caixa.horizontalHeader().setDefaultSectionSize(66)
-        self.tab_caixa.horizontalHeader().setMinimumSectionSize(40)
+        self.tab_caixa.verticalHeader().setDefaultSectionSize(40)
+        self.tab_caixa.verticalHeader().setMinimumSectionSize(30)
         self.bt_sair = QtWidgets.QPushButton(parent=self.fr_caixa)
         self.bt_sair.setGeometry(QtCore.QRect(714, 340, 81, 31))
         self.bt_sair.setStyleSheet("QPushButton {\n"
@@ -158,7 +150,7 @@ class Ui_MainWindow(object):
 "")
         self.bt_sair.setObjectName("bt_sair")
         self.bt_finalizarcompra = QtWidgets.QPushButton(parent=self.fr_caixa)
-        self.bt_finalizarcompra.setGeometry(QtCore.QRect(490, 340, 101, 31))
+        self.bt_finalizarcompra.setGeometry(QtCore.QRect(470, 340, 101, 31))
         self.bt_finalizarcompra.setStyleSheet("QPushButton {\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
@@ -180,16 +172,15 @@ class Ui_MainWindow(object):
 "")
         self.bt_finalizarcompra.setObjectName("bt_finalizarcompra")
         self.bt_cancelarcompra = QtWidgets.QPushButton(parent=self.fr_caixa)
-        self.bt_cancelarcompra.setGeometry(QtCore.QRect(380, 340, 101, 31))
-        self.bt_cancelarcompra.setStyleSheet("\n"
-"QPushButton {\n"
+        self.bt_cancelarcompra.setGeometry(QtCore.QRect(340, 340, 101, 31))
+        self.bt_cancelarcompra.setStyleSheet("QPushButton {\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
 "border-radius: 15px;\n"
 "border-color: black;\n"
 "font: 87 12pt \"Segoe UI Black\";\n"
 "color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 0, 0);\n"
+"background-color: rgb(120, 120, 120);\n"
 "}\n"
 "QPushButton:pressed {\n"
 "border-style: outset;\n"
@@ -198,23 +189,20 @@ class Ui_MainWindow(object):
 "border-color: white;\n"
 "font: 87 12pt \"Segoe UI Black\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"\n"
-"\n"
+"background-color: rgb(100, 100, 100);\n"
 "}\n"
 "")
         self.bt_cancelarcompra.setObjectName("bt_cancelarcompra")
         self.bt_cancelarproduto = QtWidgets.QPushButton(parent=self.fr_caixa)
-        self.bt_cancelarproduto.setGeometry(QtCore.QRect(270, 340, 101, 31))
-        self.bt_cancelarproduto.setStyleSheet("\n"
-"QPushButton {\n"
+        self.bt_cancelarproduto.setGeometry(QtCore.QRect(210, 340, 101, 31))
+        self.bt_cancelarproduto.setStyleSheet("QPushButton {\n"
 "border-style: outset;\n"
 "border-width: 2px;\n"
 "border-radius: 15px;\n"
 "border-color: black;\n"
 "font: 87 12pt \"Segoe UI Black\";\n"
 "color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 0, 0);\n"
+"background-color: rgb(120, 120, 120);\n"
 "}\n"
 "QPushButton:pressed {\n"
 "border-style: outset;\n"
@@ -223,19 +211,15 @@ class Ui_MainWindow(object):
 "border-color: white;\n"
 "font: 87 12pt \"Segoe UI Black\";\n"
 "color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"\n"
-"\n"
+"background-color: rgb(100, 100, 100);\n"
 "}\n"
-"\n"
-"\n"
 "")
         self.bt_cancelarproduto.setObjectName("bt_cancelarproduto")
         self.label_14 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_14.setGeometry(QtCore.QRect(10, 80, 31, 31))
+        self.label_14.setGeometry(QtCore.QRect(9, 13, 31, 31))
         self.label_14.setObjectName("label_14")
         self.ent_idcaixa = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_idcaixa.setGeometry(QtCore.QRect(49, 82, 61, 30))
+        self.ent_idcaixa.setGeometry(QtCore.QRect(42, 12, 73, 34))
         self.ent_idcaixa.setMinimumSize(QtCore.QSize(50, 20))
         self.ent_idcaixa.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_idcaixa.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
@@ -249,13 +233,13 @@ class Ui_MainWindow(object):
 "    background-color: rgb(255, 255, 255);\n"
 "}")
         self.ent_idcaixa.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
-        self.ent_idcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.ent_idcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.ent_idcaixa.setObjectName("ent_idcaixa")
         self.label_15 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_15.setGeometry(QtCore.QRect(130, 80, 91, 31))
+        self.label_15.setGeometry(QtCore.QRect(120, 13, 91, 31))
         self.label_15.setObjectName("label_15")
         self.ent_produtocaixa = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_produtocaixa.setGeometry(QtCore.QRect(230, 82, 161, 30))
+        self.ent_produtocaixa.setGeometry(QtCore.QRect(212, 12, 400, 34))
         self.ent_produtocaixa.setMinimumSize(QtCore.QSize(50, 20))
         self.ent_produtocaixa.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_produtocaixa.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
@@ -272,10 +256,10 @@ class Ui_MainWindow(object):
         self.ent_produtocaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_produtocaixa.setObjectName("ent_produtocaixa")
         self.label_16 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_16.setGeometry(QtCore.QRect(260, 160, 41, 31))
+        self.label_16.setGeometry(QtCore.QRect(621, 14, 41, 31))
         self.label_16.setObjectName("label_16")
         self.ent_qtcaixa = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_qtcaixa.setGeometry(QtCore.QRect(314, 162, 71, 30))
+        self.ent_qtcaixa.setGeometry(QtCore.QRect(669, 12, 95, 34))
         self.ent_qtcaixa.setMinimumSize(QtCore.QSize(50, 20))
         self.ent_qtcaixa.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_qtcaixa.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
@@ -289,13 +273,13 @@ class Ui_MainWindow(object):
 "    background-color: rgb(255, 255, 255);\n"
 "}")
         self.ent_qtcaixa.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
-        self.ent_qtcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.ent_qtcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.ent_qtcaixa.setObjectName("ent_qtcaixa")
         self.label_17 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_17.setGeometry(QtCore.QRect(10, 160, 111, 31))
+        self.label_17.setGeometry(QtCore.QRect(20, 70, 111, 31))
         self.label_17.setObjectName("label_17")
         self.ent_valorcaixa = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_valorcaixa.setGeometry(QtCore.QRect(130, 162, 111, 30))
+        self.ent_valorcaixa.setGeometry(QtCore.QRect(20, 110, 111, 30))
         self.ent_valorcaixa.setMinimumSize(QtCore.QSize(50, 20))
         self.ent_valorcaixa.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_valorcaixa.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
@@ -312,10 +296,10 @@ class Ui_MainWindow(object):
         self.ent_valorcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_valorcaixa.setObjectName("ent_valorcaixa")
         self.label_18 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_18.setGeometry(QtCore.QRect(10, 250, 91, 31))
+        self.label_18.setGeometry(QtCore.QRect(30, 150, 91, 31))
         self.label_18.setObjectName("label_18")
         self.ent_subtotalcaixa = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_subtotalcaixa.setGeometry(QtCore.QRect(110, 251, 136, 30))
+        self.ent_subtotalcaixa.setGeometry(QtCore.QRect(10, 190, 136, 30))
         self.ent_subtotalcaixa.setMinimumSize(QtCore.QSize(50, 20))
         self.ent_subtotalcaixa.setMaximumSize(QtCore.QSize(400, 16777215))
         self.ent_subtotalcaixa.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
@@ -331,64 +315,64 @@ class Ui_MainWindow(object):
         self.ent_subtotalcaixa.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
         self.ent_subtotalcaixa.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.ent_subtotalcaixa.setObjectName("ent_subtotalcaixa")
-        self.label_19 = QtWidgets.QLabel(parent=self.fr_caixa)
-        self.label_19.setGeometry(QtCore.QRect(10, 10, 111, 31))
-        self.label_19.setObjectName("label_19")
-        self.ent_atendente = QtWidgets.QLineEdit(parent=self.fr_caixa)
-        self.ent_atendente.setGeometry(QtCore.QRect(130, 10, 140, 30))
-        self.ent_atendente.setMinimumSize(QtCore.QSize(50, 20))
-        self.ent_atendente.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.ent_atendente.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.ent_atendente.setStyleSheet("QLineEdit {\n"
-"border-style: outset;\n"
-"border-width: 1px;\n"
-"border-radius: 15px;\n"
-"border-color: black;\n"
-"font: 87 12pt \"Segoe UI Black\";\n"
-"color: rgb(0, 0, 0);\n"
-"    background-color: rgb(255, 255, 255);\n"
-"}")
-        self.ent_atendente.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
-        self.ent_atendente.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.ent_atendente.setObjectName("ent_atendente")
-        self.comboBox = QtWidgets.QComboBox(parent=self.fr_caixa)
-        self.comboBox.setGeometry(QtCore.QRect(39, 301, 171, 31))
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
+        self.box_pag = QtWidgets.QComboBox(parent=self.fr_caixa)
+        self.box_pag.setGeometry(QtCore.QRect(0, 240, 171, 31))
+        self.box_pag.setObjectName("box_pag")
+        self.box_pag.addItem("")
+        self.box_pag.addItem("")
+        self.box_pag.addItem("")
+        self.box_pag.addItem("")
+        self.box_pag.addItem("")
+        self.bt_pesquisar = QtWidgets.QPushButton(parent=self.fr_caixa)
+        self.bt_pesquisar.setGeometry(QtCore.QRect(80, 14, 31, 31))
+        self.bt_pesquisar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;")
+        self.bt_pesquisar.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Vendas/PNG/icom_pesquisar.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_pesquisar.setIcon(icon)
+        self.bt_pesquisar.setIconSize(QtCore.QSize(25, 25))
+        self.bt_pesquisar.setObjectName("bt_pesquisar")
+        self.bt_calq = QtWidgets.QPushButton(parent=self.fr_caixa)
+        self.bt_calq.setGeometry(QtCore.QRect(730, 14, 31, 31))
+        self.bt_calq.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;")
+        self.bt_calq.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Vendas/PNG/icom_calcular.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_calq.setIcon(icon1)
+        self.bt_calq.setIconSize(QtCore.QSize(25, 25))
+        self.bt_calq.setObjectName("bt_calq")
         self.fr_tabelaprodutos = QtWidgets.QWidget(parent=self.fr_subtelas_vendas)
         self.fr_tabelaprodutos.setGeometry(QtCore.QRect(10, 10, 801, 381))
         self.fr_tabelaprodutos.setStyleSheet("background-color: rgb(220, 220, 220);\n"
 "border-radius:10px;")
         self.fr_tabelaprodutos.setObjectName("fr_tabelaprodutos")
-        self.tab_tabela = QtWidgets.QTableWidget(parent=self.fr_tabelaprodutos)
-        self.tab_tabela.setGeometry(QtCore.QRect(2, 0, 797, 376))
-        self.tab_tabela.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.tab_produtos = QtWidgets.QTableWidget(parent=self.fr_tabelaprodutos)
+        self.tab_produtos.setGeometry(QtCore.QRect(2, 0, 797, 376))
+        self.tab_produtos.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 12px \"Arial\";\n"
 "border-style: outset;\n"
 "border-width: 1px;\n"
 "border-radius: 5px;\n"
 "border-color: black;")
-        self.tab_tabela.setObjectName("tab_tabela")
-        self.tab_tabela.setColumnCount(3)
-        self.tab_tabela.setRowCount(0)
+        self.tab_produtos.setObjectName("tab_produtos")
+        self.tab_produtos.setColumnCount(3)
+        self.tab_produtos.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tab_tabela.setHorizontalHeaderItem(0, item)
+        self.tab_produtos.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tab_tabela.setHorizontalHeaderItem(1, item)
+        self.tab_produtos.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tab_tabela.setHorizontalHeaderItem(2, item)
+        self.tab_produtos.setHorizontalHeaderItem(2, item)
         self.fr_tabelaprodutos.raise_()
         self.fr_caixa.raise_()
         self.men_interno_vendas = QtWidgets.QFrame(parent=self.fr_primariovendas)
-        self.men_interno_vendas.setGeometry(QtCore.QRect(0, 20, 831, 100))
+        self.men_interno_vendas.setGeometry(QtCore.QRect(0, 20, 841, 100))
         self.men_interno_vendas.setMaximumSize(QtCore.QSize(16777215, 100))
         self.men_interno_vendas.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
         self.men_interno_vendas.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
-        self.men_interno_vendas.setStyleSheet("background-color: #f2f2f2;")
+        self.men_interno_vendas.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.men_interno_vendas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.men_interno_vendas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.men_interno_vendas.setObjectName("men_interno_vendas")
@@ -399,9 +383,9 @@ class Ui_MainWindow(object):
         self.bt_tabcodigos_ven.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
         self.bt_tabcodigos_ven.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Vendas/PNG/icon_codigos.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_tabcodigos_ven.setIcon(icon)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Vendas/PNG/icon_codigos.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_tabcodigos_ven.setIcon(icon2)
         self.bt_tabcodigos_ven.setIconSize(QtCore.QSize(35, 35))
         self.bt_tabcodigos_ven.setObjectName("bt_tabcodigos_ven")
         self.icon_caixa = QtWidgets.QLabel(parent=self.men_interno_vendas)
@@ -432,9 +416,9 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.bt_caixa_ven.setInputMethodHints(QtCore.Qt.InputMethodHint.ImhNone)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Vendas/PNG/icon_caixa.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_caixa_ven.setIcon(icon1)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Vendas/PNG/icon_caixa.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_caixa_ven.setIcon(icon3)
         self.bt_caixa_ven.setIconSize(QtCore.QSize(35, 35))
         self.bt_caixa_ven.setShortcut("")
         self.bt_caixa_ven.setCheckable(False)
@@ -454,26 +438,25 @@ class Ui_MainWindow(object):
         self.icon_tababela.setPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Vendas/PNG/icon_codigos.png"))
         self.icon_tababela.setScaledContents(True)
         self.icon_tababela.setObjectName("icon_tababela")
-        self.bt_pesquisar = QtWidgets.QPushButton(parent=self.men_interno_vendas)
-        self.bt_pesquisar.setGeometry(QtCore.QRect(390, 30, 181, 41))
-        self.bt_pesquisar.setObjectName("bt_pesquisar")
-        self.bt_calq = QtWidgets.QPushButton(parent=self.men_interno_vendas)
-        self.bt_calq.setGeometry(QtCore.QRect(580, 30, 181, 41))
-        self.bt_calq.setObjectName("bt_calq")
         self.icon_caixa.raise_()
         self.icon_tababela.raise_()
         self.bt_tabcodigos_ven.raise_()
         self.bt_caixa_ven.raise_()
-        self.bt_pesquisar.raise_()
-        self.bt_calq.raise_()
+        self.line = QtWidgets.QFrame(parent=self.fr_primariovendas)
+        self.line.setGeometry(QtCore.QRect(-3, 120, 841, 16))
+        self.line.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.line.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.line.setObjectName("line")
         self.tabWidget.addTab(self.vendas, "")
         self.relatorios = QtWidgets.QWidget()
+        self.relatorios.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.relatorios.setObjectName("relatorios")
         self.fr_primariorelatorios = QtWidgets.QFrame(parent=self.relatorios)
         self.fr_primariorelatorios.setGeometry(QtCore.QRect(0, 0, 840, 560))
         self.fr_primariorelatorios.setMinimumSize(QtCore.QSize(840, 560))
         self.fr_primariorelatorios.setMaximumSize(QtCore.QSize(16777215, 560))
-        self.fr_primariorelatorios.setStyleSheet("background-color: #f2f2f2;\n"
+        self.fr_primariorelatorios.setStyleSheet("background-color: rgb(220, 220, 220);\n"
 "border:noborder;")
         self.fr_primariorelatorios.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_primariorelatorios.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -482,8 +465,7 @@ class Ui_MainWindow(object):
         self.fr_subtelas_relatorios.setGeometry(QtCore.QRect(10, 138, 820, 400))
         self.fr_subtelas_relatorios.setMinimumSize(QtCore.QSize(820, 400))
         self.fr_subtelas_relatorios.setMaximumSize(QtCore.QSize(820, 400))
-        self.fr_subtelas_relatorios.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"")
+        self.fr_subtelas_relatorios.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.fr_subtelas_relatorios.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_subtelas_relatorios.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_subtelas_relatorios.setObjectName("fr_subtelas_relatorios")
@@ -510,7 +492,8 @@ class Ui_MainWindow(object):
         self.men_interno_relelatorios = QtWidgets.QFrame(parent=self.fr_primariorelatorios)
         self.men_interno_relelatorios.setGeometry(QtCore.QRect(0, 20, 841, 100))
         self.men_interno_relelatorios.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.men_interno_relelatorios.setStyleSheet("background-color: #f2f2f2;\n"
+        self.men_interno_relelatorios.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
 "border:noborder;")
         self.men_interno_relelatorios.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.men_interno_relelatorios.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -523,9 +506,9 @@ class Ui_MainWindow(object):
         self.bt_saidapro_rel.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.bt_saidapro_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));")
         self.bt_saidapro_rel.setInputMethodHints(QtCore.Qt.InputMethodHint.ImhNone)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_saida.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_saidapro_rel.setIcon(icon2)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_saida.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_saidapro_rel.setIcon(icon4)
         self.bt_saidapro_rel.setIconSize(QtCore.QSize(32, 32))
         self.bt_saidapro_rel.setShortcut("")
         self.bt_saidapro_rel.setCheckable(False)
@@ -540,9 +523,9 @@ class Ui_MainWindow(object):
         self.bt_vendadt_rel.setMaximumSize(QtCore.QSize(100, 90))
         self.bt_vendadt_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_venda_detalhada.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_vendadt_rel.setIcon(icon3)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_venda_detalhada.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_vendadt_rel.setIcon(icon5)
         self.bt_vendadt_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_vendadt_rel.setObjectName("bt_vendadt_rel")
         self.bt_cupomfis_rel = QtWidgets.QPushButton(parent=self.men_interno_relelatorios)
@@ -551,9 +534,9 @@ class Ui_MainWindow(object):
         self.bt_cupomfis_rel.setMaximumSize(QtCore.QSize(100, 90))
         self.bt_cupomfis_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_cupom_fiscal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_cupomfis_rel.setIcon(icon4)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_cupom_fiscal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_cupomfis_rel.setIcon(icon6)
         self.bt_cupomfis_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_cupomfis_rel.setObjectName("bt_cupomfis_rel")
         self.bt_vendasm_rel = QtWidgets.QPushButton(parent=self.men_interno_relelatorios)
@@ -562,9 +545,9 @@ class Ui_MainWindow(object):
         self.bt_vendasm_rel.setMaximumSize(QtCore.QSize(100, 90))
         self.bt_vendasm_rel.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_vendas_mensais.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_vendasm_rel.setIcon(icon5)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Relatorios/PNG/icon_vendas_mensais.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_vendasm_rel.setIcon(icon7)
         self.bt_vendasm_rel.setIconSize(QtCore.QSize(35, 35))
         self.bt_vendasm_rel.setObjectName("bt_vendasm_rel")
         self.icon_vendasdt = QtWidgets.QLabel(parent=self.men_interno_relelatorios)
@@ -611,15 +594,21 @@ class Ui_MainWindow(object):
         self.bt_vendadt_rel.raise_()
         self.bt_vendasm_rel.raise_()
         self.bt_saidapro_rel.raise_()
+        self.line_2 = QtWidgets.QFrame(parent=self.fr_primariorelatorios)
+        self.line_2.setGeometry(QtCore.QRect(0, 120, 841, 16))
+        self.line_2.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.line_2.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.line_2.setObjectName("line_2")
         self.tabWidget.addTab(self.relatorios, "")
         self.produtos = QtWidgets.QWidget()
+        self.produtos.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.produtos.setObjectName("produtos")
         self.fr_primarioprodutos = QtWidgets.QFrame(parent=self.produtos)
         self.fr_primarioprodutos.setGeometry(QtCore.QRect(0, 0, 840, 560))
         self.fr_primarioprodutos.setMinimumSize(QtCore.QSize(840, 560))
         self.fr_primarioprodutos.setMaximumSize(QtCore.QSize(16777215, 560))
-        self.fr_primarioprodutos.setStyleSheet("background-color: #f2f2f2;\n"
-"border:noborder;")
+        self.fr_primarioprodutos.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_primarioprodutos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_primarioprodutos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_primarioprodutos.setObjectName("fr_primarioprodutos")
@@ -627,13 +616,13 @@ class Ui_MainWindow(object):
         self.fr_subtelas_produtos.setGeometry(QtCore.QRect(10, 138, 820, 400))
         self.fr_subtelas_produtos.setMinimumSize(QtCore.QSize(820, 400))
         self.fr_subtelas_produtos.setMaximumSize(QtCore.QSize(820, 400))
-        self.fr_subtelas_produtos.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.fr_subtelas_produtos.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_subtelas_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_subtelas_produtos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_subtelas_produtos.setObjectName("fr_subtelas_produtos")
         self.fr_inventario = QtWidgets.QWidget(parent=self.fr_subtelas_produtos)
         self.fr_inventario.setGeometry(QtCore.QRect(10, 20, 801, 361))
-        self.fr_inventario.setStyleSheet("background-color: rgb(232, 232, 232);")
+        self.fr_inventario.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_inventario.setObjectName("fr_inventario")
         self.tab_inventario = QtWidgets.QTableWidget(parent=self.fr_inventario)
         self.tab_inventario.setGeometry(QtCore.QRect(0, 10, 801, 361))
@@ -661,8 +650,8 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.tab_inventario.setHorizontalHeaderItem(6, item)
         self.fr_produtos = QtWidgets.QFrame(parent=self.fr_subtelas_produtos)
-        self.fr_produtos.setGeometry(QtCore.QRect(10, 10, 801, 381))
-        self.fr_produtos.setStyleSheet("background-color: #f2f2f2;")
+        self.fr_produtos.setGeometry(QtCore.QRect(10, 20, 801, 361))
+        self.fr_produtos.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_produtos.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_produtos.setObjectName("fr_produtos")
@@ -965,7 +954,7 @@ class Ui_MainWindow(object):
         self.men_interno_produtos = QtWidgets.QFrame(parent=self.fr_primarioprodutos)
         self.men_interno_produtos.setGeometry(QtCore.QRect(0, 20, 841, 100))
         self.men_interno_produtos.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.men_interno_produtos.setStyleSheet("background-color: #f2f2f2;\n"
+        self.men_interno_produtos.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border:noborder;")
         self.men_interno_produtos.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -978,9 +967,9 @@ class Ui_MainWindow(object):
         self.bt_inventario.setMaximumSize(QtCore.QSize(125, 90))
         self.bt_inventario.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Produtos/Incones/icon_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_inventario.setIcon(icon6)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Produtos/Incones/icon_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_inventario.setIcon(icon8)
         self.bt_inventario.setIconSize(QtCore.QSize(35, 35))
         self.bt_inventario.setObjectName("bt_inventario")
         self.bt_produtos = QtWidgets.QPushButton(parent=self.men_interno_produtos)
@@ -1013,14 +1002,20 @@ class Ui_MainWindow(object):
         self.icon_produtos.raise_()
         self.bt_inventario.raise_()
         self.bt_produtos.raise_()
+        self.line_3 = QtWidgets.QFrame(parent=self.fr_primarioprodutos)
+        self.line_3.setGeometry(QtCore.QRect(0, 120, 841, 16))
+        self.line_3.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.line_3.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.line_3.setObjectName("line_3")
         self.tabWidget.addTab(self.produtos, "")
         self.pessoas = QtWidgets.QWidget()
         self.pessoas.setObjectName("pessoas")
         self.fr_primariopessoas = QtWidgets.QFrame(parent=self.pessoas)
-        self.fr_primariopessoas.setGeometry(QtCore.QRect(0, 0, 840, 560))
+        self.fr_primariopessoas.setGeometry(QtCore.QRect(0, -10, 840, 560))
         self.fr_primariopessoas.setMinimumSize(QtCore.QSize(840, 560))
         self.fr_primariopessoas.setMaximumSize(QtCore.QSize(16777215, 560))
-        self.fr_primariopessoas.setStyleSheet("background-color: #f2f2f2;\n"
+        self.fr_primariopessoas.setStyleSheet("background-color: rgb(220, 220, 220);\n"
 "border:noborder;")
         self.fr_primariopessoas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_primariopessoas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -1029,18 +1024,17 @@ class Ui_MainWindow(object):
         self.fr_subtelas_pessoas.setGeometry(QtCore.QRect(10, 139, 820, 400))
         self.fr_subtelas_pessoas.setMinimumSize(QtCore.QSize(820, 400))
         self.fr_subtelas_pessoas.setMaximumSize(QtCore.QSize(820, 400))
-        self.fr_subtelas_pessoas.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"")
+        self.fr_subtelas_pessoas.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_subtelas_pessoas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.fr_subtelas_pessoas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.fr_subtelas_pessoas.setObjectName("fr_subtelas_pessoas")
         self.fr_funcionarios = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
         self.fr_funcionarios.setGeometry(QtCore.QRect(10, 10, 801, 381))
-        self.fr_funcionarios.setStyleSheet("background-color: rgb(241, 241, 241);\n"
-"border-radius:10px;")
+        self.fr_funcionarios.setStyleSheet("background-color: rgb(220, 220, 220);\n"
+"")
         self.fr_funcionarios.setObjectName("fr_funcionarios")
         self.label_titulo_fun = QtWidgets.QLabel(parent=self.fr_funcionarios)
-        self.label_titulo_fun.setGeometry(QtCore.QRect(10, 20, 231, 21))
+        self.label_titulo_fun.setGeometry(QtCore.QRect(10, 10, 231, 21))
         self.label_titulo_fun.setObjectName("label_titulo_fun")
         self.ent_id_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
         self.ent_id_fun.setGeometry(QtCore.QRect(40, 70, 71, 41))
@@ -1111,6 +1105,7 @@ class Ui_MainWindow(object):
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
 "}")
+        self.ent_cpf_fun.setInputMask("")
         self.ent_cpf_fun.setObjectName("ent_cpf_fun")
         self.ent_contato_fun = QtWidgets.QLineEdit(parent=self.fr_funcionarios)
         self.ent_contato_fun.setGeometry(QtCore.QRect(90, 190, 131, 41))
@@ -1306,11 +1301,11 @@ class Ui_MainWindow(object):
         self.ent_endereco_fun.setObjectName("ent_endereco_fun")
         self.fr_clientes = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
         self.fr_clientes.setGeometry(QtCore.QRect(10, 10, 801, 381))
-        self.fr_clientes.setStyleSheet("background-color: rgb(241, 241, 241);\n"
-"border-radius:10px;")
+        self.fr_clientes.setStyleSheet("background-color: rgb(220, 220, 220);\n"
+"")
         self.fr_clientes.setObjectName("fr_clientes")
         self.label_titulo__cli = QtWidgets.QLabel(parent=self.fr_clientes)
-        self.label_titulo__cli.setGeometry(QtCore.QRect(10, 20, 201, 21))
+        self.label_titulo__cli.setGeometry(QtCore.QRect(10, 10, 201, 21))
         self.label_titulo__cli.setObjectName("label_titulo__cli")
         self.label_id_cli = QtWidgets.QLabel(parent=self.fr_clientes)
         self.label_id_cli.setGeometry(QtCore.QRect(10, 100, 31, 16))
@@ -1356,6 +1351,7 @@ class Ui_MainWindow(object):
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
 "}")
+        self.ent_cpf_cli.setInputMask("")
         self.ent_cpf_cli.setObjectName("ent_cpf_cli")
         self.label_dt_nascimento_cli = QtWidgets.QLabel(parent=self.fr_clientes)
         self.label_dt_nascimento_cli.setGeometry(QtCore.QRect(200, 170, 181, 16))
@@ -1544,8 +1540,7 @@ class Ui_MainWindow(object):
         self.bt_consulta_cli.setObjectName("bt_consulta_cli")
         self.fr_fornecedores = QtWidgets.QWidget(parent=self.fr_subtelas_pessoas)
         self.fr_fornecedores.setGeometry(QtCore.QRect(10, 10, 801, 380))
-        self.fr_fornecedores.setStyleSheet("background-color: rgb(241, 241, 241);\n"
-"border-radius:10px;")
+        self.fr_fornecedores.setStyleSheet("background-color: rgb(220, 220, 220);")
         self.fr_fornecedores.setObjectName("fr_fornecedores")
         self.label_titulo_for = QtWidgets.QLabel(parent=self.fr_fornecedores)
         self.label_titulo_for.setGeometry(QtCore.QRect(10, 10, 261, 21))
@@ -1609,6 +1604,7 @@ class Ui_MainWindow(object):
 "color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);\n"
 "}")
+        self.ent_cnpj_for.setInputMask("")
         self.ent_cnpj_for.setObjectName("ent_cnpj_for")
         self.ent_nome_for = QtWidgets.QLineEdit(parent=self.fr_fornecedores)
         self.ent_nome_for.setGeometry(QtCore.QRect(210, 70, 431, 41))
@@ -1763,9 +1759,9 @@ class Ui_MainWindow(object):
 "")
         self.bt_consulta_for.setObjectName("bt_consulta_for")
         self.men_interno_pessoas = QtWidgets.QFrame(parent=self.fr_primariopessoas)
-        self.men_interno_pessoas.setGeometry(QtCore.QRect(0, 20, 831, 100))
+        self.men_interno_pessoas.setGeometry(QtCore.QRect(0, 30, 831, 100))
         self.men_interno_pessoas.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.men_interno_pessoas.setStyleSheet("background-color: #f2f2f2;")
+        self.men_interno_pessoas.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.men_interno_pessoas.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.men_interno_pessoas.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.men_interno_pessoas.setObjectName("men_interno_pessoas")
@@ -1775,9 +1771,9 @@ class Ui_MainWindow(object):
         self.bt_fornecedores.setMaximumSize(QtCore.QSize(125, 90))
         self.bt_fornecedores.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_fornecedores.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_fornecedores.setIcon(icon7)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_fornecedores.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_fornecedores.setIcon(icon9)
         self.bt_fornecedores.setIconSize(QtCore.QSize(35, 35))
         self.bt_fornecedores.setObjectName("bt_fornecedores")
         self.bt_cliente = QtWidgets.QPushButton(parent=self.men_interno_pessoas)
@@ -1786,9 +1782,9 @@ class Ui_MainWindow(object):
         self.bt_cliente.setMaximumSize(QtCore.QSize(100, 90))
         self.bt_cliente.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_clientes.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_cliente.setIcon(icon8)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_clientes.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_cliente.setIcon(icon10)
         self.bt_cliente.setIconSize(QtCore.QSize(35, 35))
         self.bt_cliente.setCheckable(False)
         self.bt_cliente.setObjectName("bt_cliente")
@@ -1798,9 +1794,9 @@ class Ui_MainWindow(object):
         self.bt_funcionarios.setMaximumSize(QtCore.QSize(125, 90))
         self.bt_funcionarios.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0));\n"
 "border:noborder;")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_funcionarios.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.bt_funcionarios.setIcon(icon9)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("c:\\Users\\Italo\\OneDrive\\reponoDesktop\\Telas/Repono/Pessoas/Icones/icon_funcionarios.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.bt_funcionarios.setIcon(icon11)
         self.bt_funcionarios.setIconSize(QtCore.QSize(35, 35))
         self.bt_funcionarios.setObjectName("bt_funcionarios")
         self.icon_cliente = QtWidgets.QLabel(parent=self.men_interno_pessoas)
@@ -1837,6 +1833,12 @@ class Ui_MainWindow(object):
         self.icon_cliente.raise_()
         self.bt_fornecedores.raise_()
         self.bt_cliente.raise_()
+        self.line_4 = QtWidgets.QFrame(parent=self.fr_primariopessoas)
+        self.line_4.setGeometry(QtCore.QRect(0, 130, 841, 16))
+        self.line_4.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.line_4.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.line_4.setObjectName("line_4")
         self.tabWidget.addTab(self.pessoas, "")
         self.horizontalLayout_2.addWidget(self.tabWidget)
         self.verticalLayout.addWidget(self.telas)
@@ -1852,23 +1854,23 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
-        self.bt_caixa_ven.clicked.connect(self.fr_caixa.show) # type: ignore
-        self.bt_caixa_ven.clicked.connect(self.fr_tabelaprodutos.hide) # type: ignore
-        self.bt_tabcodigos_ven.clicked.connect(self.fr_caixa.hide) # type: ignore
-        self.bt_tabcodigos_ven.clicked.connect(self.fr_tabelaprodutos.show) # type: ignore
-        self.bt_produtos.clicked.connect(self.fr_produtos.show) # type: ignore
         self.bt_produtos.clicked.connect(self.fr_inventario.hide) # type: ignore
         self.bt_inventario.clicked.connect(self.fr_inventario.show) # type: ignore
-        self.bt_inventario.clicked.connect(self.fr_produtos.hide) # type: ignore
-        self.bt_cliente.clicked.connect(self.fr_clientes.show) # type: ignore
-        self.bt_cliente.clicked.connect(self.fr_funcionarios.hide) # type: ignore
-        self.bt_cliente.clicked.connect(self.fr_fornecedores.hide) # type: ignore
-        self.bt_funcionarios.clicked.connect(self.fr_funcionarios.show) # type: ignore
-        self.bt_funcionarios.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_produtos.clicked.connect(self.fr_produtos.show) # type: ignore
         self.bt_funcionarios.clicked.connect(self.fr_fornecedores.hide) # type: ignore
-        self.bt_fornecedores.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_funcionarios.hide) # type: ignore
         self.bt_fornecedores.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_fornecedores.hide) # type: ignore
+        self.bt_fornecedores.clicked.connect(self.fr_funcionarios.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_funcionarios.show) # type: ignore
+        self.bt_cliente.clicked.connect(self.fr_clientes.show) # type: ignore
         self.bt_fornecedores.clicked.connect(self.fr_fornecedores.show) # type: ignore
+        self.bt_inventario.clicked.connect(self.fr_produtos.hide) # type: ignore
+        self.bt_funcionarios.clicked.connect(self.fr_clientes.hide) # type: ignore
+        self.bt_caixa_ven.clicked.connect(self.fr_tabelaprodutos.hide) # type: ignore
+        self.bt_tabcodigos_ven.clicked.connect(self.fr_tabelaprodutos.show) # type: ignore
+        self.bt_caixa_ven.clicked.connect(self.fr_caixa.show) # type: ignore
+        self.bt_tabcodigos_ven.clicked.connect(self.fr_caixa.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1893,24 +1895,21 @@ class Ui_MainWindow(object):
         self.label_16.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">QT</span></p></body></html>"))
         self.label_17.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Valor Unit.</span></p></body></html>"))
         self.label_18.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Subtotal</span></p></body></html>"))
-        self.label_19.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Atendente</span></p></body></html>"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "Forma de Pagamento"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "Debito"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "Credito"))
-        self.comboBox.setItemText(3, _translate("MainWindow", "Pix"))
-        self.comboBox.setItemText(4, _translate("MainWindow", "Dinheiro"))
-        item = self.tab_tabela.horizontalHeaderItem(0)
+        self.box_pag.setItemText(0, _translate("MainWindow", "Forma de Pagamento"))
+        self.box_pag.setItemText(1, _translate("MainWindow", "Debito"))
+        self.box_pag.setItemText(2, _translate("MainWindow", "Credito"))
+        self.box_pag.setItemText(3, _translate("MainWindow", "Pix"))
+        self.box_pag.setItemText(4, _translate("MainWindow", "Dinheiro"))
+        item = self.tab_produtos.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
-        item = self.tab_tabela.horizontalHeaderItem(1)
+        item = self.tab_produtos.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "NOME"))
-        item = self.tab_tabela.horizontalHeaderItem(2)
+        item = self.tab_produtos.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "DESCRIÇÃO"))
         self.bt_tabcodigos_ven.setText(_translate("MainWindow", "\n"
 "Tabela "))
         self.bt_caixa_ven.setText(_translate("MainWindow", "\n"
 "Caixa "))
-        self.bt_pesquisar.setText(_translate("MainWindow", "bt_pesquisar"))
-        self.bt_calq.setText(_translate("MainWindow", "bt_calq"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.vendas), _translate("MainWindow", "Vendas"))
         self.bt_saidapro_rel.setText(_translate("MainWindow", "\n"
 "\n"
@@ -1973,7 +1972,6 @@ class Ui_MainWindow(object):
         self.label_cpf_fun.setText(_translate("MainWindow", "CPF"))
         self.label_email_fun.setText(_translate("MainWindow", "Email"))
         self.label_cargo_fun.setText(_translate("MainWindow", "Cargo"))
-        self.ent_cpf_fun.setInputMask(_translate("MainWindow", "999.999.999-99"))
         self.ent_contato_fun.setInputMask(_translate("MainWindow", "(99)99999-9999"))
         self.bt_remover_fun.setText(_translate("MainWindow", "Remover"))
         self.bt_atualizar_fun.setText(_translate("MainWindow", "Atualizar"))
@@ -1985,7 +1983,6 @@ class Ui_MainWindow(object):
         self.label_id_cli.setText(_translate("MainWindow", "ID"))
         self.label_nome_cli.setText(_translate("MainWindow", "Nome"))
         self.label_cpf_cli.setText(_translate("MainWindow", "CPF"))
-        self.ent_cpf_cli.setInputMask(_translate("MainWindow", "999.999.999-99"))
         self.label_dt_nascimento_cli.setText(_translate("MainWindow", "Data de Nascimento"))
         self.ent_nascimento_cli.setInputMask(_translate("MainWindow", "99/99/9999"))
         self.label_contato_cli.setText(_translate("MainWindow", "Contato"))
@@ -2003,7 +2000,6 @@ class Ui_MainWindow(object):
         self.ent_telefone_for.setInputMask(_translate("MainWindow", "(99)99999-9999"))
         self.ent_telefone_for.setText(_translate("MainWindow", "()-"))
         self.label_contato_for.setText(_translate("MainWindow", "CNPJ"))
-        self.ent_cnpj_for.setInputMask(_translate("MainWindow", "99.999.999/9999-99"))
         self.bt_remover_for.setText(_translate("MainWindow", "Remover"))
         self.bt_atualizar_for.setText(_translate("MainWindow", "Atualizar"))
         self.bt_limpar_for.setText(_translate("MainWindow", "Limpa Campos"))

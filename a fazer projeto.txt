@@ -1,0 +1,31 @@
+Tela final do PDF. 
+	Mostrar PDF no acrobat e enviar PDF por email.
+
+
+
+Corrigido		Tela position
+	Fechando ao clicar sem iserir ID.
+
+
+
+
+Edição de produtos, pessoas.
+	senha para modificações. 
+
+
+
+
+Layout corrigido
+	Personalização da tela.
+
+
+
+
+Documentação 
+	Documentar todo o codigo.
+
+
+Tela vendas
+	Adionar tabela com todos produtos. Corrigido
+	Senha para funcionarios.
+	Imagens de roupas no codigo

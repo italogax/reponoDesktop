@@ -318,6 +318,29 @@ font: 87 12pt &quot;Segoe UI Black&quot;;
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
+       <widget class="QTextEdit" name="pdf">
+        <property name="geometry">
+         <rect>
+          <x>13</x>
+          <y>70</y>
+          <width>421</width>
+          <height>421</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="bt_gerar">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>220</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>test</string>
+       </property>
       </widget>
      </widget>
     </item>
